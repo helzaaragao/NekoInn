@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
 import logo from '../../assets/logo.svg'
+import menuHambuguer from '../../assets/Hamburger.svg'
+import X from '../../assets/X.png'
 import { HamburgerButton, HeaderContainer, MobileMenu, NavDesktop, NavLink } from './style';
 
 export function Header(){
@@ -25,25 +27,33 @@ export function Header(){
             
             {isMobileView && (
                 <>
-                    <HamburgerButton onClick={toggleMobileMenu} isOpen={isMobileMenuOpen}>
-                       <span></span>
-                       <span></span>
-                       <span></span>
+                    <HamburgerButton onClick={toggleMobileMenu} $isOpen={isMobileMenuOpen}>
+                       {isMobileMenuOpen ?<img src={X} /> 
+                          : <img src={menuHambuguer} /> }
                     </HamburgerButton>
 
-                    <MobileMenu isOpen={isMobileMenuOpen}>
-            <NavLink href="#">Home</NavLink>
-            <NavLink href="#">Sobre</NavLink>
-            <NavLink href="#">Contato</NavLink>
-          </MobileMenu>
+                    {isMobileMenuOpen && (
+                            <MobileMenu>
+                                {/* Light/Dark */}
+                                <NavLink href="#">About us</NavLink>
+                                <NavLink href="#">Our Rooms</NavLink>
+                                <NavLink href="#">Purr Care</NavLink>
+                                <NavLink href="#">Testimonial</NavLink>
+                                <button type='submit'>Book Now</button>
+                          </MobileMenu>
+                        )
+                    }
                 </>
             )}
 
             {!isMobileView && (
                     <NavDesktop>
-                    <NavLink href="#">Home</NavLink>
-                    <NavLink href="#">Sobre</NavLink>
-                    <NavLink href="#">Contato</NavLink>
+                        <NavLink href="#">About us</NavLink>
+                        <NavLink href="#">Our Rooms</NavLink>
+                        <NavLink href="#">Purr Care</NavLink>
+                        <NavLink href="#">Testimonial</NavLink>
+                         {/* Light/Dark */}
+                        <button>Book Now</button>
                     </NavDesktop>
                 )}
             
@@ -51,3 +61,15 @@ export function Header(){
         </HeaderContainer>
     )
 }
+
+// Melhorias Adicionais
+// Animar a entrada/saída do menu (se quiser um fade in/out):
+// Use react-spring ou framer-motion para animações mais suaves.
+
+// Fechar o menu ao clicar em um link:
+
+// tsx
+// Copy
+// const closeMenu = () => setIsMobileMenuOpen(false);
+
+// <NavLink href="#" onClick={closeMenu}>Home</NavLink>

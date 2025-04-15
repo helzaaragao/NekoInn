@@ -8,10 +8,8 @@ export function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
       <GlobalStyle></GlobalStyle>
-        <>
-        <h1>Testando</h1>
+
         <Home></Home>
-        </>
     </ThemeProvider>
 
 // Pesquisar sobre themes e como utilizar em breve melhor

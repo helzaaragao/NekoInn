@@ -73,3 +73,5 @@ export function Header(){
 // const closeMenu = () => setIsMobileMenuOpen(false);
 
 // <NavLink href="#" onClick={closeMenu}>Home</NavLink>
+
+// https://mantine.dev/core/switch/ -> dark/light mode

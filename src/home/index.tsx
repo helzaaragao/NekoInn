@@ -14,11 +14,14 @@ import playtimeParadise from '../assets/playtimeParadise.png'
 import gourmetDining from '../assets/gourmetDining.png'
 import { PlanPrices } from "../components/PlanPrices";
 import { Feedbacks } from "../components/Feedbacks";
+import { Contact } from "@/components/Contact";
+import { Footer } from "@/components/Footer";
+import { HomeContainer } from "./style";
 
 
 export function Home(){
     return(
-        <main>
+        <HomeContainer>
          <Header></Header>
          <div>
             <section>
@@ -131,6 +134,8 @@ export function Home(){
          </section>
         <PlanPrices></PlanPrices>
         <Feedbacks></Feedbacks>
-        </main>
+        <Contact></Contact>
+        <Footer></Footer>
+        </HomeContainer>
     )
 }

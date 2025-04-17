@@ -75,3 +75,4 @@ export function Header(){
 // <NavLink href="#" onClick={closeMenu}>Home</NavLink>
 
 // https://mantine.dev/core/switch/ -> dark/light mode
+// https://chakra-ui.com/docs/components/accordion

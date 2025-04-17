@@ -1,6 +1,10 @@
 import styled from "styled-components";
 
-export const HeaderContainer = styled.header``
+export const HeaderContainer = styled.header`
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+`
 export const HamburgerButton = styled.button<{$isOpen:boolean}>`
     display: flex;
 
@@ -12,10 +16,15 @@ export const HamburgerButton = styled.button<{$isOpen:boolean}>`
 `
 export const MobileMenu = styled.div`
     position: fixed;
+    width: 60%;
+    height: 100%;
 
 
 `
-export const NavLink = styled.a``
+export const NavLink = styled.a`
+  width: 60%;
+  display: flex;
+`
 export const NavDesktop = styled.nav`
     display: none;
 

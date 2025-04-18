@@ -2,9 +2,10 @@ import { useEffect, useState } from 'react'
 import logo from '../../assets/logo.svg'
 import menuHambuguer from '../../assets/Hamburger.svg'
 import X from '../../assets/X.png'
-import { HamburgerButton, HeaderContainer, MobileMenu, NavDesktop, NavLink } from './style';
+import { ChackraSwitchIndicador, ChakraSwitchControl, ChakraSwitchRoot, HamburgerButton, HeaderContainer, MobileMenu, NavDesktop, NavLink, NavMobile } from './style';
 import { Switch } from "@chakra-ui/react"
 import { Moon, Sun } from '@phosphor-icons/react';
+import { Button } from '../ui/Button';
 
 
 export function Header(){
@@ -42,21 +43,23 @@ export function Header(){
 
                     {isMobileMenuOpen && (
                             <MobileMenu $isOpen={isMobileMenuOpen}>
-                                 <Switch.Root colorPalette="blue" size="lg">
+                                 <ChakraSwitchRoot  colorPalette="#8E345F" size="lg">
                                             <Switch.HiddenInput />
-                                            <Switch.Control>
-                                                <Switch.Thumb />
-                                                <Switch.Indicator fallback={<Sun size={32} />}>
+                                            <ChakraSwitchControl>
+                                                {/* <Switch.Thumb /> */}
+                                                <ChackraSwitchIndicador fallback={<Sun size={32} />}>
                                                     <Moon size={32} />
-                                                </Switch.Indicator>
-                                            </Switch.Control>
-                                            <Switch.Label>Switch me</Switch.Label>
-                                </Switch.Root>
-                                <NavLink href="#">About us</NavLink>
-                                <NavLink href="#">Our Rooms</NavLink>
-                                <NavLink href="#">Purr Care</NavLink>
-                                <NavLink href="#">Testimonial</NavLink>
-                                <button type='submit'>Book Now</button>
+                                                </ChackraSwitchIndicador>
+                                            </ChakraSwitchControl>
+                                </ChakraSwitchRoot>
+                                <NavMobile>
+                                    <NavLink href="#">About us</NavLink>
+                                    <NavLink href="#">Our Rooms</NavLink>
+                                    <NavLink href="#">Purr Care</NavLink>
+                                    <NavLink href="#">Testimonial</NavLink>
+                                    <Button></Button>
+                                </NavMobile>
+
                           </MobileMenu>
                         )
                     }

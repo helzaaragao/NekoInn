@@ -8,7 +8,7 @@ export function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
       <GlobalStyle></GlobalStyle>
-
+        
         <Home></Home>
     </ThemeProvider>
 

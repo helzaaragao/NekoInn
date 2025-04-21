@@ -12,7 +12,6 @@ export const GlobalStyle = createGlobalStyle`
     body, input, textarea, button{
         font-family: 'Poppins', serif;
         font-style: normal;
-
         font-weight: 400;
     }
 

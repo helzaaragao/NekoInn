@@ -16,14 +16,14 @@ import { PlanPrices } from "../components/PlanPrices";
 import { Feedbacks } from "../components/Feedbacks";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
-import { HomeContainer } from "./style";
+import { HomeContainer, MainBanner } from "./style";
 
 
 export function Home(){
     return(
         <HomeContainer>
          <Header></Header>
-         <div>
+         <MainBanner>
             <section>
                 <article>
                     <span>WHERE FELINE CONFORT COMES FIRST</span>
@@ -64,7 +64,7 @@ export function Home(){
               
             </section>
             
-         </div>
+         </MainBanner>
          <address>
             <section>
                  <MapPinArea size={32} weight="bold" />

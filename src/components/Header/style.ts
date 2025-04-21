@@ -5,20 +5,25 @@ export const HeaderContainer = styled.header`
   display: flex;
   justify-content: space-between;
   margin-bottom: 2rem;
+  align-items: center;
+
+  > img:first-child {
+    width: 11.125rem;
+    height: 4.313rem;
+  }
   
 `
 export const HamburgerButton = styled.button<{$isOpen:boolean}>`
     display: flex;
-    top: 1rem;      // Distância do topo
+    top: 2rem;      // Distância do topo
     right: 1rem; 
     z-index: 1001; 
     cursor: pointer;
     position: fixed;
     background-color: transparent;
+    width: 3.188rem;
+    height: 2.688rem;
    
-
-
-    
     @media (min-width: 768px) {
     display: none;
   }
@@ -30,8 +35,7 @@ export const MobileMenu = styled.div<{ $isOpen: boolean }>`
     width: 70%;
     height: 100vh;
     z-index: 1000;
-    padding-left: 2.5rem;
-    
+  
     
     transform: translateX(${({ $isOpen }) => ($isOpen ? '0' : '100%')});
     transition: transform 0.3s ease-in-out;
@@ -39,12 +43,14 @@ export const MobileMenu = styled.div<{ $isOpen: boolean }>`
    
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
+
 `
 export const ChakraSwitchRoot = styled(Switch.Root)`
   margin-top: 1rem;
   width: 6rem;
   height: 3rem;
   --icon-size: 1rem; 
+  margin-left: 2rem;
   
 `
 export const ChakraSwitchControl = styled(Switch.Control)`
@@ -80,7 +86,7 @@ export const ChackraSwitchIndicador = styled(Switch.Indicator)`
 export const NavLink = styled.a`
 
   text-decoration: none;
- 
+  padding-left: 2.5rem;
   font-size: 1.4rem;
   font-weight: bold;
   margin-bottom: 2rem;
@@ -90,6 +96,13 @@ export const NavMobile = styled.nav`
     display: flex;
     flex-direction: column;
     color:  ${({ theme }) => theme.colors["day-background"]};
+    padding-left: 0;
+
+    Button {
+      width: 100%;
+      margin-left: 1rem;
+    
+    }
     
 `
 

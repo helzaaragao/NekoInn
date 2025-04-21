@@ -3,7 +3,7 @@ import { ButtonContainer } from "./style";
 export function Button(){
     return(
         <ButtonContainer>
-              <button type='submit'>Book Now</button>
+              <button type='submit'>BOOK NOW</button>
         </ButtonContainer>
     )
 }

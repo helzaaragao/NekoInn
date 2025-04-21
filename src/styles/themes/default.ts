@@ -5,7 +5,8 @@ export const defaultTheme = {
         'day-background': '#FBF5F8',
         'input/subtitles':'#D9D9D9', 
 
-        'background/text': '#232323'
+        'background/text': '#232323',
+        'black-off': '#696969'
     } as const
 }
 export type AppTheme = typeof defaultTheme; 

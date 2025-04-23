@@ -43,12 +43,12 @@ export function Header(){
 
                     {isMobileMenuOpen && (
                             <MobileMenu $isOpen={isMobileMenuOpen}>
-                                 <ChakraSwitchRoot  colorPalette="#8E345F" size="lg">
+                                 <ChakraSwitchRoot  size="lg"
+                                 >
                                             <Switch.HiddenInput />
                                             <ChakraSwitchControl>
-                                                {/* <Switch.Thumb /> */}
-                                                <ChackraSwitchIndicador fallback={<Sun size={32} />}>
-                                                    <Moon size={32} />
+                                                <ChackraSwitchIndicador fallback={<Sun size={32} data-icon="sun"/>}>
+                                                    <Moon size={32} data-icon="moon"/>
                                                 </ChackraSwitchIndicador>
                                             </ChakraSwitchControl>
                                 </ChakraSwitchRoot>

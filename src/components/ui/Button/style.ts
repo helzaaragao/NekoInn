@@ -1,13 +1,24 @@
 import styled from "styled-components";
 
 export const ButtonContainer = styled.div`
+  width: 100%;
+  padding: 0 1rem; 
  
   button{ 
-    width: 10.313rem;
+    width: 100%;
     height: 4.063rem;
     background-color: ${({ theme }) => theme.colors["secundary/hover"]};
     font-weight: bold;
     font-size: 0.7rem;
     border-radius: 220px;
+    margin: 0 auto;
+    display: block;
+
+    @media (max-width: 768px) {
+    button {
+      max-width: 100%;
+      border-radius: 0; 
+    }
+  }
   }
 `

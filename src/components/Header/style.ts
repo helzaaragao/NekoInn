@@ -51,21 +51,21 @@ export const ChakraSwitchRoot = styled(Switch.Root)`
   height: 3rem;
   --icon-size: 1rem; 
   margin-left: 2rem;
+  position: relative;
+ 
   
 `
 export const ChakraSwitchControl = styled(Switch.Control)`
   width: 100%;
   height: 100%;
   border-radius: 9999px;
-  background: #E2E8F0 ;
+  background-color:  ${({ theme }) => theme.colors["day-background"]};
+  color: ${({ theme }) => theme.colors["background/text"]};;
+  position: relative;
+  overflow: hidden;
 
-  &[data-checked] {
-    background: #8E345F !important; /* Roxo quando ligado */
-  }
+  
 `
-// export const ChackraSwitchThumb = styled(Switch.Thumb)`
-//   width: 3rem;
-// `
 
 export const ChackraSwitchIndicador = styled(Switch.Indicator)`
   display: flex;
@@ -74,11 +74,23 @@ export const ChackraSwitchIndicador = styled(Switch.Indicator)`
   width: 100%;
   height: 100%;
  
+ 
 
   svg{
     width: 2rem;
     height: 100%;
   }
+  &[data-checked]{
+    
+    background-color: ${({ theme }) => theme.colors["secundary/hover"]};
+    color: ${({ theme }) => theme.colors["day-background"]};
+    svg{
+     
+      margin-right: 1.5rem;
+    }
+  }
+
+ 
 `
 
 
@@ -97,12 +109,6 @@ export const NavMobile = styled.nav`
     flex-direction: column;
     color:  ${({ theme }) => theme.colors["day-background"]};
     padding-left: 0;
-
-    Button {
-      width: 100%;
-      margin-left: 1rem;
-    
-    }
     
 `
 

@@ -36,5 +36,10 @@ export const MainBanner = styled.div`
         }
         
     }
+    aside{
+        width: 100%;
+        height: 7.625rem;
+        /* background-image: var(); */
+    }
    }
 `

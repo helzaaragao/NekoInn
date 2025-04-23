@@ -1,4 +1,9 @@
 import styled from "styled-components";
+import Introducing from "../assets/pexels-tomas-ryant-2870510 1.png"
+
+interface ImageProps extends ImgHTMLAttributes<HTMLImageElement> {
+    $variant?: 'vector' | 'mainHero' | 'cat';
+  }
 
 export const HomeContainer = styled.main`
     padding: 1rem;
@@ -39,7 +44,70 @@ export const MainBanner = styled.div`
     aside{
         width: 100%;
         height: 7.625rem;
-        /* background-image: var(); */
+        margin-top: 3rem;
+        color: ${({ theme }) => theme.colors["day-background"]};
+        background-image: url(${Introducing});
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+        padding: 1.6rem;
+       
+
+        span{
+            letter-spacing: 0.4rem;
+            font-weight: 600;
+        }
+        p {
+            font-size: 1rem;
+            font-weight: 700;
+        }
+
+        figure{
+            width: 4rem;
+            height: 4rem;
+            background-color:  ${({ theme }) => theme.colors["main-color"]};
+            border-radius: 99px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            right: 0;
+            
+            
+        }
+        
     }
    }
+
+   > section:nth-child(2){
+    position: relative;
+    margin-top: 2rem;
+     figure{
+        width: 100%;
+       
+     
+        
+        
+       > div:first-child{
+        
+          
+          display: flex;
+        align-items: center;
+         justify-content: center;
+
+         
+          
+        }
+     }
+   }
+`
+
+export const Image = styled.img<ImageProps>`
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    
 `

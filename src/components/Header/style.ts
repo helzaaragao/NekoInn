@@ -19,7 +19,7 @@ export const HamburgerButton = styled.button<{$isOpen:boolean}>`
     right: 1rem; 
     z-index: 1001; 
     cursor: pointer;
-    position: fixed;
+    position: absolute;
     background-color: transparent;
     width: 3.188rem;
     height: 2.688rem;

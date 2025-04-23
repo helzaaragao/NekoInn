@@ -16,7 +16,7 @@ import { PlanPrices } from "../components/PlanPrices";
 import { Feedbacks } from "../components/Feedbacks";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
-import { HomeContainer, MainBanner } from "./style";
+import { HomeContainer, Image, MainBanner } from "./style";
 
 
 export function Home(){
@@ -40,18 +40,20 @@ export function Home(){
                     <span>WATCH NOW</span>
                     <p>Introducing The NekoInn</p>
                     <figure>
-                     <Play size={32} weight="bold" />
+                     <Play size={32}  />
                     </figure>
                    
                 </aside>
             </section>
             <section>
                 <figure>
+                    
                     <div>
-                        <img src={vector} alt="" />
+                       <Image src={vector} alt="" />
                         <img src={mainHero} alt="" />
                         <img src={vector} alt="" />
                     </div>
+                 
                     <div>
                         <img src={firstCat} alt="" />
                         <img src={secondCat} alt="" />

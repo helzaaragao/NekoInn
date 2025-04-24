@@ -16,7 +16,7 @@ import { PlanPrices } from "../components/PlanPrices";
 import { Feedbacks } from "../components/Feedbacks";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
-import { HomeContainer, Image, MainBanner } from "./style";
+import { HomeContainer, MainBanner, Vectors } from "./style";
 
 
 export function Home(){
@@ -49,9 +49,10 @@ export function Home(){
                 <figure>
                     
                     <div>
-                       <Image src={vector} alt="" />
-                        <img src={mainHero} alt="" />
-                        <img src={vector} alt="" />
+                       <Vectors src={vector} alt="" $variant='primary' />
+                       <Vectors src={vector} alt="" $variant='secundary' />
+                       <img src={mainHero} alt="" />
+                        
                     </div>
                  
                     <div>

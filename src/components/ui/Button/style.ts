@@ -14,7 +14,7 @@ export const ButtonContainer = styled.div`
     margin: 0 auto;
     display: block;
 
-    @media (max-width: 768px) {
+    @media (min-width: 768px) {
     button {
       max-width: 100%;
       border-radius: 0; 

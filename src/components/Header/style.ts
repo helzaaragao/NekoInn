@@ -32,7 +32,7 @@ export const MobileMenu = styled.div<{ $isOpen: boolean }>`
     position: fixed;
     top:0;
     right:0;
-    width: 70%;
+    width: 80%;
     height: 100vh;
     z-index: 1000;
   

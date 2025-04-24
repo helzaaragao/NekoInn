@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import Introducing from "../assets/pexels-tomas-ryant-2870510 1.png"
 
-interface ImageProps extends ImgHTMLAttributes<HTMLImageElement> {
-    $variant?: 'vector' | 'mainHero' | 'cat';
-  }
+// interface ImageProps extends ImgHTMLAttributes<HTMLImageElement> {
+//     $variant?: 'vector' | 'mainHero' | 'cat';
+//   }
 
 export const HomeContainer = styled.main`
     padding: 1rem;
@@ -84,7 +84,6 @@ export const MainBanner = styled.div`
    }
 
    > section:nth-child(2){
-    position: relative;
     margin-top: 2rem;
      figure{
         width: 100%;
@@ -94,20 +93,39 @@ export const MainBanner = styled.div`
         
        > div:first-child{
         
-          
-          display: flex;
+        position: relative;
+        display: flex;
         align-items: center;
-         justify-content: center;
+        justify-content: center;
 
-         
+         img:last-child{
+            position: relative;
+            z-index: 2;
+         }
           
         }
      }
    }
 `
-
-export const Image = styled.img<ImageProps>`
-    object-fit: contain;
-    transition: transform 0.3s ease;
+export const Vectors = styled.img<{$variant: 'primary' | 'secundary'}>`
+   max-width: 100%;
+   height: auto;
+  position: absolute;
+  z-index: 1;
+  display: block;
+  
+  ${props => props.$variant === 'primary' && `
+    width: 300px;
+    left: 17%;
+    top: 30%;
     
+  `}
+ 
+ ${props => props.$variant === 'secundary' && `
+    width: 300px;
+    right: 40%;
+    bottom: 20%;
+  `}
+ 
 `
+

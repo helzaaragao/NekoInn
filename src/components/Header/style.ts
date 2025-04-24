@@ -96,7 +96,6 @@ export const ChackraSwitchIndicador = styled(Switch.Indicator)`
 
 
 export const NavLink = styled.a`
-
   text-decoration: none;
   padding-left: 2.5rem;
   font-size: 1.4rem;

@@ -16,7 +16,7 @@ import { PlanPrices } from "../components/PlanPrices";
 import { Feedbacks } from "../components/Feedbacks";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
-import { HomeContainer, MainBanner, Vectors } from "./style";
+import { Address, Cats, HomeContainer, MainBanner, Vectors } from "./style";
 
 
 export function Home(){
@@ -55,12 +55,12 @@ export function Home(){
                         
                     </div>
                  
-                    <div>
+                    <Cats>
                         <img src={firstCat} alt="" />
                         <img src={secondCat} alt="" />
                         <img src={thirdCat} alt="" />
                         <img src={lastCat} alt="" />
-                    </div>
+                    </Cats>
               
 
                 </figure>
@@ -68,7 +68,7 @@ export function Home(){
             </section>
             
          </MainBanner>
-         <address>
+         <Address>
             <section>
                  <MapPinArea size={32} weight="bold" />
                  <p>123 Meow Avenue. 
@@ -84,7 +84,7 @@ export function Home(){
                     <p>info@neko-inn.com</p>
                  </a>
             </section>
-         </address>
+         </Address>
          <section>
             <article>
                 <span>YOUR TRUSTED CAT RETREAT</span>

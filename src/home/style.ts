@@ -1,10 +1,6 @@
 import styled from "styled-components";
 import Introducing from "../assets/pexels-tomas-ryant-2870510 1.png"
 
-// interface ImageProps extends ImgHTMLAttributes<HTMLImageElement> {
-//     $variant?: 'vector' | 'mainHero' | 'cat';
-//   }
-
 export const HomeContainer = styled.main`
     padding: 1rem;
  
@@ -23,6 +19,8 @@ export const MainBanner = styled.div`
         span{
             font-size: 0.625rem;
             color: ${({ theme }) => theme.colors["black-off"]};
+            font-weight: bold;
+            letter-spacing: 3px;
         }
         h1{
             font-size: 1.9rem;
@@ -273,6 +271,8 @@ export const About = styled.section`
       font-size: 0.625rem;
       color: ${({ theme }) => theme.colors["black-off"]};
       margin-bottom: 0.5rem;
+      font-weight: bold;
+      letter-spacing: 3px;
     }
     h2{
       font-size: 2rem;
@@ -296,6 +296,29 @@ export const About = styled.section`
     }
     img:last-child{
       position: relative;
+    }
+  }
+`
+export const Rooms = styled.section`
+figure{
+  margin-top: 4rem;
+}
+  article {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+    > span{
+      font-size: 0.7rem;
+      color: ${({ theme }) => theme.colors["black-off"]};
+      letter-spacing: 3px;
+      font-weight: bold;
+      margin-top: 2rem;
+    }
+    h2{
+      font-size: 2rem;
+      font-weight: 700;
     }
   }
 `

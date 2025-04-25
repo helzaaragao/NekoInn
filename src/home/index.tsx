@@ -16,8 +16,9 @@ import { PlanPrices } from "../components/PlanPrices";
 import { Feedbacks } from "../components/Feedbacks";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
-import { About, Address, Cats, HomeContainer, MainBanner, Vectors } from "./style";
+import { About, Address, Cats, HomeContainer, MainBanner, Rooms, Vectors } from "./style";
 import { Button } from "@/components/ui/Button";
+import { AccordionChackra } from "@/components/ui/Accordion";
 
 
 export function Home(){
@@ -106,16 +107,16 @@ export function Home(){
                 <img src={aboutCat}/>
             </figure>
          </About>
-         <section>
+         <Rooms>
             <figure>
                 <img src={detailsCat} alt="" />
             </figure>
             <article>
                 <span>PERFECTLY TAILORED FOR YOUR FELINE FRIEND</span>
                 <h2>Our Rooms</h2>
-                {/* https://ui.shadcn.com/docs/components/accordion */}
+                <AccordionChackra></AccordionChackra> 
             </article>
-         </section>
+         </Rooms>
          <section>
             <article>
                 <span>DEDICATED CARE FOR EVERY PURRSONALITY</span>

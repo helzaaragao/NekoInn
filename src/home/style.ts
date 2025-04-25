@@ -134,34 +134,30 @@ export const Vectors = styled.img<{$variant: 'primary' | 'secundary'}>`
 
 export const Cats = styled.div`
     position: absolute;
-    top: 50%;  /* Centraliza verticalmente */
-    left: 50%;  /* Centraliza horizontalmente */
+    top: 50%;  
+    left: 50%; 
     transform: translate(-50%, -50%);
     z-index: 3;
-    width: 200px;  /* Largura do arco */
-    height: 100px;  /* Altura do arco */
+    width: 200px;  
+    height: 100px; 
   
-  /* Posicionamento dos gatos em forma de Lua Crescente */
   img {
     position: absolute;
     width: 4.125rem;
   }
 
-  /* Gato 1: Topo do arco (ponto mais alto) */
   img:nth-child(1) {
     bottom: 90%;
     left: 0;
     transform: translateX(-130%);
   }
 
-  /* Gato 2: Meio do arco (lado esquerdo) */
   img:nth-child(2) {
     top: 50%;
     left: 5%;
     transform: translateX(-130%);
   }
 
-  /* Gato 3: Meio do arco (lado direito) */
   img:nth-child(3) {
     top: 100%;
     left: 30%;
@@ -169,7 +165,6 @@ export const Cats = styled.div`
     
   }
 
-  /* Gato 4: Parte inferior (opcional, se quiser mais elementos) */
   img:nth-child(4) {
     top: 70%;
     left: 50%;
@@ -183,25 +178,127 @@ export const Address = styled.address`
     width: 100%;
     height: 25rem;
     color: ${({ theme }) => theme.colors["day-background"]};
+    
 
    > section:first-child{
         height: 40%;
         background-color: ${({ theme }) => theme.colors["main-color"]};
         display: flex;
         align-items: center;
-        gap: 1rem;
+        justify-content: center;
+        gap: 1.5rem;
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+        div{
+          width: 9rem;
+          background-color: ${({ theme }) => theme.colors["secundary/hover"]};
+          border-radius: 60px;
+          height: 40%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-left: 1rem;
+        }
+        
+        p{
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+    }
+    > section:nth-child(2){
+        height: 30%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1.8rem;
+        padding-left: 1.1rem;
+        /* border-top-left-radius: 40px;
+        border-top-right-radius: 40px; */
+        background-color: ${({ theme }) => theme.colors["secundary/hover"]};
+        div{
+          width: 4rem;
+          background-color: ${({ theme }) => theme.colors["main-color"]};
+          border-radius: 60px;
+          height: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        
         p{
             font-size: 1.2rem;
             font-weight: 600;
         }
     }
-    > section:nth-child(2){
-        height: 30%;
-        background-color: ${({ theme }) => theme.colors["secundary/hover"]};
-    }
     >section:nth-child(3){
         height: 30%;
         background-color: ${({ theme }) => theme.colors["secundary/hover"]};
+        display: flex;
+        border-bottom-left-radius: 40px;
+        border-bottom-right-radius: 40px;
+        a{
+          display: flex;
+          align-items: center;
+          gap: 1.8rem;
+          padding-left: 1.1rem;
+
+            div{
+            width: 4rem;
+            background-color: ${({ theme }) => theme.colors["main-color"]};
+            border-radius: 60px;
+            height: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          
+          p{
+              font-size: 1.2rem;
+              font-weight: 600;
+          }
+        }
     }
 `
+export const About = styled.section`
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  article{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 2.5rem;
+    span{
+      font-size: 0.625rem;
+      color: ${({ theme }) => theme.colors["black-off"]};
+      margin-bottom: 0.5rem;
+    }
+    h2{
+      font-size: 2rem;
+      font-weight: 700;
+    }
+    p{
+      font-size: 0.7rem;
+      text-align: start;
+      padding: 2rem;
+    }
+    Button{
+      color: ${({ theme }) => theme.colors["day-background"]};
+      background-color: ${({ theme }) => theme.colors["main-color"]};
+    }
+  }
+  figure{
+    img:first-child{
+      position: absolute;
+      width: 200px;
+      right: 17%; 
+    }
+    img:last-child{
+      position: relative;
+    }
+  }
+`
+
+
 

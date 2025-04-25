@@ -16,7 +16,8 @@ import { PlanPrices } from "../components/PlanPrices";
 import { Feedbacks } from "../components/Feedbacks";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
-import { Address, Cats, HomeContainer, MainBanner, Vectors } from "./style";
+import { About, Address, Cats, HomeContainer, MainBanner, Vectors } from "./style";
+import { Button } from "@/components/ui/Button";
 
 
 export function Home(){
@@ -70,33 +71,41 @@ export function Home(){
          </MainBanner>
          <Address>
             <section>
-                 <MapPinArea size={32} weight="bold" />
+                <div>
+                <MapPinArea size={32} weight="bold" />
+                </div>
+             
                  <p>123 Meow Avenue. 
                  Kittyville, CA 90210 United States</p>
             </section>
             <section>
-                 <Phone size={32} />
+                <div>
+                    <Phone size={32} />
+                </div>
+             
                  <p>(555) 555-5555</p>
             </section>
             <section>
                 <a href="mailto:info@neko-inn.com">
+                    <div>
                     <Envelope size={32} />
+                    </div>
                     <p>info@neko-inn.com</p>
                  </a>
             </section>
          </Address>
-         <section>
+         <About>
             <article>
                 <span>YOUR TRUSTED CAT RETREAT</span>
                 <h2>About NekoInn</h2>
                 <p>NekoInn is more than a cat boarding facility; it's a home away from home for your furry family members. Nestled in serene surroundings, our inn offers a tranquil retreat for cats of all shapes, sizes, and personalities. With a team of dedicated caregivers passionate about feline welfare, we ensure every guest receives love, attention, and comfort. Rest easy knowing your cat is in caring hands at NekoInn.</p>
-                <button>BOOK NOW</button>
+                <Button></Button>
             </article>
             <figure>
                 <img src={vector}/>
                 <img src={aboutCat}/>
             </figure>
-         </section>
+         </About>
          <section>
             <figure>
                 <img src={detailsCat} alt="" />

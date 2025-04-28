@@ -6,7 +6,8 @@ export const defaultTheme = {
         'input/subtitles':'#D9D9D9', 
 
         'background/text': '#232323',
-        'black-off': '#696969'
+        'black-off': '#696969', 
+        'black': '#181818'
     } as const
 }
 export type AppTheme = typeof defaultTheme; 

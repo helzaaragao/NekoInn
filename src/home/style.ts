@@ -322,6 +322,76 @@ figure{
     }
   }
 `
+export const PurrCare = styled.section`
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+  article{
+    width: 100%;
+    padding: 5rem 5rem 3rem 2rem;
+    background-color: ${({ theme }) => theme.colors["main-color"]};
+    border-radius: 40px;
+   
+    span{
+      font-size: 0.7rem;
+      color: ${({ theme }) => theme.colors["black"]};
+      letter-spacing: 3px;
+      font-weight: bold;
+    }
+    h2{
+      font-size: 2rem;
+      font-weight: 700;
+      color: ${({ theme }) => theme.colors["day-background"]};
+      margin-top: 1rem;
+    }
+    p{
+      margin-top: 1rem;
+      color: ${({ theme }) => theme.colors["day-background"]};
+      font-size: 0.875rem;
+    }
+    button{
+      display: flex; 
+      align-items: center;
+      padding-left: 1rem;
+      gap: 3rem;
+      width:  14rem;
+      height: 3rem;
+      background-color: ${({ theme }) => theme.colors["secundary/hover"]};
+      color:${({ theme }) => theme.colors["day-background"]};
+      font-size: 0.75rem;
+      border-radius: 220px;
+      margin-top: 2rem;
+      font-weight: bold;
+    }
+  }
+ > div{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    div{
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      padding: 1.5rem;
+      h4{
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+      p{
+       font-size: 0.875rem;
+       width: 80%;
+      }
+    }
+    
+  }
+`
+export const Carousel = styled.section`
+  
+
+`
 
 
 

@@ -1,5 +1,5 @@
 import { Header } from "../components/Header";
-import { Envelope, MapPinArea, Phone, Play } from "@phosphor-icons/react"
+import { ArrowRight, Envelope, MapPinArea, Phone, Play } from "@phosphor-icons/react"
 
 import mainHero from '../assets/mainHero.png'
 import vector from '../assets/Vector.svg'
@@ -16,13 +16,38 @@ import { PlanPrices } from "../components/PlanPrices";
 import { Feedbacks } from "../components/Feedbacks";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
-import { About, Address, Cats, HomeContainer, MainBanner, Rooms, Vectors } from "./style";
+import { About, Address, Carousel, Cats, HomeContainer, MainBanner, PurrCare, Rooms, Vectors } from "./style";
 import { Button } from "@/components/ui/Button";
 import { AccordionChackra } from "@/components/ui/Accordion";
+import { useState } from "react";
+import carousel1 from '../assets/carousel.png';
+import carousel2 from '../assets/carousel2.png';
+import carousel3 from '../assets/carousel3.png';
+import carousel4 from '../assets/carousel4.png';
+import carousel5 from '../assets/carousel5.png';
+import carousel6 from '../assets/carousel6.png';
+
+
+interface ImageCarouselProps {
+    images: string[];
+  }
 
 
 export function Home(){
+    const images = [carousel1, carousel2, carousel3, carousel4, carousel5, carousel6];
+    const [currentIndex, setCurrentIndex] = useState(0)
+   
+
+    const nextSlide = () => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+      };
+    
+      const prevSlide = () => {
+        setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+      };
     return(
+     
+      
         <HomeContainer>
          <Header></Header>
          <MainBanner>
@@ -117,12 +142,12 @@ export function Home(){
                 <AccordionChackra></AccordionChackra> 
             </article>
          </Rooms>
-         <section>
+         <PurrCare>
             <article>
                 <span>DEDICATED CARE FOR EVERY PURRSONALITY</span>
-                <h3>Purr Care</h3>
+                <h2>Purr Care</h2>
                 <p>Experience top-notch feline care with our Purr Care services. From grooming to playtime, we provide personalized attention to ensure your cat's happiness and well-being at NekoInn.</p>
-                <button>Book Now</button>
+                <button><ArrowRight size={20} />Book Now</button>
             </article>
             <div>
                 <div>
@@ -141,10 +166,24 @@ export function Home(){
                     <p>Treat your cat's taste buds to a culinary delight with our Gourmet Dining service. From premium cat cuisine to customized meal plans tailored to their dietary needs, our gourmet chefs ensure that every meal is both delicious and nutritious.</p>
                 </div>
             </div>
-         </section>
-         <section>
-            {/* https://ui.shadcn.com/docs/components/carousel */}
-         </section>
+         </PurrCare>
+         <Carousel>
+         <button onClick={prevSlide}>Anterior</button>
+            {images.map((image, index) => (
+            <img
+                key={image}
+                src={image}
+                alt={`Slide ${index + 1}`}
+                style={{
+                width: '100%',
+                flex: '0 0 auto',
+                transform: `translateX(-${currentIndex * 100}%)`,
+                transition: 'transform 0.5s ease',
+                }}
+            />
+            ))}
+              <button onClick={nextSlide}>Próximo</button>
+         </Carousel>
         <PlanPrices></PlanPrices>
         <Feedbacks></Feedbacks>
         <Contact></Contact>

@@ -8,6 +8,7 @@ import carousel6 from '../../../assets/carousel6.png';
 import { useMediaQuery } from 'react-responsive';
 import { ImagesCarouselContainer, ImagesCarouselMobile } from './style';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
+import PetHouse from '../../../assets/PetHouse-Icon.svg'
 
 const images = [carousel1, carousel2, carousel3, carousel4, carousel5, carousel6];   
    
@@ -50,6 +51,10 @@ export function ImagesCarousel(){
                     <div>
                       <img src={images[currentIndex]} draggable="false"/>
                     </div>
+                    <div>
+                      <img src={PetHouse} alt="" />
+                    </div>
+                   
               <button onClick={goToNext}><ArrowRight size={32} /></button>
                       <div>
                         {images.map((_, index) => (

@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
 export const ImagesCarouselContainer = styled.section`
-    /* display: flex;
-    width: 100%; */
+    width: 100%;
 `
 
 export const ImagesCarouselMobile = styled.div`
@@ -10,6 +9,8 @@ export const ImagesCarouselMobile = styled.div`
     position: relative;
     align-items: center;
     justify-content: center;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
 
    > button {
         background-color: ${({ theme }) => theme.colors["main-color"]};
@@ -27,13 +28,39 @@ export const ImagesCarouselMobile = styled.div`
     button:first-child{
         position: absolute;
         top: 40%;
-        left: 5%;
+        left: -4%;
        
     }
-    button:nth-child(2){
-        position: absolute;
-        top: 50%;
-        left: 5%;
+
+    div:nth-child(2){
+        img{
+            width: 100%;
+            height: 25rem;
+        }
     }
+
+    div:nth-child(3){
+        position: absolute;
+        background-color: ${({ theme }) => theme.colors["main-color"]};
+        width: 7rem;
+        height: 7rem;
+        border-radius: 999px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img{
+            width: 4.438rem;
+            height: 4.438rem;
+        }
+        top: 80%;
+        right: 15%;
+    }
+
+    button:nth-child(4){
+        position: absolute;
+        top: 40%;
+        right: -4%;
+    }
+
    
 `

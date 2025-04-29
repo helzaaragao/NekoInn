@@ -16,38 +16,15 @@ import { PlanPrices } from "../components/PlanPrices";
 import { Feedbacks } from "../components/Feedbacks";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
-import { About, Address, Carousel, Cats, HomeContainer, MainBanner, PurrCare, Rooms, Vectors } from "./style";
+import { About, Address, Cats, HomeContainer, MainBanner, PurrCare, Rooms, Vectors } from "./style";
 import { Button } from "@/components/ui/Button";
 import { AccordionChackra } from "@/components/ui/Accordion";
-import { useState } from "react";
-import carousel1 from '../assets/carousel.png';
-import carousel2 from '../assets/carousel2.png';
-import carousel3 from '../assets/carousel3.png';
-import carousel4 from '../assets/carousel4.png';
-import carousel5 from '../assets/carousel5.png';
-import carousel6 from '../assets/carousel6.png';
+import { ImagesCarousel } from "@/components/ui/ImagesCarousel";
 
-
-interface ImageCarouselProps {
-    images: string[];
-  }
 
 
 export function Home(){
-    const images = [carousel1, carousel2, carousel3, carousel4, carousel5, carousel6];
-    const [currentIndex, setCurrentIndex] = useState(0)
-   
-
-    const nextSlide = () => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-      };
-    
-      const prevSlide = () => {
-        setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
-      };
     return(
-     
-      
         <HomeContainer>
          <Header></Header>
          <MainBanner>
@@ -167,23 +144,7 @@ export function Home(){
                 </div>
             </div>
          </PurrCare>
-         <Carousel>
-         <button onClick={prevSlide}>Anterior</button>
-            {images.map((image, index) => (
-            <img
-                key={image}
-                src={image}
-                alt={`Slide ${index + 1}`}
-                style={{
-                width: '100%',
-                flex: '0 0 auto',
-                transform: `translateX(-${currentIndex * 100}%)`,
-                transition: 'transform 0.5s ease',
-                }}
-            />
-            ))}
-              <button onClick={nextSlide}>Próximo</button>
-         </Carousel>
+         <ImagesCarousel></ImagesCarousel>
         <PlanPrices></PlanPrices>
         <Feedbacks></Feedbacks>
         <Contact></Contact>

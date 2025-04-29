@@ -388,10 +388,6 @@ export const PurrCare = styled.section`
     
   }
 `
-export const Carousel = styled.section`
-  
-
-`
 
 
 

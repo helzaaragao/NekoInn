@@ -1,9 +1,10 @@
 import { Envelope, FacebookLogo, InstagramLogo, LinkedinLogo, MapPinArea, TwitterLogo, YoutubeLogo } from '@phosphor-icons/react'
 import newsLetter from '../../assets/newsletter.svg'
 import { Phone } from 'lucide-react'
+import { FooterContainer } from './style'
 export function Footer(){
     return(
-        <>
+        <FooterContainer>
             <div>
                 <div>
                         <img src={newsLetter} alt="" />
@@ -62,6 +63,6 @@ export function Footer(){
                 </div>
             </div>
         
-        </>
+        </FooterContainer>
     )
 }

@@ -49,21 +49,21 @@ export function Feedbacks(){
                   
                 <SlidesContainer $isDesktop={isDesktop}>
                     <Slide $isDesktop={isDesktop}  $isActive={isDesktop || currentSlide === 0}>
-                         <Quotes size={32} />
+                         <Quotes />
                          <p>Leaving my cat at NekoInn was the best decision I ever made. The staff went above and beyond to ensure that my furry friend felt loved and cared for. I received regular updates and photos, which put my mind at ease during my time away. Thank you, NekoInn, for providing such a wonderful home away from home for my cat!</p>
                          <figure>
                             <img src={Emily} alt="" />
                          </figure>
                     </Slide>
                     <Slide $isDesktop={isDesktop} $isActive={isDesktop || currentSlide === 1}>
-                         <Quotes size={32} />
+                         <Quotes />
                          <p>I cannot recommend NekoInn enough! From the moment I walked in, I knew my cat would be in good hands. The facilities are clean and spacious, and the staff is incredibly friendly and attentive. My cat came back home relaxed and happy, and I will definitely be using NekoInn for all my future boarding needs.</p>
                          <figure>
                             <img src={Mark} alt="" />
                          </figure>
                     </Slide>
                     <Slide $isDesktop={isDesktop} $isActive={isDesktop || currentSlide === 2}>
-                         <Quotes size={32} />
+                         <Quotes/>
                          <p>NekoInn made the experience so much easier. Their personalized care and attention to detail set them apart from other boarding facilities. I loved receiving updates and photos of my cat enjoying her stay. I have complete peace of mind knowing she's in the care of such dedicated professionals. Thank you, NekoInn!</p>
                          <figure>
                             <img src={EmilyS} alt="" />
@@ -82,4 +82,3 @@ export function Feedbacks(){
         </FeedbacksContainer>
     )
 }
-// https://chakra-ui.com/docs/components/accordion

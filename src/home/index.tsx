@@ -144,7 +144,7 @@ export function Home(){
                 </div>
             </div>
          </PurrCare>
-         <ImagesCarousel></ImagesCarousel>
+        <ImagesCarousel></ImagesCarousel>
         <PlanPrices></PlanPrices>
         <Feedbacks></Feedbacks>
         <Contact></Contact>

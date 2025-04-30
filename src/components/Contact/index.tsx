@@ -1,12 +1,14 @@
+import { ContactContainer, FormContact } from "./style";
+
 export function Contact(){
     return(
-        <>
+        <ContactContainer>
         <header>
             <span>SECURE YOUR CAT'S STAY TODAY</span>
                 <h2>Book Now</h2>
                 <p>Ready to reserve your cat's spot at NekoInn? Our easy-to-use booking system makes it simple to schedule your cat's stay with us. Just select your desired dates, choose from our range of accommodations and services, and complete your reservation in a few easy steps.</p>
         </header>
-        <form action="" method="post">
+        <FormContact action="" method="post">
             <div>
                 <label htmlFor="name">FULL NAME</label>
                 <input type="text" />
@@ -32,9 +34,9 @@ export function Contact(){
                 <input type="number" />
             </div>
             <div>
-                <label htmlFor="numberPets">Purr Plan</label>
+                <label htmlFor="numberPets">PURR PLAN</label>
                 <select name="opcoes" id="opcoes" required>
-                    <option value="" disabled selected>Selecione</option>
+                    <option defaultValue="selecione">Selecione</option>
                     <option value="opcao1">PURR DUCAL</option>
                     <option value="opcao2">PURR IMPERIAL</option>
                     <option value="opcao3">PURR ROYAL</option>
@@ -43,8 +45,8 @@ export function Contact(){
             <button>BOOK NOW</button>
            
 
-        </form>
+        </FormContact>
            
-        </>
+        </ContactContainer>
     )
 }

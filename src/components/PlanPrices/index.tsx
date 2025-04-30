@@ -73,7 +73,7 @@ export function PlanPrices(){
                     <button>BOOK NOW</button> 
                 </article>
                 <article>
-                <div>
+                  <div>
                     <span>PURR ROYAL</span>
                     <img src={pinkCrown} alt="" />
                     <h4>$299.99<small>PER DAY</small></h4>

@@ -23,6 +23,7 @@ import { ImagesCarousel } from "@/components/ui/ImagesCarousel";
 
 export function Home(){
     return(
+        <>
         <HomeContainer>
          <Header></Header>
          <MainBanner>
@@ -146,7 +147,10 @@ export function Home(){
         <PlanPrices></PlanPrices>
         <Feedbacks></Feedbacks>
         <Contact></Contact>
-        <Footer></Footer>
+        
         </HomeContainer>
+        <Footer></Footer>
+
+</>
     )
 }

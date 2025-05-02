@@ -15,7 +15,7 @@ export const HeaderContainer = styled.header`
 `
 export const HamburgerButton = styled.button<{$isOpen:boolean}>`
     display: flex;
-    top: 2rem;      // Distância do topo
+    top: 2rem;      
     right: 1rem; 
     z-index: 1001; 
     cursor: pointer;
@@ -93,14 +93,17 @@ export const ChackraSwitchIndicador = styled(Switch.Indicator)`
  
 `
 
-
-
 export const NavLink = styled.a`
   text-decoration: none;
   padding-left: 2.5rem;
   font-size: 1.4rem;
   font-weight: bold;
   margin-bottom: 2rem;
+  @media (min-width: 1024px) {
+    font-size: 0.875rem;
+    padding-left: 0;
+    
+  }
 `
 export const NavMobile = styled.nav`
     margin-top: 4rem;
@@ -114,7 +117,9 @@ export const NavMobile = styled.nav`
 export const NavDesktop = styled.nav`
     display: none;
 
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
     display: flex;
+    align-items: center;
+    justify-content: center;
   }
 `

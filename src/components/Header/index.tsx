@@ -72,7 +72,15 @@ export function Header(){
                         <NavLink href="#">Our Rooms</NavLink>
                         <NavLink href="#">Purr Care</NavLink>
                         <NavLink href="#">Testimonial</NavLink>
-                         {/* Light/Dark */}
+                        <ChakraSwitchRoot  size="lg"
+                                 >
+                                            <Switch.HiddenInput />
+                                            <ChakraSwitchControl>
+                                                <ChackraSwitchIndicador fallback={<Sun size={32} data-icon="sun"/>}>
+                                                    <Moon size={32} data-icon="moon"/>
+                                                </ChackraSwitchIndicador>
+                                            </ChakraSwitchControl>
+                        </ChakraSwitchRoot>
                         <button>Book Now</button>
                     </NavDesktop>
                 )}

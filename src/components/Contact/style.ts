@@ -28,7 +28,7 @@ export const FormContact = styled.form`
     gap: 1.5rem;
     padding: 1rem;
     div{
-        border: 1px solid ;
+        border: 1px solid;
         height: 4rem;
         border-radius: 40px;
         padding-left: 2rem;

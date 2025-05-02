@@ -3,6 +3,7 @@ import Introducing from "../assets/pexels-tomas-ryant-2870510 1.png"
 
 export const HomeContainer = styled.main`
     padding: 1rem;
+    overflow-x: hidden; 
  
 `
 
@@ -388,6 +389,7 @@ export const PurrCare = styled.section`
     
   }
 `
+
 
 
 

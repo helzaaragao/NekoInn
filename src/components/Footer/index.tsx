@@ -1,19 +1,19 @@
 import { Envelope, FacebookLogo, InstagramLogo, LinkedinLogo, MapPinArea, TwitterLogo, YoutubeLogo } from '@phosphor-icons/react'
 import newsLetter from '../../assets/newsletter.svg'
 import { Phone } from 'lucide-react'
-import { FooterContainer } from './style'
+import { ContactInfos, EmailNewsletter, FooterContainer, Newsletter } from './style'
 export function Footer(){
     return(
         <FooterContainer>
-            <div>
+            <Newsletter>
                 <div>
                         <img src={newsLetter} alt="" />
                         <div>
                             <span>STAY IN TOUCH</span>
                             <h4>Newsletter</h4>
-                        </div>
-                    </div>
-                    <div>
+                         </div>
+                </div>
+                    <EmailNewsletter>
                         <div>
                             <label htmlFor="email">EMAIL</label>
                             <input type="email" />
@@ -21,9 +21,9 @@ export function Footer(){
                         <div>
                         <Envelope size={32} />
                         </div>
-                    </div>
-            </div>
-            <div>
+                    </EmailNewsletter>
+            </Newsletter>
+            <ContactInfos>
                 <div>
                     <section>
                     <MapPinArea size={32} weight="bold" />
@@ -61,7 +61,7 @@ export function Footer(){
                 <div>
                     <p>2024 © COPYRIGHT - NEKOINN A 5 STAR PURR HOTEL</p>
                 </div>
-            </div>
+            </ContactInfos>
         
         </FooterContainer>
     )

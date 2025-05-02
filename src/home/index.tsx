@@ -21,8 +21,6 @@ import { Button } from "@/components/ui/Button";
 import { AccordionChackra } from "@/components/ui/Accordion";
 import { ImagesCarousel } from "@/components/ui/ImagesCarousel";
 
-
-
 export function Home(){
     return(
         <HomeContainer>

@@ -11,6 +11,11 @@ export const HeaderContainer = styled.header`
     width: 11.125rem;
     height: 4.313rem;
   }
+  @media (min-width: 1024px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
   
 `
 export const HamburgerButton = styled.button<{$isOpen:boolean}>`
@@ -121,5 +126,22 @@ export const NavDesktop = styled.nav`
     display: flex;
     align-items: center;
     justify-content: center;
+
+    ul{
+      width: 25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 1.2rem;
+    }
+    div{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30rem;
+      Button{
+        width: 10.313rem;
+      }
+    }
   }
 `

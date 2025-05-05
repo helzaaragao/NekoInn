@@ -7,7 +7,8 @@ export const ButtonContainer = styled.div`
   button{ 
     width: 100%;
     height: 4.063rem;
-    background-color: ${({ theme }) => theme.colors["secundary/hover"]};
+    background-color: ${({ theme }) => theme.colors["main-color"]};
+    color: ${({ theme }) => theme.colors["day-background"]};
     font-weight: bold;
     font-size: 0.7rem;
     border-radius: 220px;

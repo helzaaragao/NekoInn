@@ -4,6 +4,9 @@ import Introducing from "../assets/pexels-tomas-ryant-2870510 1.png"
 export const HomeContainer = styled.main`
     padding: 1rem;
     overflow-x: hidden; 
+    @media (min-width: 1024px) {
+      padding: 2rem;
+  }
  
 `
 

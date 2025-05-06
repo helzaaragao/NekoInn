@@ -33,7 +33,7 @@ export const HamburgerButton = styled.button<{$isOpen:boolean}>`
     width: 3.188rem;
     height: 2.688rem;
    
-    @media (min-width: 768px) {
+    @media (min-width: 1024px) {
     display: none;
   }
 `
@@ -128,6 +128,14 @@ export const NavMobile = styled.nav`
     flex-direction: column;
     color:  ${({ theme }) => theme.colors["day-background"]};
     padding-left: 0;
+    Button{
+      background-color: ${({ theme }) => theme.colors["secundary/hover"]};
+    }
+    @media (min-width: 768px) {
+      Button{
+        width: 50%;
+      }
+    }
     
 `
 

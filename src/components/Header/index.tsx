@@ -9,42 +9,52 @@ import { Button } from '../ui/Button';
 
 
 export function Header(){
-    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    const [isMobileView, setIsMobileView] = useState(false); 
+    const [isBurgerMenu, setIsBurgerMenu] = useState(false);
+    const [isSmallScreenView, setIsSmallScreenView] = useState(false); 
 
     useEffect(() => {
-        const checkIfMobile = () => {
-            setIsMobileView(window.innerWidth <= 768);
+        const checkScreenSize = () => {
+            setIsSmallScreenView(window.innerWidth <= 1024);
         }
         
-        checkIfMobile();
-        window.addEventListener('resize', checkIfMobile)
+        checkScreenSize();
+        window.addEventListener('resize', checkScreenSize)
 
-        return () => window.removeEventListener('resize', checkIfMobile)
+        return () => window.removeEventListener('resize', checkScreenSize)
     }, [])
+    
+    useEffect(() => {
+        if (isBurgerMenu) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'auto';
+        }
+
+        // Cleanup function para restaurar o scroll quando o componente desmontar
+        return () => {
+            document.body.style.overflow = 'auto';
+        };
+    }, [isBurgerMenu]);
 
     const toggleMobileMenu = () => {
-        setIsMobileMenuOpen(prevState => !prevState);
+        setIsBurgerMenu(prevState => !prevState);
       };
     
     return(
         <HeaderContainer>
-          
             <img src={logo} alt="" />
-           
-            
-            {isMobileView && (
+            {isSmallScreenView && (
                 <>
-                                <HamburgerButton onClick={toggleMobileMenu} $isOpen={isMobileMenuOpen}>
-                                {isMobileMenuOpen ? (
+                                <HamburgerButton onClick={toggleMobileMenu} $isOpen={isBurgerMenu}>
+                                {isBurgerMenu ? (
                                     <img src={X} alt="Close menu" />
                                 ) : (
                                     <img src={menuHambuguer} alt="Open menu" />
                                 )}
                                 </HamburgerButton>
 
-                    {isMobileMenuOpen && (
-                            <MobileMenu $isOpen={isMobileMenuOpen}>
+                    {isBurgerMenu && (
+                            <MobileMenu $isOpen={isBurgerMenu}>
                                  <ChakraSwitchRoot  size="lg"
                                  >
                                             <Switch.HiddenInput />
@@ -68,7 +78,7 @@ export function Header(){
                 </>
             )}
 
-            {!isMobileView && (
+            {!isSmallScreenView && (
                     <NavDesktop>
                         <ul>
                             <NavLink href="#">About us</NavLink>

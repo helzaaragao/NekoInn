@@ -50,12 +50,10 @@ export function Home(){
             </section>
             <section>
                 <figure>
-                    
                     <div>
                        <Vectors src={vector} alt="" $variant='primary' />
                        <Vectors src={vector} alt="" $variant='secundary' />
-                       <img src={mainHero} alt="" />
-                        
+                       <img src={mainHero} alt="" />     
                     </div>
                  
                     <Cats>
@@ -69,7 +67,6 @@ export function Home(){
                 </figure>
               
             </section>
-            
          </MainBanner>
          <Address>
             <section>

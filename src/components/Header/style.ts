@@ -14,7 +14,11 @@ export const HeaderContainer = styled.header`
   @media (min-width: 1024px) {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 2.5rem;
+
+  }
+  @media (min-width: 1440px){
+    gap: 0;
   }
   
 `
@@ -57,7 +61,15 @@ export const ChakraSwitchRoot = styled(Switch.Root)`
   --icon-size: 1rem; 
   margin-left: 2rem;
   position: relative;
- 
+
+  @media (min-width: 1024px) {
+   
+
+  }
+
+   @media (min-width: 1440px){
+    
+  }
   
 `
 export const ChakraSwitchControl = styled(Switch.Control)`

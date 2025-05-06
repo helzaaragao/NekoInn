@@ -29,7 +29,9 @@ export function Header(){
     
     return(
         <HeaderContainer>
+          
             <img src={logo} alt="" />
+           
             
             {isMobileView && (
                 <>
@@ -84,7 +86,7 @@ export function Header(){
                                                     </ChackraSwitchIndicador>
                                                 </ChakraSwitchControl>
                             </ChakraSwitchRoot>
-                            <Button>Book Now</Button>
+                            <Button></Button>
                         </div>
                       
                     </NavDesktop>

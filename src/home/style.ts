@@ -110,6 +110,54 @@ export const MainBanner = styled.div`
         }
      }
    }
+
+   @media (min-width: 1024px) {
+     display: flex;
+     flex-direction: row;
+     width: 100%;
+     text-align: start;
+     align-items: center;
+     gap: 5rem;
+   
+
+     > section:first-child{
+      width: 45%;
+      article{
+        button{
+          width: 12.5rem;
+        }
+      }
+      aside{
+        width: 21.063rem;
+        figure{
+          right: 61%;
+
+        }
+      }
+     }
+     > section:nth-child(2){
+      width: 50%;
+      margin-top: 2rem;
+     figure{
+      > div:first-child{
+        img:last-child{
+            border-bottom-left-radius: 0px;
+         }
+      }
+     }
+
+     }
+  }
+
+  @media (min-width: 1440px) {
+    > section:first-child{
+      aside{
+        figure{
+          right: 73%;
+        }
+      }
+    }
+  }
 `
 export const Vectors = styled.img<{$variant: 'primary' | 'secundary'}>`
    max-width: 100%;
@@ -131,6 +179,34 @@ export const Vectors = styled.img<{$variant: 'primary' | 'secundary'}>`
     right: 50%;
     bottom: 50%;
   `}
+
+@media (min-width: 1024px) {
+  ${props => props.$variant === 'primary' && `
+    left: 65%;
+    top: 68%;
+    transform: scaleX(-1);
+  `}
+ 
+ ${props => props.$variant === 'secundary' && `
+   
+    right: 65%;
+    bottom: 65%;
+  `}
+}
+@media (min-width: 1440px) {
+  ${props => props.$variant === 'primary' && `
+    width: 300px;
+    left: 55%;
+    top: 60%;
+    transform: scaleX(-1);
+  `}
+ 
+ ${props => props.$variant === 'secundary' && `
+    width: 300px;
+    right: 60%;
+    bottom: 55%;
+  `}
+}
  
 `
 

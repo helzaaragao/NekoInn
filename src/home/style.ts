@@ -4,13 +4,13 @@ import Introducing from "../assets/pexels-tomas-ryant-2870510 1.png"
 export const HomeContainer = styled.main`
     padding: 1rem;
     overflow-x: hidden; 
-    @media (min-width: 1024px) {
+    @media (min-width: 768px) {
       padding: 2rem;
   }
  
 `
 
-export const MainBanner = styled.div`
+export const HeroBanner = styled.div`
    display: flex;
    flex-direction: column;
    text-align: center;
@@ -93,9 +93,6 @@ export const MainBanner = styled.div`
      figure{
         width: 100%;
        position: relative;
-     
-        
-        
        > div:first-child{
         position: relative;
         display: flex;
@@ -111,6 +108,38 @@ export const MainBanner = styled.div`
      }
    }
 
+   @media (min-width: 768px) {
+    > section:first-child{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      article{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        button{
+          width: 50%;
+        }
+      }
+      aside{
+        width: 60%;
+        figure{
+          right: 19%;
+        }
+      
+      }
+    }
+   > section:nth-child(2){
+    figure{
+      > div:first-child{
+        img:last-child{
+            border-bottom-left-radius: 300px;
+         }
+      }
+     }
+   }
+   }
+
    @media (min-width: 1024px) {
      display: flex;
      flex-direction: row;
@@ -123,6 +152,9 @@ export const MainBanner = styled.div`
      > section:first-child{
       width: 45%;
       article{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
         button{
           width: 12.5rem;
         }
@@ -166,7 +198,7 @@ export const Vectors = styled.img<{$variant: 'primary' | 'secundary'}>`
    z-index: 1;
    display: block;
   
-  ${props => props.$variant === 'primary' && `
+ ${props => props.$variant === 'primary' && `
     width: 200px;
     // right: 40%;
     left: 45%;
@@ -178,7 +210,21 @@ export const Vectors = styled.img<{$variant: 'primary' | 'secundary'}>`
     width: 200px;
     right: 50%;
     bottom: 50%;
+  `} 
+
+@media (min-width: 768px) { 
+  ${props => props.$variant === 'primary' && `
+    width: 250px;
+    left: 60%;
+    top: 65%;
   `}
+ 
+ ${props => props.$variant === 'secundary' && `
+    width: 250px;
+    right: 60%;
+    bottom: 65%;
+  `} 
+}
 
 @media (min-width: 1024px) {
   ${props => props.$variant === 'primary' && `
@@ -248,6 +294,29 @@ export const Cats = styled.div`
     left: 50%;
     transform:  translateY(160%) translateX(-30%);
   }
+
+  @media (min-width: 768px) { 
+    img {
+      width: 6.5rem;
+    }
+    img:nth-child(1) {
+      transform: translateX(-225%) translateY(-50%);
+    }
+    img:nth-child(2) {
+      transform: translateX(-215%);
+    }
+    img:nth-child(3) {
+      transform: translateY(90%) translateX(-190%);
+    }
+    img:nth-child(4) {
+      transform:  translateY(200%) translateX(-40%);
+    }
+  }
+  @media (min-width: 1440px) {
+    img {
+      width: 8.125rem;
+    }
+  }
 `;
 
 export const Address = styled.address`
@@ -260,7 +329,7 @@ export const Address = styled.address`
 
    > section:first-child{
         height: 40%;
-        background-color: ${({ theme }) => theme.colors["main-color"]};
+        background-color: ${({ theme }) => theme.colors["background/text"]};
         display: flex;
         align-items: center;
         justify-content: center;
@@ -269,7 +338,7 @@ export const Address = styled.address`
         border-top-right-radius: 40px;
         div{
           width: 9rem;
-          background-color: ${({ theme }) => theme.colors["secundary/hover"]};
+          background-color: ${({ theme }) => theme.colors["main-color"]};
           border-radius: 60px;
           height: 40%;
           display: flex;
@@ -293,10 +362,10 @@ export const Address = styled.address`
         padding-left: 1.1rem;
         /* border-top-left-radius: 40px;
         border-top-right-radius: 40px; */
-        background-color: ${({ theme }) => theme.colors["secundary/hover"]};
+        background-color: ${({ theme }) => theme.colors["main-color"]};
         div{
           width: 4rem;
-          background-color: ${({ theme }) => theme.colors["main-color"]};
+          background-color: ${({ theme }) => theme.colors["background/text"]};
           border-radius: 60px;
           height: 50%;
           display: flex;
@@ -311,7 +380,7 @@ export const Address = styled.address`
     }
     >section:nth-child(3){
         height: 30%;
-        background-color: ${({ theme }) => theme.colors["secundary/hover"]};
+        background-color: ${({ theme }) => theme.colors["main-color"]};
         display: flex;
         border-bottom-left-radius: 40px;
         border-bottom-right-radius: 40px;
@@ -323,7 +392,7 @@ export const Address = styled.address`
 
             div{
             width: 4rem;
-            background-color: ${({ theme }) => theme.colors["main-color"]};
+            background-color: ${({ theme }) => theme.colors["background/text"]};
             border-radius: 60px;
             height: 50%;
             display: flex;
@@ -336,6 +405,9 @@ export const Address = styled.address`
               font-weight: 600;
           }
         }
+    }
+    @media (min-width: 768px) { 
+      width: 70%;
     }
 `
 export const About = styled.section`

@@ -53,6 +53,12 @@ export const MobileMenu = styled.div<{ $isOpen: boolean }>`
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
 
+    @media (min-width: 768px) {
+      width: 60%;
+      
+
+  }
+
 `
 export const ChakraSwitchRoot = styled(Switch.Root)`
   margin-top: 1rem;

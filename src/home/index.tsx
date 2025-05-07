@@ -69,9 +69,8 @@ export function Home(){
             <Address>
                 <section>
                     <div>
-                    <MapPinArea size={32} weight="bold" />
+                         <MapPinArea size={32} weight="bold" />
                     </div>
-                
                     <p>123 Meow Avenue. 
                     Kittyville, CA 90210 United States</p>
                 </section>

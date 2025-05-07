@@ -337,14 +337,20 @@ export const Address = styled.address`
         border-top-left-radius: 40px;
         border-top-right-radius: 40px;
         div{
-          width: 9rem;
+          width: 4rem;
+          height: 4rem;
+          border-radius: 50%; 
+          flex-shrink: 0;
           background-color: ${({ theme }) => theme.colors["main-color"]};
-          border-radius: 60px;
-          height: 40%;
           display: flex;
           align-items: center;
           justify-content: center;
           margin-left: 1rem;
+          svg {
+            width: 2rem;  
+            height: 2rem;
+          }
+         
         }
         
         p{
@@ -365,12 +371,17 @@ export const Address = styled.address`
         background-color: ${({ theme }) => theme.colors["main-color"]};
         div{
           width: 4rem;
+          height: 4rem;
+          border-radius: 50%; 
+          flex-shrink: 0;
           background-color: ${({ theme }) => theme.colors["background/text"]};
-          border-radius: 60px;
-          height: 50%;
           display: flex;
           align-items: center;
           justify-content: center;
+          svg {
+            width: 2.5rem;  
+            height: 2.5rem;
+          }
         }
         
         p{
@@ -391,13 +402,19 @@ export const Address = styled.address`
           padding-left: 1.1rem;
 
             div{
-            width: 4rem;
+              width: 4rem;
+              height: 4rem;
+              border-radius: 50%; 
+              flex-shrink: 0;
             background-color: ${({ theme }) => theme.colors["background/text"]};
-            border-radius: 60px;
-            height: 50%;
+           
             display: flex;
             align-items: center;
             justify-content: center;
+            svg {
+            width: 2.5rem;  
+            height: 2.5rem;
+          }
           }
           
           p{
@@ -407,7 +424,14 @@ export const Address = styled.address`
         }
     }
     @media (min-width: 768px) { 
-      width: 70%;
+      width: 75%;
+      margin: 0 auto; 
+
+      /* > section:first-child{
+        div{
+          
+        }
+      } */
     }
 `
 export const About = styled.section`
@@ -438,6 +462,7 @@ export const About = styled.section`
     Button{
       color: ${({ theme }) => theme.colors["day-background"]};
       background-color: ${({ theme }) => theme.colors["main-color"]};
+      width: 50%;
     }
   }
   figure{

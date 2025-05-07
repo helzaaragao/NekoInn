@@ -69,7 +69,7 @@ export function Header(){
                                     <NavLink href="#">Our Rooms</NavLink>
                                     <NavLink href="#">Purr Care</NavLink>
                                     <NavLink href="#">Testimonial</NavLink>
-                                    <Button></Button>
+                                    <Button bgColor="secundary/hover"></Button>
                                 </NavMobile>
 
                           </MobileMenu>

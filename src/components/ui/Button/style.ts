@@ -1,13 +1,14 @@
 import styled from "styled-components";
 
-export const ButtonContainer = styled.div`
+export const ButtonContainer = styled.div<{ $bgColor?: string }>`
   width: 100%;
   padding: 0 1rem; 
  
   button{ 
     width: 100%;
     height: 4.063rem;
-    background-color: ${({ theme }) => theme.colors["main-color"]};
+    background-color: ${({ theme, $bgColor }) => 
+      $bgColor || theme.colors["main-color"]};
     color: ${({ theme }) => theme.colors["day-background"]};
     font-weight: bold;
     font-size: 0.7rem;

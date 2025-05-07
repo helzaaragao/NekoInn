@@ -138,9 +138,10 @@ export const NavMobile = styled.nav`
       background-color: ${({ theme }) => theme.colors["secundary/hover"]};
     }
     @media (min-width: 768px) {
-      Button{
-        width: 50%;
-      }
+      /* Button{
+        margin-left: 0;
+        width: 60%;
+      } */
     }
     
 `

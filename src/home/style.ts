@@ -498,6 +498,11 @@ figure{
       font-weight: 700;
     }
   }
+  @media (min-width: 768px) { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 `
 export const PurrCare = styled.section`
   text-align: start;
@@ -563,6 +568,18 @@ export const PurrCare = styled.section`
       }
     }
     
+  }
+  @media (min-width: 768px) { 
+    width: 80%;
+    margin: 3rem auto; 
+    > div{
+      div{
+        p{
+          width: 100%;
+}
+      }
+    
+    }
   }
 `
 

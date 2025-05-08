@@ -16,7 +16,7 @@ const images = [carousel1, carousel2, carousel3, carousel4, carousel5, carousel6
 export function ImagesCarousel(){
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isAutoPlaying, setIsAutoPlaying] = useState(true); 
-  const isMobile = useMediaQuery({maxWidth: 600});
+  const isMobile = useMediaQuery({maxWidth: 1024});
 
   useEffect(() => {
     if(!isAutoPlaying) return;

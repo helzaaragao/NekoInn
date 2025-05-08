@@ -4,6 +4,9 @@ export const PricesContainer = styled.section`
     display: flex;
     flex-direction: column;
     gap: 3rem;
+    @media (min-width: 768px) {
+        align-items: center;
+    }
 `
 export const PricesHeader = styled.header`
     text-align: center;
@@ -195,5 +198,8 @@ export const PricesSection = styled.section`
                 font-size: 0.7rem;
                 font-weight: bold;
             }
+    }
+    @media (min-width: 768px) {
+        gap: 2rem;
     }
 `

@@ -61,6 +61,41 @@ export const ImagesCarouselMobile = styled.div`
         top: 40%;
         right: -4%;
     }
+    @media (min-width: 768px) {
+    button:first-child{
+        width: 4rem;
+        height: 4rem;
+        svg{
+            width: 2.5rem;
+            height: 2.5rem;
+        }
+        left: 4%;
+    }
+        div:nth-child(2){
+            img{
+                height: 40rem; 
+            }
+        }
+        div:nth-child(3){
+            width: 8rem;
+            height: 8rem;
+                img{
+                width: 5rem;
+                height: 5rem;
+                }
+                top: 90%;
+                right: 15%;
+        }
+    button:nth-child(4){
+        width: 4rem;
+        height: 4rem;
+        svg{
+            width: 2.5rem;
+            height: 2.5rem;
+        }
+        right: 5%;
+    }
+    }
 
    
 `

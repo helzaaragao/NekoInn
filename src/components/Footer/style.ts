@@ -38,6 +38,9 @@ export const Newsletter = styled.section`
             }
         }
     }
+     @media (min-width: 768px) {
+        align-items: center;
+     }
 `
 export const EmailNewsletter = styled.form`
     display: flex;
@@ -46,7 +49,7 @@ export const EmailNewsletter = styled.form`
     border: 1px solid ;
     height: 4rem;
     border-radius: 40px;
-   margin: 1rem;
+    margin: 1rem;
     border-color: ${({ theme }) => theme.colors["border-gray"]};
    
     > div{
@@ -75,6 +78,10 @@ export const EmailNewsletter = styled.form`
             align-items: center;
             justify-content: center;
         }
+
+         @media (min-width: 768px) {
+            width: 70%;
+         }
 
 `
 export const ContactInfos = styled.section`
@@ -164,4 +171,8 @@ export const ContactInfos = styled.section`
         }
    
     }
+     @media (min-width: 768px) {
+       
+    
+     }
 `

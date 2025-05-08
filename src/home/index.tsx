@@ -19,7 +19,7 @@ import { Footer } from "@/components/Footer";
 import { About, Address, Cats, HeroBanner, HomeContainer, PurrCare, Rooms, Vectors } from "./style";
 import { Button } from "@/components/ui/Button";
 import { AccordionChackra } from "@/components/ui/Accordion";
-import { ImagesCarousel } from "@/components/ui/ImagesCarousel";
+import { GalleryCarousel } from "@/components/ui/GalleryCarousel";
 
 export function Home(){
     return(
@@ -137,7 +137,7 @@ export function Home(){
                     </div>
                 </div>
             </PurrCare>
-            <ImagesCarousel></ImagesCarousel>
+            <GalleryCarousel></GalleryCarousel>
             <PlanPrices></PlanPrices>
             <Feedbacks></Feedbacks>
             <Contact></Contact>

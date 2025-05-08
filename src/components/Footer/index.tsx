@@ -13,7 +13,7 @@ export function Footer(){
                             <h4>Newsletter</h4>
                          </div>
                 </div>
-                    <EmailNewsletter>
+                <EmailNewsletter>
                         <div>
                             <label htmlFor="email">EMAIL</label>
                             <input type="email" />
@@ -21,7 +21,7 @@ export function Footer(){
                         <div>
                         <Envelope size={32} />
                         </div>
-                    </EmailNewsletter>
+                </EmailNewsletter>
                     <hr />
             </Newsletter>
             <ContactInfos>

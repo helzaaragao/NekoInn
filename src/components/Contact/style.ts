@@ -21,6 +21,13 @@ export const ContactContainer = styled.section`
             padding: 1rem;
         }
     }
+    @media (min-width: 768px) {
+        header{
+            p{
+                font-size: 0.85rem;
+            }
+        }
+    }
 `
 export const FormContact = styled.form`
     display: flex;

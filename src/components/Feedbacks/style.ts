@@ -19,6 +19,13 @@ export const FeedbacksContainer = styled.div`
       font-size: 0.75rem;
      }
     }
+      @media (min-width: 768px) {
+       header{
+        p{
+           font-size: 0.85rem;
+        }
+       }
+      }
 `
 
 export const FeedbacksCarousel = styled.div`
@@ -54,6 +61,26 @@ export const FeedbacksCarousel = styled.div`
         align-items: center;
         justify-content: center;
   }
+   @media (min-width: 768px) {
+     > button:first-child{
+      width: 3rem;
+      height: 3rem;
+      left: 1%;
+      svg{
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+     }
+     button:nth-child(3){
+      width: 3rem;
+      height: 3rem;
+      right: 1%;
+       svg{
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+     }
+   }
 `;
 
 export const SlidesContainer = styled.section<{ $isDesktop: boolean }>`
@@ -85,5 +112,8 @@ export const Slide = styled.section<{$isDesktop: boolean, $isActive: boolean }>`
     
      
     }
+   }
+   @media (min-width: 768px) {
+    padding: 2rem;
    }
 `

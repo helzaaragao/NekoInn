@@ -11,7 +11,7 @@ export function Feedbacks(){
 
     useEffect(() => {
         const checkScreenSize = () => {
-          setIsDesktop(window.innerWidth >= 768);
+          setIsDesktop(window.innerWidth >= 1024);
         };
     
         checkScreenSize();

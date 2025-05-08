@@ -26,6 +26,11 @@ export const PricesHeader = styled.header`
     p{
         font-size: 0.75rem;
     }
+    @media (min-width: 768px) {
+         p{
+        font-size: 0.85rem;
+    }
+    }
 `
 export const PricesSection = styled.section`
     display: flex;

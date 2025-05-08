@@ -117,6 +117,9 @@ export const HeroBanner = styled.div`
         display: flex;
         flex-direction: column;
         align-items: center;
+        p{
+          font-size: 0.85rem;
+        }
         button{
           width: 50%;
         }
@@ -475,6 +478,13 @@ export const About = styled.section`
       position: relative;
     }
   }
+   @media (min-width: 768px) { 
+      article{
+        p{
+           font-size: 0.85rem;
+        }
+      }
+   }
 `
 export const Rooms = styled.section`
 figure{

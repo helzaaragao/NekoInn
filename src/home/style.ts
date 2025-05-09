@@ -154,6 +154,7 @@ export const HeroBanner = styled.div`
 
      > section:first-child{
       width: 45%;
+      align-items: start;
       article{
         display: flex;
         flex-direction: column;
@@ -231,15 +232,15 @@ export const Vectors = styled.img<{$variant: 'primary' | 'secundary'}>`
 
 @media (min-width: 1024px) {
   ${props => props.$variant === 'primary' && `
-    left: 65%;
-    top: 68%;
+    left: 50%;
+    top: 60%;
     transform: scaleX(-1);
   `}
  
  ${props => props.$variant === 'secundary' && `
    
-    right: 65%;
-    bottom: 65%;
+    right: 55%;
+    bottom: 55%;
   `}
 }
 @media (min-width: 1440px) {
@@ -313,6 +314,20 @@ export const Cats = styled.div`
     }
     img:nth-child(4) {
       transform:  translateY(200%) translateX(-40%);
+    }
+  }
+  @media (min-width: 1024px) {
+    img:nth-child(1) {
+      transform: translateX(-170%) translateY(-20%);
+    }
+     img:nth-child(2) {
+      transform: translateX(-190%);
+    }
+    img:nth-child(3) {
+      transform: translateY(100%) translateX(-160%);
+    }
+      img:nth-child(4) {
+      transform:  translateY(140%);
     }
   }
   @media (min-width: 1440px) {
@@ -429,13 +444,30 @@ export const Address = styled.address`
     @media (min-width: 768px) { 
       width: 75%;
       margin: 0 auto; 
-
-      /* > section:first-child{
-        div{
-          
-        }
-      } */
     }
+     @media (min-width: 1024px) {
+      flex-direction: row;
+      width: 100%;
+      height: 10rem;
+
+      > section:first-child{
+          border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        width: 40%;
+        height: 100%;
+      }
+         > section:nth-child(2){
+           width: 30%;
+            height: 100%;
+         }
+
+      >section:nth-child(3){
+             border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+         width: 30%;
+        height: 100%;
+      }
+     }
 `
 export const About = styled.section`
   display: flex;

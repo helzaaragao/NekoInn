@@ -14,7 +14,7 @@ export function Header(){
 
     useEffect(() => {
         const checkScreenSize = () => {
-            setIsSmallScreenView(window.innerWidth <= 1024);
+            setIsSmallScreenView(window.innerWidth < 1024);
         }
         
         checkScreenSize();
@@ -30,7 +30,6 @@ export function Header(){
             document.body.style.overflow = 'auto';
         }
 
-        // Cleanup function para restaurar o scroll quando o componente desmontar
         return () => {
             document.body.style.overflow = 'auto';
         };

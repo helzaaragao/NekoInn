@@ -449,23 +449,40 @@ export const Address = styled.address`
       flex-direction: row;
       width: 100%;
       height: 10rem;
+      position: relative;
 
       > section:first-child{
-          border-top-left-radius: 0px;
+        border-top-left-radius: 40px;
         border-top-right-radius: 0px;
-        width: 40%;
+        border-bottom-left-radius: 40px;
+        width: 45%;
         height: 100%;
+        position: absolute;
+        padding-right: 5rem;
+
+      
+        
       }
          > section:nth-child(2){
            width: 30%;
-            height: 100%;
+           height: 100%;
+           position: relative;
+           left: 37%;
+           border-top-left-radius: 90px;
+           border-bottom-left-radius: 90px;
          }
 
       >section:nth-child(3){
-             border-bottom-left-radius: 0px;
-        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 40px;
+        border-top-right-radius: 40px;
+        
          width: 30%;
         height: 100%;
+        position: relative;
+        left: 37%;
+       
+         
       }
      }
 `
@@ -516,6 +533,32 @@ export const About = styled.section`
            font-size: 0.85rem;
         }
       }
+   }
+   @media (min-width: 1024px) {
+    width: 100%;
+    flex-direction: row;
+    article{
+      width: 50%;
+      text-align: start;
+      align-items: start;
+      justify-content: start;
+      padding: 2rem;
+      gap: 1rem;
+      p{
+        padding: 0rem;
+      }
+    }
+    figure{
+      width: 50%;
+      img:first-child{
+         width: 300px;
+         right: 10%;
+      }
+      img:last-child{
+        width: 100%;
+        height: 100%;
+      }
+    }
    }
 `
 export const Rooms = styled.section`

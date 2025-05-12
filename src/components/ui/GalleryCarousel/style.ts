@@ -21,9 +21,6 @@ export const ImagesCarouselMobile = styled.div`
         display: flex;
         align-items: center;
         justify-content: center;
-      
-        
-    
     }
     button:first-child{
         position: absolute;
@@ -96,6 +93,45 @@ export const ImagesCarouselMobile = styled.div`
         right: 5%;
     }
     }
+    
 
    
+`
+export const DesktopImagesCarousel = styled.div`
+ @media (min-width: 1024px) {
+    display: flex;
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+    gap: 1rem;
+    > div{
+    position: relative;
+    width: 100%;
+    figure{
+        position: relative;
+        display: inline-block;
+        img:first-child{
+          display: block;
+          width: 100%;
+          height: auto;
+        }
+        div:last-child{
+          position: absolute;
+          top: 75%;
+          right: 10%;
+          width: 4rem; 
+          height: 4rem;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 2;
+          background-color: ${({ theme }) => theme.colors["main-color"]};
+          img{
+            width: 80%;
+          }
+        }
+    }
+
+    }
+}
 `

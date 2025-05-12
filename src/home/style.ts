@@ -702,12 +702,27 @@ export const PurrCare = styled.section`
   @media (min-width: 1024px) {
     flex-direction: row;
     margin: 0;
+    width: 100%;
+    align-items: center;
+     gap: 1rem;
     article{
-      width: 18.125rem;
+      width: 18rem;
       height: 35rem;
     }
      > div{
+       gap: 1rem;
       flex-direction: row;
+      width: 100%;
+    
+      div {
+        width: 33.3%;
+         img{ 
+       
+         }
+          h4{
+        font-size: 1rem;
+      }
+      }
      }
   }
 `

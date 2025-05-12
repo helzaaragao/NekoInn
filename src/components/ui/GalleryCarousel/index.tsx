@@ -6,7 +6,7 @@ import carousel4 from '../../../assets/carousel4.png';
 import carousel5 from '../../../assets/carousel5.png';
 import carousel6 from '../../../assets/carousel6.png';
 import { useMediaQuery } from 'react-responsive';
-import { ImagesCarouselContainer, ImagesCarouselMobile } from './style';
+import { DesktopImagesCarousel, ImagesCarouselContainer, ImagesCarouselMobile } from './style';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 import PetHouse from '../../../assets/PetHouse-Icon.svg'
 
@@ -16,7 +16,7 @@ const images = [carousel1, carousel2, carousel3, carousel4, carousel5, carousel6
 export function GalleryCarousel(){
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isAutoPlaying, setIsAutoPlaying] = useState(true); 
-  const isMobile = useMediaQuery({maxWidth: 1024});
+  const isMobile = useMediaQuery({maxWidth: 1023});
 
   useEffect(() => {
     if(!isAutoPlaying) return;
@@ -70,24 +70,30 @@ export function GalleryCarousel(){
           </ImagesCarouselMobile>
             
         ) : (
-          <div>
-            <button onClick={goToPrev}>Anterior</button>
+          <DesktopImagesCarousel>
+        
             {images.map((image, index) => (
               <div 
                 key={index}
                 className={`desktop-slide ${index === currentIndex ? 'active' : ''}`}
               >
-                <img
-                  src={image}
-                  alt={`Slide ${index + 1}`}
-                  className="carousel-image"
-                  draggable="false"
-                />
+                <figure>
+                   <img
+                    src={image}
+                    alt={`Slide ${index + 1}`}
+                    className="carousel-image"
+                    draggable="false"
+                  />
+                  <div>
+                        <img src={PetHouse} alt="" />
+                  </div>
+              </figure>
+             
+                 
           </div>
+          
             ))}
-           
-            <button onClick={goToNext}>Próximo</button>
-          </div>
+          </DesktopImagesCarousel>
         )}
 
      

@@ -520,7 +520,7 @@ export const About = styled.section`
   figure{
     img:first-child{
       position: absolute;
-      width: 200px;
+      width: 12.5rem;
       right: 17%; 
     }
     img:last-child{
@@ -533,26 +533,46 @@ export const About = styled.section`
            font-size: 0.85rem;
         }
       }
+      figure{
+         img:first-child{
+          width: 14.063rem;
+          right: 28%;
+          top: 20%;
+          bottom: 1%;
+        
+         }
+      }
    }
    @media (min-width: 1024px) {
     width: 100%;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
     article{
       width: 50%;
       text-align: start;
-      align-items: start;
+      align-items: flex-start;
       justify-content: start;
       padding: 2rem;
       gap: 1rem;
       p{
         padding: 0rem;
+        font-size: 0.875rem;
+      }
+      Button{
+        width: 45%;
+        height: 2.813rem;
+        margin-left: 0;
+        margin-top: 2rem;
       }
     }
     figure{
       width: 50%;
+      position: relative;
       img:first-child{
-         width: 300px;
+         width: 15.625rem;
          right: 10%;
+         
       }
       img:last-child{
         width: 100%;
@@ -588,6 +608,19 @@ figure{
     flex-direction: column;
     align-items: center;
   }
+   @media (min-width: 1024px) {
+    flex-direction: row;
+    width: 100%;
+    figure{
+      width: 50%;
+      padding: 1rem;
+    }
+    article{
+      width: 50%;
+      padding: 2rem;
+      align-items: start;
+    }
+   }
 `
 export const PurrCare = styled.section`
   text-align: start;
@@ -665,6 +698,17 @@ export const PurrCare = styled.section`
       }
     
     }
+  }
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    margin: 0;
+    article{
+      width: 18.125rem;
+      height: 35rem;
+    }
+     > div{
+      flex-direction: row;
+     }
   }
 `
 

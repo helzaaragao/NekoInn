@@ -26,6 +26,11 @@ export const FeedbacksContainer = styled.div`
         }
        }
       }
+       @media (min-width: 1024px) {
+        header{
+          padding: 2rem;
+        }
+     }
 `
 
 export const FeedbacksCarousel = styled.div`
@@ -81,11 +86,23 @@ export const FeedbacksCarousel = styled.div`
       }
      }
    }
+    @media (min-width: 1024px) {
+        > button:first-child{
+          left: -1%;
+        }
+     button:nth-child(3){
+      right: -1%;
+    }
+    }
 `;
 
 export const SlidesContainer = styled.section<{ $isDesktop: boolean }>`
-   display: ${({ $isDesktop }) => ($isDesktop ? 'grid' : 'block')};
+   display: ${({ $isDesktop }) => ($isDesktop ? 'flex' : 'block')};
+   //mudei de grid para flex
    padding: 2rem;
+    @media (min-width: 1024px) {
+        flex-direction: row;
+     }
 `
 export const Slide = styled.section<{$isDesktop: boolean, $isActive: boolean }>`
    display: ${({ $isDesktop, $isActive }) => ($isDesktop || $isActive ? 'block' : 'none')};
@@ -116,4 +133,16 @@ export const Slide = styled.section<{$isDesktop: boolean, $isActive: boolean }>`
    @media (min-width: 768px) {
     padding: 2rem;
    }
+    @media (min-width: 1024px) {
+      margin-bottom: 3rem;
+       > svg{
+        margin-bottom: 1rem;
+       }
+       p{
+        margin-bottom: 1rem;
+       }
+       figure{
+        margin-bottom: 2rem;
+       }
+    }
 `

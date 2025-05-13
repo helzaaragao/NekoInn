@@ -75,4 +75,29 @@ export const FormContact = styled.form`
         font-weight: bold;
         margin-top: 1rem;
        }
+
+           @media (min-width: 1024px) {
+            display: grid;
+            grid-template-columns: 1fr 1fr; 
+            gap: 1rem;
+            padding: 2rem;
+                & > div:nth-child(1),
+                & > div:nth-child(2) {
+                    grid-column: span 1; 
+                    margin-bottom: 1rem;
+                }
+                 & > div:nth-child(n + 5):nth-child(-n + 7) {
+                grid-column: 1 / -1; 
+                  margin-top: 1rem;
+                   margin-bottom: 1rem;
+                    }
+                    & > button:last-child {
+                    grid-column: 1 / -1;
+                    text-align: center;
+                    justify-self: center;
+                    width: 30%; 
+                    margin-top: 1rem; 
+                }
+
+           }
 `

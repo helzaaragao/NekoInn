@@ -6,6 +6,10 @@ export const FooterContainer = styled.footer`
     border-top-right-radius: 60px;
     border-top-left-radius: 60px;
     padding: 1.2rem;
+     @media (min-width: 1024px) {
+        border-top-right-radius: 120px;
+        border-top-left-radius: 120px;
+     }
 `
 export const Newsletter = styled.section`
     display: flex;
@@ -41,6 +45,19 @@ export const Newsletter = styled.section`
      @media (min-width: 768px) {
         align-items: center;
      }
+         @media (min-width: 1024px) {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2rem;
+           
+             > div{
+                  margin-top: 0;
+             }
+            hr{
+                display: none;
+            }
+         }
 `
 export const EmailNewsletter = styled.form`
     display: flex;
@@ -82,6 +99,9 @@ export const EmailNewsletter = styled.form`
          @media (min-width: 768px) {
             width: 70%;
          }
+          @media (min-width: 1024px) {
+            width: 50%;
+          }
 
 `
 export const ContactInfos = styled.section`
@@ -175,4 +195,12 @@ export const ContactInfos = styled.section`
        
     
      }
+       @media (min-width: 1024px) {
+         display: grid;
+         grid-template-columns: 1fr 1fr 1fr;
+         div:last-child{
+            grid-column: 2 / 4;
+          
+         }
+       }
 `

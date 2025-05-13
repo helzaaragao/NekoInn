@@ -31,6 +31,9 @@ export const PricesHeader = styled.header`
         font-size: 0.85rem;
     }
     }
+     @media (min-width: 1024px) {
+       padding: 1rem;
+     }
 `
 export const PricesSection = styled.section`
     display: flex;
@@ -207,4 +210,7 @@ export const PricesSection = styled.section`
     @media (min-width: 768px) {
         gap: 2rem;
     }
+    @media (min-width: 1024px) {
+        flex-direction: row;
+     }
 `

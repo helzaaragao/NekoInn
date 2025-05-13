@@ -2,6 +2,7 @@ import { CheckCircle } from '@phosphor-icons/react'
 
 import pinkCrown from '../../assets/royal-crown-variant-made-of-lines-and-circles-svgrepo-com 1.svg'
 import whiteCrown from '../../assets/royal-crown-of-elegant-vintage-design-svgrepo-com 1.svg'
+import pinkOutlineCrown from '../../assets/crown-made-of-triangles-and-circles-outline-svgrepo-com 1.svg'
 import { PricesContainer, PricesHeader, PricesSection } from './style'
 export function PlanPrices(){
     return(
@@ -75,7 +76,7 @@ export function PlanPrices(){
                 <article>
                   <div>
                     <span>PURR ROYAL</span>
-                    <img src={pinkCrown} alt="" />
+                    <img src={pinkOutlineCrown} alt="" />
                     <h4>$299.99<small>PER DAY</small></h4>
                     </div>
                     <ul>

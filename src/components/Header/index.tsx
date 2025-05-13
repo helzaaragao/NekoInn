@@ -110,13 +110,4 @@ export function Header(){
 // Animar a entrada/saída do menu (se quiser um fade in/out):
 // Use react-spring ou framer-motion para animações mais suaves.
 
-// Fechar o menu ao clicar em um link:
-
-// tsx
-// Copy
-// const closeMenu = () => setIsMobileMenuOpen(false);
-
-// <NavLink href="#" onClick={closeMenu}>Home</NavLink>
-
-// https://mantine.dev/core/switch/ -> dark/light mode
-// https://chakra-ui.com/docs/components/accordion
+// Fechar o menu ao clicar em um link.

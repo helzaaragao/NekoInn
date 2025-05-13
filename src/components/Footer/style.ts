@@ -101,6 +101,9 @@ export const EmailNewsletter = styled.form`
          }
           @media (min-width: 1024px) {
             width: 50%;
+            justify-content: space-between;
+            padding-left: 2rem;
+            padding-right: 1rem;
           }
 
 `
@@ -198,9 +201,10 @@ export const ContactInfos = styled.section`
        @media (min-width: 1024px) {
          display: grid;
          grid-template-columns: 1fr 1fr 1fr;
+         padding: 1.5rem;
          div:last-child{
             grid-column: 2 / 4;
-          
+            letter-spacing: 3px; 
          }
        }
 `

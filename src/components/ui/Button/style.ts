@@ -23,4 +23,7 @@ export const ButtonContainer = styled.div<{ $bgColor?: string }>`
     }
   }
   }
+     @media (min-width: 1440px) {
+      padding: 0;
+     }
 `

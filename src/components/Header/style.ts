@@ -176,13 +176,13 @@ export const NavDesktop = styled.nav`
     }
   }
    @media (min-width: 1440px){
-    gap: 5rem;
+    gap: 15rem;
      ul{
       width: 27rem;
       justify-content: space-between;
     }
     div{
-      width: 30rem;
+      width: 20rem;
     Button{
         width: 10rem;
       }

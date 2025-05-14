@@ -186,8 +186,26 @@ export const HeroBanner = styled.div`
   }
 
   @media (min-width: 1440px) {
+    margin-top: 3rem;
+    margin-bottom: 2.5rem;
     > section:first-child{
+      article{
+        gap: 2rem;
+        span{
+          font-size: 0.875rem;
+        }
+        h1{
+          font-size: 2.875rem;
+        }
+        p{
+          font-size: 0.875rem;
+        }
+        button{
+          margin-top: 1rem;
+        }
+      }
       aside{
+        margin-top: 5rem;
         figure{
           right: 73%;
         }
@@ -333,6 +351,18 @@ export const Cats = styled.div`
   @media (min-width: 1440px) {
     img {
       width: 8.125rem;
+    }
+       img:nth-child(1) {
+          transform: translateX(-190%) translateY(-5%);
+       }
+        img:nth-child(2) {
+             transform: translateX(-200%) translateY(20%);
+           }
+        img:nth-child(3) {
+      transform: translateY(110%) translateX(-160%);
+    }
+     img:nth-child(4) {
+      transform:  translateY(140%) translateX(-20%);
     }
   }
 `;
@@ -485,6 +515,11 @@ export const Address = styled.address`
          
       }
      }
+     @media (min-width: 1440px) {
+         > section:first-child{
+            padding-right: 10rem;
+         }
+     }
 `
 export const About = styled.section`
   display: flex;
@@ -577,6 +612,30 @@ export const About = styled.section`
       img:last-child{
         width: 100%;
         height: 100%;
+      }
+    }
+   }
+   @media (min-width: 1440px) {
+    article{
+      span{
+        font-size: 0.75rem;
+      }
+      h2{
+        font-size: 2.25rem;
+      }
+      p{
+        font-size: 0.875rem;
+      }
+      Button{
+        width: 25%;
+        font-size: 0.75rem;
+        margin-top: 3rem;
+      }
+    }
+    figure{
+      img:first-child{
+        right: 20%;
+         top: 15%;
       }
     }
    }

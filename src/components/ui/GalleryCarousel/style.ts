@@ -134,4 +134,14 @@ export const DesktopImagesCarousel = styled.div`
 
     }
 }
+@media (min-width: 1440px) {
+    padding: 2rem;
+    > div{
+        figure{
+              div:last-child{
+                 top: 85%;
+              }
+        }
+    }
+}
 `

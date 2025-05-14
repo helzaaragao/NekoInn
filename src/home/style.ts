@@ -680,6 +680,24 @@ figure{
       align-items: start;
     }
    }
+    @media (min-width: 1440px) {
+      justify-content: center;
+      gap: 2.5rem;
+      padding: 1rem;
+      figure{
+        width: 40%;
+      }
+      article{
+        width: 60%;
+        gap: 2rem;
+          > span{
+             font-size: 0.75rem;
+         }
+          h2{
+            font-size: 2.25rem;
+          }
+      }
+    }
 `
 export const PurrCare = styled.section`
   text-align: start;
@@ -784,6 +802,26 @@ export const PurrCare = styled.section`
       }
      }
   }
+   @media (min-width: 1440px) {
+    padding: 2rem;
+     article{
+      width: 19.5rem;
+      height: 31rem;
+          span{
+      font-size: 0.75rem;
+    }
+       h2{
+      font-size: 2.25rem;
+    }
+    }
+     > div{
+       div{
+        h4{
+          font-size: 1.5rem;
+        }
+       }
+     }
+   }
 `
 
 

@@ -34,6 +34,17 @@ export const PricesHeader = styled.header`
      @media (min-width: 1024px) {
        padding: 1rem;
      }
+     @media (min-width: 1440px) {
+            span{
+                font-size: 0.75rem;
+            }
+            h2{
+                font-size: 2.5rem;
+            }
+            p{
+                font-size: 0.875rem;
+            }
+    }
 `
 export const PricesSection = styled.section`
     display: flex;
@@ -213,4 +224,41 @@ export const PricesSection = styled.section`
     @media (min-width: 1024px) {
         flex-direction: row;
      }
+      @media (min-width: 1440px) {
+        position: relative;
+        article:first-child{
+            width: 29.688rem;
+            height: 36.063rem;
+            position: absolute;
+            right: 100%;
+            margin-top:3rem;
+            z-index: 1;
+            button{
+                width: 70%;
+                 height: 2.813rem;
+            }
+        }
+        article:nth-child(2){
+            width: 27.75rem;
+            height: 40.25rem;
+            position: relative;
+            z-index: 2;
+             button{
+                width: 70%;
+                 height: 2.813rem;
+            }
+        }
+           article:nth-child(3){
+             width: 29.688rem;
+            height: 36.063rem;
+             position: absolute;
+             left: 100%;
+             margin-top:3rem;
+                z-index: 1;
+                 button{
+                width: 70%;
+                height: 2.813rem;
+            }
+           }
+      }
 `

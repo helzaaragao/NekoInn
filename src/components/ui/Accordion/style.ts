@@ -8,9 +8,12 @@ export const Root = styled(Accordion.Root)`
 `
 
 export const ItemTrigger = styled(Accordion.ItemTrigger)`
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     font-weight: bold;
     margin-bottom: 1rem;
+     @media (min-width: 1440px) {
+        font-size: 1.25rem;
+     }
 `
 export const ItemIndicator = styled(Accordion.ItemIndicator)`
     background-color: ${({ theme }) => theme.colors["main-color"]};

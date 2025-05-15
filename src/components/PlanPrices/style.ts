@@ -227,37 +227,67 @@ export const PricesSection = styled.section`
       @media (min-width: 1440px) {
         position: relative;
         article:first-child{
-            width: 29.688rem;
+            width: 29rem;
             height: 36.063rem;
             position: absolute;
             right: 100%;
             margin-top:3rem;
+            padding-top: 3rem;
             z-index: 1;
+            ul{
+                gap: 1.2rem;
+                li{
+                    gap: 1rem;
+                }
+            }
             button{
                 width: 70%;
                  height: 2.813rem;
+                 margin-top: 1rem;
             }
+            
         }
         article:nth-child(2){
-            width: 27.75rem;
+            width: 27rem;
             height: 40.25rem;
             position: relative;
             z-index: 2;
+                padding-top: 5rem;
+                div{
+                    span{
+                        font-size: 1rem;
+                    }
+                }
              button{
                 width: 70%;
                  height: 2.813rem;
+                  margin-top: 3rem;
+            }
+              ul{
+                gap: 1.2rem;
+                li{
+                    gap: 1rem;
+                }
             }
         }
            article:nth-child(3){
-             width: 29.688rem;
+             width: 29rem;
             height: 36.063rem;
              position: absolute;
              left: 100%;
              margin-top:3rem;
+              padding-top: 3rem;
                 z-index: 1;
                  button{
                 width: 70%;
                 height: 2.813rem;
+                margin-top: 1rem;
+            }
+              ul{
+                gap: 1.2rem;
+                li{
+                    gap: 1rem;
+                }
             }
            }
       }

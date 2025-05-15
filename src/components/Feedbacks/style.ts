@@ -31,6 +31,19 @@ export const FeedbacksContainer = styled.div`
           padding: 2rem;
         }
      }
+      @media (min-width: 1440px) {
+        header{
+          span{
+            font-size: 0.75rem;
+          }
+          h2{
+            font-size: 2.5rem;
+          }
+          p{
+            font-size: 0.875rem;
+          }
+        }
+      }
 `
 
 export const FeedbacksCarousel = styled.div`
@@ -94,6 +107,14 @@ export const FeedbacksCarousel = styled.div`
       right: -1%;
     }
     }
+    @media (min-width: 1440px) {
+       > button:first-child{
+        left: 0%;
+       }
+            button:nth-child(3){
+              right: 0%;
+            }
+  }
 `;
 
 export const SlidesContainer = styled.section<{ $isDesktop: boolean }>`
@@ -102,7 +123,12 @@ export const SlidesContainer = styled.section<{ $isDesktop: boolean }>`
    padding: 2rem;
     @media (min-width: 1024px) {
         flex-direction: row;
+        gap: 0.5rem;
      }
+      @media (min-width: 1440px) {
+        gap: 1rem;
+      }
+     
 `
 export const Slide = styled.section<{$isDesktop: boolean, $isActive: boolean }>`
    display: ${({ $isDesktop, $isActive }) => ($isDesktop || $isActive ? 'block' : 'none')};
@@ -135,6 +161,10 @@ export const Slide = styled.section<{$isDesktop: boolean, $isActive: boolean }>`
    }
     @media (min-width: 1024px) {
       margin-bottom: 3rem;
+      background-color:  ${({ theme }) => theme.colors["white"]};
+      border-radius: 20px;
+      height: auto;
+  
        > svg{
         margin-bottom: 1rem;
        }
@@ -145,4 +175,8 @@ export const Slide = styled.section<{$isDesktop: boolean, $isActive: boolean }>`
         margin-bottom: 2rem;
        }
     }
+     @media (min-width: 1440px) {
+      border-radius: 40px;
+     }
+    
 `

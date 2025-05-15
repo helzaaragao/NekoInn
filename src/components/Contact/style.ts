@@ -28,6 +28,24 @@ export const ContactContainer = styled.section`
             }
         }
     }
+      @media (min-width: 1440px) {
+        padding: 4rem;
+        background-color: ${({ theme }) => theme.colors["white"]};
+        margin-left: 1rem;
+        margin-right: 1rem;
+        border-radius: 40px;
+        header{
+            span{
+                font-size: 0.75rem;
+            }
+            h2{
+                font-size: 2.25rem;
+            }
+            p{
+                font-size: 0.875rem;
+            }
+        }
+      }
 `
 export const FormContact = styled.form`
     display: flex;
@@ -100,4 +118,11 @@ export const FormContact = styled.form`
                 }
 
            }
+             @media (min-width: 1440px) {
+                div{
+                    input, select{
+                         background-color:${({ theme }) => theme.colors["white"]};
+                    }
+                }
+             }
 `

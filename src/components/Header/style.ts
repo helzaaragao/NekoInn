@@ -55,8 +55,6 @@ export const MobileMenu = styled.div<{ $isOpen: boolean }>`
 
     @media (min-width: 768px) {
       width: 60%;
-      
-
   }
 
 `
@@ -79,12 +77,13 @@ export const ChakraSwitchRoot = styled(Switch.Root)`
   }
   
 `
-export const ChakraSwitchControl = styled(Switch.Control)`
+export const ChakraSwitchControl = styled(Switch.Control)<{ $active: boolean }>`
   width: 100%;
   height: 100%;
   border-radius: 9999px;
-  background-color:  ${({ theme }) => theme.colors["day-background"]};
-  color: ${({ theme }) => theme.colors["background/text"]};;
+   background-color: ${({ $active, theme }) => 
+    $active ? theme.colors['day-background'] : theme.colors['black']};
+  color: ${({ theme }) => theme.colors['background/text']};
   position: relative;
   overflow: hidden;
 

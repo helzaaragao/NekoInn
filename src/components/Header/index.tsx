@@ -1,20 +1,23 @@
-import { useEffect, useState } from 'react'
-import logo from '../../assets/logo.svg'
+port logo from '../../assets/logo.svg'
 import menuHambuguer from '../../assets/Hamburger.svg'
 import X from '../../assets/X.png'
 import { ChackraSwitchIndicador, ChakraSwitchControl, ChakraSwitchRoot, HamburgerButton, HeaderContainer, MobileMenu, NavDesktop, NavLink, NavMobile } from './style';
 import { Switch } from "@chakra-ui/react"
 import { Moon, Sun } from '@phosphor-icons/react';
 import { Button } from '../ui/Button';
+import { useTheme } from '@/hooks/useTheme';
 
 
 export function Header(){
     const [isBurgerMenu, setIsBurgerMenu] = useState(false);
     const [isSmallScreenView, setIsSmallScreenView] = useState(false); 
+    const { theme, toggleTheme } = useTheme();
+    
 
     useEffect(() => {
         const checkScreenSize = () => {
-            setIsSmallScreenView(window.innerWidth < 1024);
+            setIsSmimport { useEffect, useState } from 'react'
+imallScreenView(window.innerWidth < 1024);
         }
         
         checkScreenSize();
@@ -54,10 +57,9 @@ export function Header(){
 
                     {isBurgerMenu && (
                             <MobileMenu $isOpen={isBurgerMenu}>
-                                 <ChakraSwitchRoot  size="lg"
-                                 >
+                                 <ChakraSwitchRoot  size="lg" checked={theme === 'dark'} onCheckedChange={toggleTheme}>
                                             <Switch.HiddenInput />
-                                            <ChakraSwitchControl>
+                                            <ChakraSwitchControl  $active={theme === 'light'}>
                                                 <ChackraSwitchIndicador fallback={<Sun size={32} data-icon="sun"/>}>
                                                     <Moon size={32} data-icon="moon"/>
                                                 </ChackraSwitchIndicador>
@@ -86,10 +88,9 @@ export function Header(){
                             <NavLink href="#">Testimonial</NavLink>
                         </ul>
                         <div>
-                            <ChakraSwitchRoot  size="lg"
-                                    >
+                            <ChakraSwitchRoot  size="lg" checked={theme === 'dark'} onCheckedChange={toggleTheme}>
                                                 <Switch.HiddenInput />
-                                                <ChakraSwitchControl>
+                                                <ChakraSwitchControl  $active={theme === 'light'}>
                                                     <ChackraSwitchIndicador fallback={<Sun size={32} data-icon="sun"/>}>
                                                         <Moon size={32} data-icon="moon"/>
                                                     </ChackraSwitchIndicador>

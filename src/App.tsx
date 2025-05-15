@@ -1,12 +1,14 @@
 import { ThemeProvider } from "styled-components"
-import { defaultTheme } from "./styles/themes/default"
+import { darkTheme, defaultTheme, lightTheme } from "./styles/themes/default"
 import { GlobalStyle } from "./styles/global"
 import { Home } from "./home"
+import { useTheme } from "./hooks/useTheme";
 
 export function App() {
+   const { theme } = useTheme();
 
   return (
-    <ThemeProvider theme={defaultTheme}>
+    <ThemeProvider theme={theme === 'dark' ? darkTheme : lightTheme}>
       <GlobalStyle></GlobalStyle>
         
         <Home></Home>

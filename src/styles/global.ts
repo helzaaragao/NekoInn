@@ -26,17 +26,4 @@ export const GlobalStyle = createGlobalStyle`
         border: none;
         cursor: pointer;
     }
-        &[data-theme="dark"] {
-            --background: #1a202c;
-            --text: #ffffff;
-            --primary: #63b3ed;
-    // outras variáveis para o tema dark
-  }
-    &[data-theme="light"] {
-    --background: #ffffff;
-    --text: #2d3748;
-    --primary: #3182ce;
-    // outras variáveis para o tema light
-  }
-     
 `

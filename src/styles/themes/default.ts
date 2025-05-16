@@ -1,5 +1,3 @@
-import { DefaultTheme } from "styled-components/dist/types";
-
 export const defaultTheme = {
     colors: {
         'main-color': '#C75E90', 
@@ -14,23 +12,6 @@ export const defaultTheme = {
         'border-gray': '#B7B7B7',
         'night-background':'#1D1D1D'
     } as const
-} as const;
-// Crie um tipo para as cores
-export type AppColors = typeof defaultTheme.colors;
-export type AppTheme = typeof defaultTheme;
+} 
 
-// Crie uma função utilitária para criar temas com tipagem segura
-
-export const lightTheme: DefaultTheme = createTheme({
-    ...defaultTheme
-});
-
-export const darkTheme: DefaultTheme = createTheme({
-    ...defaultTheme,
-    colors: {
-        ...defaultTheme.colors,
-        'day-background': defaultTheme.colors['black'], // Use uma cor existente
-        'background/text': defaultTheme.colors['white'],
-        // Outras sobreposições conforme necessário
-    }
-});
+export type AppTheme = typeof defaultTheme; 

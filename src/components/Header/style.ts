@@ -77,12 +77,11 @@ export const ChakraSwitchRoot = styled(Switch.Root)`
   }
   
 `
-export const ChakraSwitchControl = styled(Switch.Control)<{ $active: boolean }>`
+export const ChakraSwitchControl = styled(Switch.Control)`
   width: 100%;
   height: 100%;
   border-radius: 9999px;
-   background-color: ${({ $active, theme }) => 
-    $active ? theme.colors['day-background'] : theme.colors['black']};
+   background-color:${({ theme }) => theme.colors['day-background']};; 
   color: ${({ theme }) => theme.colors['background/text']};
   position: relative;
   overflow: hidden;

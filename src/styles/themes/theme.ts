@@ -1,8 +1,6 @@
-// import { DefaultTheme } from "styled-components";
+import 'styled-components';
+import { AppTheme } from './default';
 
-// export const lightTheme: DefaultTheme = {
-//     colors: {
-//          'day-background': '#FBF5F8',
-//         'white': '#FFFFFF',
-//     }
-// }
+declare module 'styled-components' {
+  export interface DefaultTheme extends AppTheme {}
+}

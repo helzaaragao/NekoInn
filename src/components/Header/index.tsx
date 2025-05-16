@@ -6,11 +6,14 @@ import { Switch } from "@chakra-ui/react"
 import { Moon, Sun } from '@phosphor-icons/react';
 import { Button } from '../ui/Button';
 import { useEffect, useState } from 'react';
+import { useTheme } from '@/context/ThemeContext';
 
 
 export function Header(){
     const [isBurgerMenu, setIsBurgerMenu] = useState(false);
     const [isSmallScreenView, setIsSmallScreenView] = useState(false);
+
+    const {isDarkMode, toggleTheme} = useTheme();
     
 
     useEffect(() => {
@@ -55,11 +58,11 @@ export function Header(){
 
                     {isBurgerMenu && (
                             <MobileMenu $isOpen={isBurgerMenu}>
-                                 <ChakraSwitchRoot  size="lg">
+                                 <ChakraSwitchRoot  size="lg" onClick={toggleTheme}>
                                             <Switch.HiddenInput />
                                             <ChakraSwitchControl>
-                                                <ChackraSwitchIndicador fallback={<Sun size={32} data-icon="sun"/>}>
-                                                    <Moon size={32} data-icon="moon"/>
+                                                <ChackraSwitchIndicador >
+                                                {isDarkMode ? <Moon size={32} /> : <Sun size={32} />}
                                                 </ChackraSwitchIndicador>
                                             </ChakraSwitchControl>
                                 </ChakraSwitchRoot>
@@ -86,7 +89,7 @@ export function Header(){
                             <NavLink href="#">Testimonial</NavLink>
                         </ul>
                         <div>
-                            <ChakraSwitchRoot  size="lg">
+                            <ChakraSwitchRoot  size="lg" onClick={toggleTheme}>
                                                 <Switch.HiddenInput />
                                                 <ChakraSwitchControl>
                                                     <ChackraSwitchIndicador fallback={<Sun size={32} data-icon="sun"/>}>

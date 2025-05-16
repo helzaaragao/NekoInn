@@ -1,14 +1,14 @@
-import { ThemeProvider } from "styled-components"
+
 
 import { GlobalStyle } from "./styles/global"
 import { Home } from "./home"
-import { defaultTheme } from "./styles/themes/default"
+import { ThemeProvider } from "./context/ThemeContext"
 
 
 export function App() {
 
   return (
-    <ThemeProvider theme={defaultTheme}>
+    <ThemeProvider>
       <GlobalStyle></GlobalStyle>
         
         <Home></Home>

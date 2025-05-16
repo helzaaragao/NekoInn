@@ -1,6 +1,28 @@
-export const defaultTheme = {
-    colors: {
-        'main-color': '#C75E90', 
+// styles/default.ts
+interface ThemeColors {
+   'main-color': string; 
+  'secundary/hover': string; 
+  'day-background': string;
+  'white': string;
+  'input/subtitles': string;
+  'background/text': string;
+  'black-off': string; 
+  'black': string; 
+  'border-gray': string;
+  'night-background': string;
+}
+
+interface Theme {
+  background: string;
+  text: string;
+  colors: ThemeColors;
+}
+
+export const lightTheme: Theme = {
+  background: '#FBF5F8',
+  text: '#232323',
+  colors: {
+   'main-color': '#C75E90', 
         'secundary/hover': '#8E345F', 
         'day-background': '#FBF5F8',
         'white': '#FFFFFF',
@@ -11,7 +33,17 @@ export const defaultTheme = {
         'black': '#181818', 
         'border-gray': '#B7B7B7',
         'night-background':'#1D1D1D'
-    } as const
-} 
+  }
+};
 
-export type AppTheme = typeof defaultTheme; 
+export const darkTheme: Theme = {
+  background: '#1D1D1D',
+  text: '#FFFFFF',
+  colors: {
+    ...lightTheme.colors, // Mantém as cores que são iguais
+    'day-background': '#1D1D1D', // Sobrescreve as que mudam
+    'night-background': '#FBF5F8'
+  }
+};
+
+export type AppTheme = Theme;

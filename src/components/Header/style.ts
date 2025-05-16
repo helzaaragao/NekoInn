@@ -1,3 +1,4 @@
+import { AppTheme } from "@/styles/themes/default";
 import { Switch } from "@chakra-ui/react";
 import styled from "styled-components";
 
@@ -77,11 +78,11 @@ export const ChakraSwitchRoot = styled(Switch.Root)`
   }
   
 `
-export const ChakraSwitchControl = styled(Switch.Control)`
+export const ChakraSwitchControl = styled(Switch.Control)<{ theme: AppTheme }>`
   width: 100%;
   height: 100%;
   border-radius: 9999px;
-   background-color:${({ theme }) => theme.colors['day-background']};; 
+  background-color: ${({ theme }) => theme.colors['day-background']}; 
   color: ${({ theme }) => theme.colors['background/text']};
   position: relative;
   overflow: hidden;

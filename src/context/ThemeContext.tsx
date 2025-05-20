@@ -20,6 +20,7 @@ interface ThemeProviderProps {
 
 export const ThemeContext = createContext({
     theme: ThemeType.light, 
+    themeData: lightTheme,
     toggleTheme: () => {},
 })
 
@@ -34,7 +35,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({children}) => {
         }
     }
     return(
-        <ThemeContext.Provider value={{theme, toggleTheme}}>
+        <ThemeContext.Provider value={{theme, themeData: themes[theme],toggleTheme}}>
             <ThemeProviderStyled theme={themes[theme]}>
                 {children}
             </ThemeProviderStyled>

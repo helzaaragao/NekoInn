@@ -1,9 +1,15 @@
 import { DefaultTheme } from "styled-components";
+import lightLogo from '../../assets/logo.svg'
 
 export const lightTheme: DefaultTheme = {
     colors:{
-        'background': '#FBF5F8',
+        'fillBackground': '#FBF5F8',
+        'componentBackground': '#FFFFFF',
         'text': '#232323', 
+        'spanText': '#696969',
+        'firstAddressBackground': '#232323',
+        'othersAddressBackground': '#C75E90',
+
         'main-color': '#C75E90', 
         'secundary/hover': '#8E345F', 
         'day-background': '#FBF5F8',
@@ -14,5 +20,8 @@ export const lightTheme: DefaultTheme = {
         'black': '#181818', 
         'border-gray': '#B7B7B7',
         'night-background': '#1D1D1D',
+    },
+    images:{
+        logo: lightLogo,
     }
 }

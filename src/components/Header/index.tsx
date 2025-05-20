@@ -1,4 +1,3 @@
-import logo from '../../assets/logo.svg'
 import menuHambuguer from '../../assets/Hamburger.svg'
 import X from '../../assets/X.png'
 import { ChackraSwitchIndicador, ChakraSwitchControl, ChakraSwitchRoot, HamburgerButton, HeaderContainer, MobileMenu, NavDesktop, NavLink, NavMobile } from './style';
@@ -13,7 +12,7 @@ export function Header(){
     const [isBurgerMenu, setIsBurgerMenu] = useState(false);
     const [isSmallScreenView, setIsSmallScreenView] = useState(false);
 
-    const {theme,toggleTheme} = useContext(ThemeContext);
+    const {theme, themeData, toggleTheme} = useContext(ThemeContext);
 
     const isDarkMode = theme === ThemeType.dark
     
@@ -44,10 +43,11 @@ export function Header(){
     const toggleMobileMenu = () => {
         setIsBurgerMenu(prevState => !prevState);
       };
+      
     
     return(
         <HeaderContainer>
-            <img src={logo} alt="" />
+            <img src={themeData.images.logo} alt="" />
             {isSmallScreenView && (
                 <>
                                 <HamburgerButton onClick={toggleMobileMenu} $isOpen={isBurgerMenu}>

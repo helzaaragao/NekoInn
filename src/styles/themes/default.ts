@@ -5,8 +5,13 @@ import 'styled-components';
 declare module 'styled-components' {
   export interface DefaultTheme {
     colors: {
-      'background': string;
+      'fillBackground': string;
+      'componentBackground': string;
       'text': string;
+      'spanText': string;
+      'firstAddressBackground': string;
+      'othersAddressBackground': string;
+
       'main-color': string;
       'secundary/hover': string;
       'day-background': string;
@@ -18,13 +23,18 @@ declare module 'styled-components' {
       'border-gray': string;
       'night-background': string;
     }
+     images: {
+        logo: string;
+    }
   }
 }
 
 export const defaultTheme = {
   colors: {
-    'background': '#FBF5F8',
+    'fillBackground': '#FFFFFF',
+    'componentBackground': '#FFFFFF',
     'text': '#232323',
+    'spanText': '#696969',
     'main-color': '#C75E90', 
     'secundary/hover': '#8E345F', 
     'day-background': '#FBF5F8',

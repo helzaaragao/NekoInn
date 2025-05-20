@@ -377,7 +377,7 @@ export const Address = styled.address`
 
    > section:first-child{
         height: 40%;
-        background-color: ${({ theme }) => theme.colors["background/text"]};
+        background-color: ${({ theme }) => theme.colors.firstAddressBackground};
         display: flex;
         align-items: center;
         justify-content: center;
@@ -416,7 +416,7 @@ export const Address = styled.address`
         padding-left: 1.1rem;
         /* border-top-left-radius: 40px;
         border-top-right-radius: 40px; */
-        background-color: ${({ theme }) => theme.colors["main-color"]};
+        background-color: ${({ theme }) => theme.colors.othersAddressBackground};
         div{
           width: 4rem;
           height: 4rem;
@@ -439,7 +439,7 @@ export const Address = styled.address`
     }
     >section:nth-child(3){
         height: 30%;
-        background-color: ${({ theme }) => theme.colors["main-color"]};
+        background-color: ${({ theme }) => theme.colors.othersAddressBackground};
         display: flex;
         border-bottom-left-radius: 40px;
         border-bottom-right-radius: 40px;

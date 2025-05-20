@@ -5,12 +5,17 @@ import { ChackraSwitchIndicador, ChakraSwitchControl, ChakraSwitchRoot, Hamburge
 import { Switch } from "@chakra-ui/react"
 import { Moon, Sun } from '@phosphor-icons/react';
 import { Button } from '../ui/Button';
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
+import { ThemeContext, ThemeType } from '@/context/ThemeContext';
 
 
 export function Header(){
     const [isBurgerMenu, setIsBurgerMenu] = useState(false);
     const [isSmallScreenView, setIsSmallScreenView] = useState(false);
+
+    const {theme,toggleTheme} = useContext(ThemeContext);
+
+    const isDarkMode = theme === ThemeType.dark
     
 
     useEffect(() => {
@@ -55,7 +60,7 @@ export function Header(){
 
                     {isBurgerMenu && (
                             <MobileMenu $isOpen={isBurgerMenu}>
-                                 <ChakraSwitchRoot  size="lg">
+                                 <ChakraSwitchRoot  size="lg" checked={isDarkMode} onCheckedChange={toggleTheme}>
                                             <Switch.HiddenInput />
                                             <ChakraSwitchControl>
                                                 <ChackraSwitchIndicador fallback={<Sun size={32} data-icon="sun"/>}>
@@ -86,7 +91,7 @@ export function Header(){
                             <NavLink href="#">Testimonial</NavLink>
                         </ul>
                         <div>
-                            <ChakraSwitchRoot  size="lg">
+                            <ChakraSwitchRoot  size="lg" checked={isDarkMode} onCheckedChange={toggleTheme}>
                                                 <Switch.HiddenInput />
                                                 <ChakraSwitchControl>
                                                     <ChackraSwitchIndicador fallback={<Sun size={32} data-icon="sun"/>}>

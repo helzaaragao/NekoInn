@@ -1,17 +1,39 @@
-export const defaultTheme = {
+import 'styled-components';
+
+// pegar as cores mais especificas que estão faltando do light e dark começando pelo light
+
+declare module 'styled-components' {
+  export interface DefaultTheme {
     colors: {
-        'main-color': '#C75E90', 
-        'secundary/hover': '#8E345F', 
-        'day-background': '#FBF5F8',
-        'white': '#FFFFFF',
-        'input/subtitles':'#D9D9D9', 
+      'background': string;
+      'text': string;
+      'main-color': string;
+      'secundary/hover': string;
+      'day-background': string;
+      'white': string;
+      'input/subtitles': string;
+      'background/text': string;
+      'black-off': string;
+      'black': string;
+      'border-gray': string;
+      'night-background': string;
+    }
+  }
+}
 
-        'background/text': '#232323',
-        'black-off': '#696969', 
-        'black': '#181818', 
-        'border-gray': '#B7B7B7',
-        'night-background':'#1D1D1D'
-    } as const
-} 
-
-export type AppTheme = typeof defaultTheme; 
+export const defaultTheme = {
+  colors: {
+    'background': '#FBF5F8',
+    'text': '#232323',
+    'main-color': '#C75E90', 
+    'secundary/hover': '#8E345F', 
+    'day-background': '#FBF5F8',
+    'white': '#FFFFFF',
+    'input/subtitles': '#D9D9D9', 
+    'background/text': '#232323',
+    'black-off': '#696969', 
+    'black': '#181818', 
+    'border-gray': '#B7B7B7',
+    'night-background': '#1D1D1D',
+  }
+};

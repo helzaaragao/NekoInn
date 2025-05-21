@@ -52,7 +52,7 @@ export const PricesSection = styled.section`
     gap: 1rem;
 
     article:first-child{
-        background-color: ${({ theme }) => theme.colors["white"]};
+        background-color: ${({ theme }) => theme.colors.componentBackground};
         display: flex;
         flex-direction: column;
         gap: 2rem;
@@ -164,7 +164,7 @@ export const PricesSection = styled.section`
     
     }
     article:nth-child(3){
-        background-color: ${({ theme }) => theme.colors["white"]};
+         background-color: ${({ theme }) => theme.colors.componentBackground};
         display: flex;
         flex-direction: column;
         gap: 2rem;

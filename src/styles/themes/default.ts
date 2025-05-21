@@ -11,7 +11,8 @@ declare module 'styled-components' {
       'spanText': string;
       'firstAddressBackground': string;
       'othersAddressBackground': string;
-
+      'firstIconAddressBackground': string;
+      'iconAddressBackground': string; 
       'main-color': string;
       'secundary/hover': string;
       'day-background': string;

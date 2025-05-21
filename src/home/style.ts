@@ -389,7 +389,7 @@ export const Address = styled.address`
           height: 4rem;
           border-radius: 50%; 
           flex-shrink: 0;
-          background-color: ${({ theme }) => theme.colors["main-color"]};
+          background-color: ${({ theme }) => theme.colors.firstIconAddressBackground};
           display: flex;
           align-items: center;
           justify-content: center;
@@ -422,7 +422,7 @@ export const Address = styled.address`
           height: 4rem;
           border-radius: 50%; 
           flex-shrink: 0;
-          background-color: ${({ theme }) => theme.colors["background/text"]};
+          background-color: ${({ theme }) => theme.colors.iconAddressBackground};
           display: flex;
           align-items: center;
           justify-content: center;
@@ -454,7 +454,7 @@ export const Address = styled.address`
               height: 4rem;
               border-radius: 50%; 
               flex-shrink: 0;
-            background-color: ${({ theme }) => theme.colors["background/text"]};
+            background-color: ${({ theme }) => theme.colors.iconAddressBackground};
            
             display: flex;
             align-items: center;
@@ -525,6 +525,9 @@ export const About = styled.section`
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  background-color: ${({ theme }) => theme.colors.componentBackground};
+  margin-top: 2rem;
+  border-radius: 40px;
   article{
     display: flex;
     flex-direction: column;
@@ -563,6 +566,7 @@ export const About = styled.section`
     }
   }
    @media (min-width: 768px) { 
+    margin-top: 3.5rem;
       article{
         p{
            font-size: 0.85rem;
@@ -747,6 +751,8 @@ export const PurrCare = styled.section`
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    background-color: ${({ theme }) => theme.colors.componentBackground};
+    border-radius: 40px;
 
     div{
       display: flex;

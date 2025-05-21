@@ -133,6 +133,9 @@ export const SlidesContainer = styled.section<{ $isDesktop: boolean }>`
 export const Slide = styled.section<{$isDesktop: boolean, $isActive: boolean }>`
    display: ${({ $isDesktop, $isActive }) => ($isDesktop || $isActive ? 'block' : 'none')};
    height: 28.313rem;
+   background-color:  ${({ theme }) => theme.colors.componentBackground};
+    border-radius: 20px;
+    padding: 1rem;
    > svg{
     color: ${({ theme }) => theme.colors["main-color"]};
     font-size: 4.625rem;
@@ -161,10 +164,7 @@ export const Slide = styled.section<{$isDesktop: boolean, $isActive: boolean }>`
    }
     @media (min-width: 1024px) {
       margin-bottom: 3rem;
-      background-color:  ${({ theme }) => theme.colors["white"]};
-      border-radius: 20px;
       height: auto;
-  
        > svg{
         margin-bottom: 1rem;
        }

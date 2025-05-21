@@ -3,12 +3,15 @@ import darkLogo from '../../assets/logo-dark.svg'
 
 export const darkTheme: DefaultTheme = {
     colors: {
-        'fillBackground': '#161616',
+        'fillBackground': '#232323',
         'componentBackground': '#161616',
         'spanText': '#696969',
         'text': '#FFFFFF', 
         'firstAddressBackground': '#C75E90',
         'othersAddressBackground': '#8E345F',
+        'firstIconAddressBackground': '#8E345F',
+        'iconAddressBackground': '#C75E90',
+
         'main-color': '#C75E90', 
         'secundary/hover': '#8E345F', 
         'day-background': '#FBF5F8',

@@ -4,8 +4,12 @@ export const ContactContainer = styled.section`
     display: flex;
     flex-direction: column;
     gap: 1rem;
+      background-color: ${({ theme }) => theme.colors.componentBackground};
+      padding: 2rem;
+      border-radius: 40px;
     header{
         text-align: center;
+        margin-top: 2rem; 
         span{
             font-size: 0.7rem;
             color: ${({ theme }) => theme.colors["black-off"]};
@@ -30,7 +34,7 @@ export const ContactContainer = styled.section`
     }
       @media (min-width: 1440px) {
         padding: 4rem;
-        background-color: ${({ theme }) => theme.colors["white"]};
+      
         margin-left: 1rem;
         margin-right: 1rem;
         border-radius: 40px;
@@ -77,7 +81,7 @@ export const FormContact = styled.form`
         }
        
        input, select{
-        background-color:${({ theme }) => theme.colors["day-background"]};
+        background-color:${({ theme }) => theme.colors.componentBackground};
         width: 90%;
       
        }
@@ -121,7 +125,7 @@ export const FormContact = styled.form`
              @media (min-width: 1440px) {
                 div{
                     input, select{
-                         background-color:${({ theme }) => theme.colors["white"]};
+                       background-color:${({ theme }) => theme.colors.componentBackground};
                     }
                 }
              }

@@ -9,6 +9,7 @@ declare module 'styled-components' {
       'componentBackground': string;
       'text': string;
       'spanText': string;
+      'switchBackground': string;
       'firstAddressBackground': string;
       'othersAddressBackground': string;
       'firstIconAddressBackground': string;

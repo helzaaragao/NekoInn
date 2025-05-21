@@ -1,6 +1,5 @@
 import { Header } from "../components/Header";
 import { ArrowRight, Envelope, MapPinArea, Phone, Play } from "@phosphor-icons/react"
-
 import mainHero from '../assets/mainHero.png'
 import vector from '../assets/Vector.svg'
 import lastCat from '../assets/Group 2.png'

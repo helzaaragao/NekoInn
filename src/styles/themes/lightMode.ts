@@ -7,10 +7,12 @@ export const lightTheme: DefaultTheme = {
         'componentBackground': '#FFFFFF',
         'text': '#232323', 
         'spanText': '#696969',
+        'switchBackground': '#FBF5F8',
         'firstAddressBackground': '#232323',
         'othersAddressBackground': '#C75E90',
         'firstIconAddressBackground': '#C75E90',
         'iconAddressBackground': '#232323',
+
 
         'main-color': '#C75E90', 
         'secundary/hover': '#8E345F', 

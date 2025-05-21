@@ -7,7 +7,6 @@ export const HomeContainer = styled.main`
     @media (min-width: 768px) {
       padding: 2rem;
   }
- 
 `
 
 export const HeroBanner = styled.div`
@@ -365,7 +364,7 @@ export const Cats = styled.div`
       transform:  translateY(140%) translateX(-20%);
     }
   }
-`;
+`
 
 export const Address = styled.address`
     display: flex;

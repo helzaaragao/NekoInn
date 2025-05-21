@@ -1,6 +1,5 @@
 import { createGlobalStyle } from "styled-components" 
 
-
 export const GlobalStyle = createGlobalStyle`
     *{
         margin: 0;
@@ -18,8 +17,7 @@ export const GlobalStyle = createGlobalStyle`
     body{
         -webkit-font-smoothing: antialiased; 
         color: ${({ theme }) => theme.colors.text};
-        background-color: ${({ theme }) => theme.colors.fillBackground};
-     
+        background-color: ${({ theme }) => theme.colors.fillBackground};  
     }
 
     button{

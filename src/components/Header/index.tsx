@@ -1,11 +1,12 @@
-import menuHambuguer from '../../assets/Hamburger.svg'
-import X from '../../assets/X.png'
-import { ChackraSwitchIndicador, ChakraSwitchControl, ChakraSwitchRoot, HamburgerButton, HeaderContainer, MobileMenu, NavDesktop, NavLink, NavMobile } from './style';
+import { useContext, useEffect, useState } from 'react';
 import { Switch } from "@chakra-ui/react"
 import { Moon, Sun } from '@phosphor-icons/react';
 import { Button } from '../ui/Button';
-import { useContext, useEffect, useState } from 'react';
+import { ChackraSwitchIndicador, ChakraSwitchControl, ChakraSwitchRoot, HamburgerButton, HeaderContainer, MobileMenu, NavDesktop, NavLink, NavMobile } from './style';
 import { ThemeContext, ThemeType } from '@/context/ThemeContext';
+
+import menuHambuguer from '../../assets/Hamburger.svg'
+import X from '../../assets/X.png'
 
 
 export function Header(){
@@ -101,11 +102,8 @@ export function Header(){
                             </ChakraSwitchRoot>
                             <Button></Button>
                         </div>
-                      
                     </NavDesktop>
                 )}
-            
-
         </HeaderContainer>
     )
 }

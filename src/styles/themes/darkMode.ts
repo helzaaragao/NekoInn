@@ -7,6 +7,7 @@ export const darkTheme: DefaultTheme = {
         'componentBackground': '#161616',
         'spanText': '#696969',
         'text': '#FFFFFF', 
+        'switchBackground': '#C75E90',
         'firstAddressBackground': '#C75E90',
         'othersAddressBackground': '#8E345F',
         'firstIconAddressBackground': '#8E345F',

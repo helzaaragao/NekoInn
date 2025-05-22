@@ -1,6 +1,63 @@
+import { useState } from "react";
 import { ContactContainer, FormContact } from "./style";
+import emailjs from '@emailjs/browser'
+
+interface FormData{
+    name: string,
+    email: string, 
+    phone: string, 
+    catName: string, 
+    scredullingDate: string, 
+    numberPets: string, 
+    purrPlan: string
+}
 
 export function Contact(){
+    const [formData, setFormData] = useState<FormData>({
+        name: '',
+        email:'', 
+        phone: '', 
+        catName: '', 
+        scredullingDate: '', 
+        numberPets: '', 
+        purrPlan: ''
+    })
+
+      const [isSubmitting, setIsSubmitting] = useState(false);
+      const [submitSuccess, setSubmitSuccess] = useState(false);
+      const [submitError, setSubmitError] = useState('');
+
+        const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+        const { name, value } = e.target;
+        setFormData(prev => ({
+        ...prev,
+        [name]: value
+        }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setIsSubmitting(true);
+        setSubmitError('');
+
+        try{
+            //envia o email para mim/a adm
+            await emailjs.send(
+                 process.env.REACT_APP_EMAILJS_SERVICE_ID!,
+                process.env.REACT_APP_EMAILJS_TEMPLATE_ID_ADMIN!,
+                {
+                   ...formData, 
+                   to_email: 'helza.batista.aragao@gmail.com',
+                   
+                }
+            )
+        }
+  }
+
+    // const sendEmail = (e) => {
+    //     
+
+    // }
     return(
         <ContactContainer>
         <header>
@@ -11,35 +68,35 @@ export function Contact(){
         <FormContact action="" method="post">
             <div>
                 <label htmlFor="name">FULL NAME</label>
-                <input type="text" />
+                <input type="text" id="name" name="name"/>
             </div>
             <div>
                 <label htmlFor="email">EMAIL</label>
-                <input type="email" />
+                <input type="email" id="email" name="email" />
             </div>
             <div>
                 <label htmlFor="phone">PHONE NUMBER</label>
-                <input type="tel" />
+                <input type="tel" id="phone" name="phone" />
             </div>
             <div>
                 <label htmlFor="catName">CAT NAME</label>
-                <input type="text" />
+                <input type="text" id="catName" name="catName" />
             </div>
             <div>
                 <label htmlFor="date">PICK A DATE</label>
-                <input type="date" />
+                <input type="date" id="scredullingDate" name="scredullingDate" />
             </div>
             <div>
                 <label htmlFor="numberPets">HOW MANY PETS?</label>
-                <input type="number" />
+                <input type="number" id="numberPets" name="numberPets" />
             </div>
             <div>
-                <label htmlFor="numberPets">PURR PLAN</label>
-                <select name="opcoes" id="opcoes" required>
+                <label htmlFor="purrPlan">PURR PLAN</label>
+                <select name="purrPlan" id="purrPlan" required>
                     <option defaultValue="selecione">Selecione</option>
-                    <option value="opcao1">PURR DUCAL</option>
-                    <option value="opcao2">PURR IMPERIAL</option>
-                    <option value="opcao3">PURR ROYAL</option>
+                    <option value="PURR DUCAL">PURR DUCAL</option>
+                    <option value="PURR IMPERIAL">PURR IMPERIAL</option>
+                    <option value="PURR ROYAL">PURR ROYAL</option>
                 </select>
             </div>
             <button>BOOK NOW</button>

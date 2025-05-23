@@ -1,14 +1,18 @@
 import { useState } from "react";
-import { ContactContainer, FormContact } from "./style";
+import { ContactContainer, FormContact } from "./style"
 import emailjs from '@emailjs/browser'
+import {format, isBefore, parseISO} from 'date-fns'
+import {ptBR} from 'date-fns/locale'
+
+// Frase de erro para quando ocorrer do usuário colocar algo errado de proposito na data por exemplo
 
 interface FormData{
     name: string,
     email: string, 
     phone: string, 
     catName: string, 
-    scredullingDate: string, 
-    numberPets: string, 
+    scredullingDate: Date | null, 
+    numberPets: number, 
     purrPlan: string
 }
 
@@ -19,14 +23,16 @@ const emailjsConfig = {
     userId: import.meta.env.VITE_PUBLIC_EMAILJS_USER_ID || ''
 }
 
+const MIN_DATE = new Date(2025, 4, 1);
+
 export function Contact(){
     const [formData, setFormData] = useState<FormData>({
         name: '',
         email:'', 
         phone: '', 
         catName: '', 
-        scredullingDate: '', 
-        numberPets: '', 
+        scredullingDate: null, 
+        numberPets: 1, 
         purrPlan: ''
     })
 
@@ -35,27 +41,57 @@ export function Contact(){
       const [submitError, setSubmitError] = useState('');
       const [isEmailSent, setIsEmailSent] = useState(false)
 
+
+      const formattedDate = formData.scredullingDate ? format(formData.scredullingDate, "dd 'de' MMM 'de' yyyy", {locale: ptBR}) : ''
+
+
         const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
         const { name, value } = e.target;
-        setFormData(prev => ({
-        ...prev,
-        [name]: value
-        }));
+        setFormData(prev => {
+            if(name === 'numberPets'){
+                return{
+                    ...prev,
+                    [name]: Number(value)
+                }
+            }
+            if(name === 'scredullingDate'){
+                const dateValue = value ? parseISO(value) : null
+                return {
+                    ...prev, 
+                    [name]: dateValue
+                }
+            }
+            return {
+                ...prev,
+                [name]: value
+            }
+        })
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        setIsSubmitting(true);
-        setSubmitError('');
+     
 
          if (isSubmitting || isEmailSent) return;
 
+         if(formData.scredullingDate && isBefore(formData.scredullingDate, MIN_DATE)){
+            setSubmitError('Por favor, selecione uma data a partir de maio de 2025')
+            return
+         }
+            setIsSubmitting(true);
+            setSubmitError('');
+
         try{
+            const emailData = {
+                ...formData,
+                scredullingDate: formattedDate,
+                numberPets: formData.numberPets.toString(),
+            }
             await emailjs.send(
                 emailjsConfig.serviceId,
                 emailjsConfig.templateIdAdm,
                 {
-                   ...formData, 
+                   ...emailData, 
                    to_email: 'helza.batista.aragao@gmail.com',
                    subject: `Novo agendamento no Neko Inn - ${formData.name}`
                 },
@@ -65,7 +101,7 @@ export function Contact(){
                     emailjsConfig.serviceId,
                     emailjsConfig.templateIdUser,
                   {
-                    ...formData,
+                    ...emailData,
                     to_email: formData.email,
                     subject: 'Auto-reply: Agendamento concluído! | Neko Inn'
                   },
@@ -86,7 +122,7 @@ export function Contact(){
                 <header>
                     <span>AGENDAMENTO CONFIRMADO!</span>
                     <h2>Obrigado por reservar conosco!</h2>
-                    <p>Enviamos uma confirmação para {formData.email} com os detalhes do seu agendamento para o plano {formData.purrPlan}.</p>
+                    <p>Enviamos uma confirmação para <strong>{formData.email}</strong> com os detalhes do seu agendamento para o plano <strong>{formData.purrPlan}</strong> em <strong>{formattedDate}</strong>.</p>
                 </header>
             </ContactContainer>
     )
@@ -118,26 +154,23 @@ export function Contact(){
             </div>
             <div>
                 <label htmlFor="date">PICK A DATE</label>
-                <input type="date" id="scredullingDate" name="scredullingDate" value={formData.scredullingDate} onChange={handleChange} required />
+                <input type="date" id="scredullingDate" name="scredullingDate" value={formData.scredullingDate ? format(formData.scredullingDate, 'yyyy-MM-dd') : ''} onChange={handleChange} min={format(MIN_DATE, 'yyyy-MM-dd')} required />
             </div>
             <div>
                 <label htmlFor="numberPets">HOW MANY PETS?</label>
-                <input type="number" id="numberPets" name="numberPets" value={formData.numberPets} onChange={handleChange} required min="1"/>
+                <input type="number" id="numberPets" name="numberPets" value={formData.numberPets} onChange={handleChange} min="1" required />
             </div>
             <div>
                 <label htmlFor="purrPlan">PURR PLAN</label>
                 <select name="purrPlan" id="purrPlan" value={formData.purrPlan} onChange={handleChange} required>
                     <option defaultValue="selecione">Selecione</option>
-                    <option value="PURR DUCAL">PURR DUCAL</option>
-                    <option value="PURR IMPERIAL">PURR IMPERIAL</option>
-                    <option value="PURR ROYAL">PURR ROYAL</option>
+                    <option value="Purr Ducal">Purr Ducal</option>
+                    <option value="Purr Imperial">Purr Imperial</option>
+                    <option value="Purr Royal">Purr Royal</option>
                 </select>
             </div>
             <button type="submit" disabled={isSubmitting}> {isSubmitting ? 'SENDING...' : 'BOOK NOW'}</button>
-           
-
-        </FormContact>
-           
+            </FormContact>     
         </ContactContainer>
     )
 }

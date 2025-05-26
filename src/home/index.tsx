@@ -19,8 +19,16 @@ import { About, Address, Cats, HeroBanner, HomeContainer, PurrCare, Rooms, Vecto
 import { Button } from "@/components/ui/Button";
 import { AccordionChackra } from "@/components/ui/Accordion";
 import { GalleryCarousel } from "@/components/ui/GalleryCarousel";
+import '../i18n/i18n'
+import { useTranslation } from "react-i18next";
+import { useEffect } from "react";
 
 export function Home(){
+    const {t, i18n} = useTranslation()
+    useEffect(() => {
+        i18n.changeLanguage(navigator.language)
+    }, [])
+
     return(
         <>
         <HomeContainer>

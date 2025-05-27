@@ -1,0 +1,33 @@
+{
+    "MainHome": {
+        "hero":{
+            "article-span": "WHERE FELINE CONFORT COMES FIRST",
+            "article-title": "Your 5 Starts Purr Inn",
+            "article-description": "At NekoInn, we understand that your beloved feline companion deserves the best care, even when you can't be there.That's why we've created a haven designed specifically for cats, where every whisker is cherished and every purr is celebrated. From cozy accommodations to personalized attention, we strive to provide a nurturing environment where your cat can relax, play, and thrive while you're away. Welcome to NekoInn, where your cat's comfort and happiness are our top priorities.",
+            "bookButton": "BOOK A PURR-SUITE",
+            "aside-span":"WATCH NOW",
+             "aside-title":"Introducing The NekoInn"
+        },  
+        "about" : {
+            "span":"YOUR TRUSTED CAT RETREAT", 
+            "title": "About NekoInn", 
+            "description":"NekoInn is more than a cat boarding facility; it's a home away from home for your furry family members. Nestled in serene surroundings, our inn offers a tranquil retreat for cats of all shapes, sizes, and personalities. With a team of dedicated caregivers passionate about feline welfare, we ensure every guest receives love, attention, and comfort. Rest easy knowing your cat is in caring hands at NekoInn."
+        }, 
+        "rooms": {
+            "span":"PERFECTLY TAILORED FOR YOUR FELINE FRIEND",
+            "title":"Our Rooms"
+        }, 
+        "purrCare": {
+            "article-span":"DEDICATED CARE FOR EVERY PURRSONALITY", 
+            "article-title":"Purr Care", 
+            "article-description":"Experience top-notch feline care with our Purr Care services. From grooming to playtime, we provide personalized attention to ensure your cat's happiness and well-being at NekoInn.", 
+            "article-button":"Book Now", 
+            "firstDiv-title":"Grooming Spa:",
+            "firstDiv-description":"Indulge your cat in a pampering experience at our Grooming Spa. Our skilled groomers provide gentle care and attention, from luxurious baths to expert grooming sessions, leaving your cat looking and feeling their best.", 
+            "secondDiv-title":"Playtime Paradise:", 
+            "secondDiv-description":"Let your cat unleash their playful side in our Playtime Paradise. With a variety of engaging toys, climbing structures, and interactive games, our supervised play sessions offer the perfect opportunity for your cat to exercise, socialize, and have fun.", 
+            "thirdDiv-title":"Gourmet Dining:", 
+            "thirdDiv-description":"Treat your cat's taste buds to a culinary delight with our Gourmet Dining service. From premium cat cuisine to customized meal plans tailored to their dietary needs, our gourmet chefs ensure that every meal is both delicious and nutritious."
+        }
+    }
+}

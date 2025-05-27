@@ -1,0 +1,33 @@
+{
+    "MainHome": {
+        "hero":{
+            "article-span": "ONDE O CONFORTO FELINO VEM EM PRIMEIRO LUGAR",
+            "article-title": "Sua Pousada Ronronante 5 Estrelas",
+            "article-description": "Na NekoInn, entendemos que seu amado companheiro felino merece o melhor cuidado, mesmo quando você não pode estar lá. Por isso criamos um refúgio projetado especialmente para gatos, onde cada bigode é valorizado e cada ronronar é celebrado.",
+            "bookButton": "RESERVE UM SUÍTE RONRONANTE",
+            "aside-span":"ASSISTA AGORA",
+             "aside-title":"Conhecendo a NekoInn"
+        }, 
+        "about" : {
+            "span":"SEU RETIRO FELINO DE CONFIANÇA", 
+            "title": "Sobre a NekoInn", 
+            "description":"A NekoInn é mais do que uma instalação de hospedagem para gatos; é um lar longe de casa para seus familiares peludos. Aninhada em um ambiente sereno, nossa pousada oferece um refúgio tranquilo para gatos de todos os tipos"
+        }, 
+        "rooms": {
+            "span":"FEITO SOB MEDIDA PARA O SEU AMIGO FELINO",
+            "title":"Nossos Aposentos"
+        }, 
+        "purrCare": {
+            "article-span":"CUIDADOS PERSONALIZADOS PARA CADA PERSONALIDADE FELINA", 
+            "article-title":"Cuidados Ronronantes", 
+            "article-description":"Desfrute do melhor cuidado felino com nossos serviços especiais. Desde cuidados estéticos até momentos de brincadeira, oferecemos atenção personalizada para garantir a felicidade e bem-estar do seu gato na NekoInn.", 
+            "article-button":"Reserve Agora", 
+            "firstDiv-title":"Spa de Beleza:",
+            "firstDiv-description":"Mime seu gato com uma experiência relaxante em nosso Spa de Beleza. Nossos profissionais oferecem cuidados gentis, desde banhos luxuosos até sessões completas de grooming, deixando seu felino com aparência e sensação de pura satisfação.", 
+            "secondDiv-title":"Paraíso de Brincadeiras:", 
+            "secondDiv-description":"Deixe seu gato soltar sua energia em nosso Paraíso de Brincadeiras. Com variedade de brinquedos, estruturas para escalar e jogos interativos, nossas sessões supervisionadas são a oportunidade perfeita para exercício, socialização e diversão.", 
+            "thirdDiv-title":"Gastronomia Felina:", 
+            "thirdDiv-description":"Aguce o paladar do seu gato com nosso serviço de Gastronomia Felina. Desde pratos premium até cardápios personalizados para necessidades específicas, nossos chefs garantem refeições deliciosas e nutritivas."
+        }
+    }
+}

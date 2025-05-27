@@ -19,15 +19,12 @@ import { About, Address, Cats, HeroBanner, HomeContainer, PurrCare, Rooms, Vecto
 import { Button } from "@/components/ui/Button";
 import { AccordionChackra } from "@/components/ui/Accordion";
 import { GalleryCarousel } from "@/components/ui/GalleryCarousel";
-import '../i18n/i18n'
+import '../../public/i18n'
 import { useTranslation } from "react-i18next";
-import { useEffect } from "react";
 
 export function Home(){
-    const {t, i18n} = useTranslation()
-    useEffect(() => {
-        i18n.changeLanguage(navigator.language)
-    }, [])
+    const { t } = useTranslation('home'); 
+
 
     return(
         <>
@@ -36,7 +33,7 @@ export function Home(){
             <HeroBanner>
                 <section>
                     <article>
-                        <span>WHERE FELINE CONFORT COMES FIRST</span>
+                        <span>{t('MainHome.hero.article-span')}</span>
                         <h1>Your 5 Starts Purr Inn</h1>
                         <p>At NekoInn, we understand that your beloved feline companion deserves the best care, even when you can't be there.
                             That's why we've created a haven designed specifically for cats, where every whisker is cherished and every purr 

@@ -9,9 +9,12 @@ export const LanguageSwitcher = () => {
     return(
         <div>
             {languages.map((lang) => (
-                <button key={lang.code} onClick={() => i18n.changeLanguage(lang.code)}>
-                    <span>{lang.flag}</span>
-                    <span>{lang.name}</span>
+                <button 
+                    key={lang.code} 
+                    onClick={() => i18n.changeLanguage(lang.code)} 
+                    disabled={i18n.language === lang.code}>
+                        <span>{lang.flag}</span>
+                        <span>{lang.name}</span>
                 </button>
             ))}
         </div>

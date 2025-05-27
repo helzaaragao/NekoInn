@@ -6,8 +6,10 @@ import i18next from "i18next";
 
 export function App() {
 useEffect(() => {
-  i18next.loadNamespaces(['home', 'components']); // Pré-carrega todos os namespaces
-}, []);
+    if (!i18next.hasLoadedNamespace('home') || !i18next.hasLoadedNamespace('components')) {
+      i18next.loadNamespaces(['home', 'components'])
+    }
+  }, [])
   return (
     <ThemeProvider>
       <GlobalStyle></GlobalStyle>

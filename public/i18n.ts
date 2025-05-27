@@ -6,8 +6,13 @@ import Backend from 'i18next-http-backend';
 i18n.use(Backend)
     .use(LanguageDetector)
     .use(initReactI18next).init({
-    fallbackLng: 'en',
-    supportedLngs: ['en', 'pt-BR'],
+    fallbackLng: {
+      'pt': ['pt-BR', 'en'], 
+      'default': ['en'] 
+    },
+    supportedLngs: ['en','pt', 'pt-BR'],
+    nonExplicitSupportedLngs: true,
+    load: 'currentOnly',
     debug:  import.meta.env.MODE === 'development', 
      interpolation: {
       escapeValue: false,
@@ -18,7 +23,14 @@ i18n.use(Backend)
     ns: ['home', 'components'], 
     defaultNS:'home',
     detection: {
-        order: ['navigator', 'htmlTag', 'cookie', 'localStorage'],
-      caches: ['cookie'],
+       order: ['cookie', 'localStorage', 'navigator', 'htmlTag', 'path', 'subdomain'],
+      caches: ['cookie', 'localStorage'],
+      lookupCookie: 'i18next',
+      lookupLocalStorage: 'i18nextLng',
+        convertDetectedLanguage: (lng) => {
+        if (lng === 'pt' || lng.startsWith('pt-')) return 'pt-BR';
+        return lng;
+      }
     }
 })
+export default i18n

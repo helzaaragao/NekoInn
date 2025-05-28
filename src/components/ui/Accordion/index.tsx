@@ -1,23 +1,25 @@
 import { Accordion, Span } from "@chakra-ui/react"
 import { ItemContent, ItemIndicator, ItemTrigger, Root } from "./style"
+import { useTranslation } from "react-i18next";
 
 const items = [
-    { value: "a", title: "Cozy Corners: Where Comfort Meets Contentment", text: "NekoInn is more than a cat boarding facility; it's a home away from home for your furry family members. Nestled in serene surroundings, our inn offers a tranquil retreat for cats of all shapes, sizes, and personalities. With a team of dedicated caregivers passionate about feline welfare, we ensure every guest receives love, attention, and comfort. Rest easy knowing your cat is in caring hands at NekoInn." },
-    { value: "b", title: "Palatial Purrfections: Opulence for Discerning Cats", text: "NekoInn is more than a cat boarding facility; it's a home away from home for your furry family members. Nestled in serene surroundings, our inn offers a tranquil retreat for cats of all shapes, sizes, and personalities. With a team of dedicated caregivers passionate about feline welfare, we ensure every guest receives love, attention, and comfort. Rest easy knowing your cat is in caring hands at NekoInn." },
-    { value: "c", title: "Tailored Tranquility: Personalized Care for Every Cat", text: "NekoInn is more than a cat boarding facility; it's a home away from home for your furry family members. Nestled in serene surroundings, our inn offers a tranquil retreat for cats of all shapes, sizes, and personalities. With a team of dedicated caregivers passionate about feline welfare, we ensure every guest receives love, attention, and comfort. Rest easy knowing your cat is in caring hands at NekoInn." },
+   { value: "a", titleKey: "accordion.cozyCorners.title", textKey: "accordion.cozyCorners.text" },
+  { value: "b", titleKey: "accordion.palatialPurrfections.title", textKey: "accordion.palatialPurrfections.text" },
+  { value: "c", titleKey: "accordion.tailoredTranquility.title", textKey: "accordion.tailoredTranquility.text" },
   ]
 
 export const AccordionChackra = () => {
+    const { t } = useTranslation('components');
     return (
       <Root collapsible defaultValue={["a"]} variant={"outline"}>
         {items.map((item, index) => (
           <Accordion.Item key={index} value={item.value} >
             <ItemTrigger>
             <ItemIndicator />
-              <Span flex="1">{item.title}</Span>
+              <Span flex="1">{t(item.titleKey)}</Span>
             </ItemTrigger>
             <ItemContent>
-              <Accordion.ItemBody>{item.text}</Accordion.ItemBody>
+              <Accordion.ItemBody>{t(item.textKey)}</Accordion.ItemBody>
             </ItemContent>
           </Accordion.Item>
         ))}

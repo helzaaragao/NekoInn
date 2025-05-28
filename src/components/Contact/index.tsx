@@ -3,6 +3,7 @@ import { ContactContainer, FormContact } from "./style"
 import emailjs from '@emailjs/browser'
 import {format, isBefore, parseISO} from 'date-fns'
 import {ptBR} from 'date-fns/locale'
+import { useTranslation } from "react-i18next";
 
 // Frase de erro para quando ocorrer do usuário colocar algo errado de proposito na data por exemplo
 
@@ -40,6 +41,7 @@ export function Contact(){
       const [submitSuccess, setSubmitSuccess] = useState(false);
       const [submitError, setSubmitError] = useState('');
       const [isEmailSent, setIsEmailSent] = useState(false)
+      const { t } = useTranslation('components'); 
 
 
       const formattedDate = formData.scredullingDate ? format(formData.scredullingDate, "dd 'de' MMM 'de' yyyy", {locale: ptBR}) : ''
@@ -130,40 +132,40 @@ export function Contact(){
     return(
         <ContactContainer>
         <header>
-            <span>SECURE YOUR CAT'S STAY TODAY</span>
-                <h2>Book Now</h2>
-                <p>Ready to reserve your cat's spot at NekoInn? Our easy-to-use booking system makes it simple to schedule your cat's stay with us. Just select your desired dates, choose from our range of accommodations and services, and complete your reservation in a few easy steps.</p>
+            <span>{t('Contact.header-span')}</span>
+                <h2>{t('Contact.header-title')}</h2>
+                <p>{t('Contact.header-description')}</p>
                 {submitError && <p className="error-message">{submitError}</p>}
         </header>
         <FormContact onSubmit={handleSubmit}>
             <div>
-                <label htmlFor="name">FULL NAME</label>
+                <label htmlFor="name">{t('Contact.label-name')}</label>
                 <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required/>
             </div>
             <div>
-                <label htmlFor="email">EMAIL</label>
+                <label htmlFor="email">{t('Contact.label-email')}</label>
                 <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required/>
             </div>
             <div>
-                <label htmlFor="phone">PHONE NUMBER</label>
+                <label htmlFor="phone">{t('Contact.label-phone')}</label>
                 <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleChange} required/>
             </div>
             <div>
-                <label htmlFor="catName">CAT NAME</label>
+                <label htmlFor="catName">{t('Contact.label-catName')}</label>
                 <input type="text" id="catName" name="catName" value={formData.catName} onChange={handleChange} required/>
             </div>
             <div>
-                <label htmlFor="date">PICK A DATE</label>
+                <label htmlFor="date">{t('Contact.label-date')}</label>
                 <input type="date" id="scredullingDate" name="scredullingDate" value={formData.scredullingDate ? format(formData.scredullingDate, 'yyyy-MM-dd') : ''} onChange={handleChange} min={format(MIN_DATE, 'yyyy-MM-dd')} required />
             </div>
             <div>
-                <label htmlFor="numberPets">HOW MANY PETS?</label>
+                <label htmlFor="numberPets">{t('Contact.label-numberPets')}</label>
                 <input type="number" id="numberPets" name="numberPets" value={formData.numberPets} onChange={handleChange} min="1" required />
             </div>
             <div>
-                <label htmlFor="purrPlan">PURR PLAN</label>
+                <label htmlFor="purrPlan">{t('Contact.label-purrPlan')}</label>
                 <select name="purrPlan" id="purrPlan" value={formData.purrPlan} onChange={handleChange} required>
-                    <option defaultValue="selecione">Selecione</option>
+                    <option defaultValue="selecione">{t('Contact.label-pick')}</option>
                     <option value="Purr Ducal">Purr Ducal</option>
                     <option value="Purr Imperial">Purr Imperial</option>
                     <option value="Purr Royal">Purr Royal</option>

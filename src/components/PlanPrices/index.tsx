@@ -4,104 +4,106 @@ import pinkCrown from '../../assets/royal-crown-variant-made-of-lines-and-circle
 import whiteCrown from '../../assets/royal-crown-of-elegant-vintage-design-svgrepo-com 1.svg'
 import pinkOutlineCrown from '../../assets/crown-made-of-triangles-and-circles-outline-svgrepo-com 1.svg'
 import { PricesContainer, PricesHeader, PricesSection } from './style'
+import { useTranslation } from 'react-i18next'
 export function PlanPrices(){
+     const { t } = useTranslation('components'); 
     return(
         <PricesContainer>
             <PricesHeader>
-                <span>TRANSPARENT RATES FOR YOUR PURRY COMPANION</span>
-                <h2>Pricing</h2>
-                <p>In our Pricing Section, transparency meets affordability. At NekoInn, we believe in straightforward pricing, ensuring you have peace of mind knowing exactly what to expect.</p>
+                <span>{t('PlanPrices.header-span')}</span>
+                <h2>{t('PlanPrices.header-title')}</h2>
+                <p>{t('PlanPrices.header-description')}</p>
             </PricesHeader>
             <PricesSection>
                 <article>
                     <div>
                         <span>PURR DUCAL</span>
                         <img src={pinkCrown} alt="" />
-                        <h4>$160.99 <small>PER DAY</small></h4>
+                        <h4>{t('PlanPrices.section-firstDiv-title')} <small>{t('PlanPrices.titleSmall')} </small></h4>
                     </div>
                     <ul>
                         <li>
                             <CheckCircle size={32} />
-                            Standard Room Accommodation
+                            {t('PlanPrices.section-firstDiv-li1')}
                         </li>
                         <li>
                             <CheckCircle size={32} />
-                             Basic Grooming
+                               {t('PlanPrices.section-firstDiv-li2')}
                         </li>
                         <li>
                             <CheckCircle size={32} />
-                            Group Playtime
+                              {t('PlanPrices.section-firstDiv-li3')}
                         </li>
                         <li>
                             <CheckCircle size={32} />
-                            Standard Meal Plan
+                              {t('PlanPrices.section-firstDiv-li4')}
                         </li>
                         <li>
                             <CheckCircle size={32} />
-                            Daily Wellness Check
+                              {t('PlanPrices.section-firstDiv-li5')}
                         </li>
                     </ul>
-                    <button>BOOK NOW</button> 
+                    <button>{t('PlanPrices.button')}</button> 
                 </article>
                 <article>
                      <div>
                     <span>PURR IMPERIAL</span>
                     <img src={whiteCrown} alt="" />
-                    <h4>$600.99<small>PER DAY</small></h4>
+                    <h4>{t('PlanPrices.section-secondDiv-title')} <small>  {t('PlanPrices.titleSmall')}</small></h4>
                     </div>
                     <ul>
                         <li>
                             <CheckCircle size={32} />
-                            Presidential Suite Accommodation
+                           {t('PlanPrices.section-secondDiv-li1')}
                         </li>
                         <li>
                             <CheckCircle size={32} />
-                            Deluxe Spa Grooming Package
+                            {t('PlanPrices.section-secondDiv-li2')}
                         </li>
                         <li>
                             <CheckCircle size={32} />
-                            Exclusive One-on-One Playtime
+                            {t('PlanPrices.section-secondDiv-li3')}
                         </li>
                         <li>
                             <CheckCircle size={32} />
-                            Gourmet Meal Plan
+                           {t('PlanPrices.section-secondDiv-li4')}
                         </li>
                         <li>
                             <CheckCircle size={32} />
-                            24/7 Concierge Service
+                           {t('PlanPrices.section-secondDiv-li5')}
                         </li>
                     </ul>
-                    <button>BOOK NOW</button> 
+                    <button>{t('PlanPrices.button')}</button> 
                 </article>
                 <article>
                   <div>
                     <span>PURR ROYAL</span>
                     <img src={pinkOutlineCrown} alt="" />
-                    <h4>$299.99<small>PER DAY</small></h4>
+                    <h4>{t('PlanPrices.section-thirdDiv-title')} <small> {t('PlanPrices.titleSmall')}</small></h4>
                     </div>
                     <ul>
                         <li>
                             <CheckCircle size={32} />
-                            Luxury Suite Accommodation
+                            {t('PlanPrices.section-thirdDiv-li1')}
                         </li>
                         <li>
                             <CheckCircle size={32} />
-                            Deluxe Grooming Package
+                             {t('PlanPrices.section-thirdDiv-li2')}
                         </li>
                         <li>
                             <CheckCircle size={32} />
-                            Private Playtime
+                             {t('PlanPrices.section-thirdDiv-li3')}
                         </li>
                         <li>
                             <CheckCircle size={32} />
-                            Premium Meal Plan
+                            {t('PlanPrices.section-thirdDiv-li4')}
                         </li>
                         <li>
                             <CheckCircle size={32} />
-                            VIP Wellness Check
+                             {t('PlanPrices.section-thirdDiv-li5')}
                         </li>
                     </ul>
-                    <button>BOOK NOW</button> 
+                    <button>{t('PlanPrices.button')}</button> 
                 </article>
             </PricesSection>
         </PricesContainer>

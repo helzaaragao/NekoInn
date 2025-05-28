@@ -1,3 +1,89 @@
 {
-    
+    "Header": {
+        "about-us":"Sobre nós",
+        "our-rooms":"Nossos Aposentos",
+        "purrCare":"Cuidados Ronronantes",
+        "testimonial":"Depoimentos",
+        "button": "RESERVAR AGORA"
+    },
+    "accordion":{
+        "cozyCorners": {
+      "title": "Cantinhos Aconchegantes: Conforto e Bem-Estar para Seu Gato",
+      "text": "A NekoInn não é um simples hotel para gatos - é um verdadeiro lar temporário para seu bichano. Num ambiente tranquilo e seguro, oferecemos o refúgio perfeito para gatos de todos os tipos. Nossa equipe de cuidadores apaixonados por felinos garante carinho, atenção e todo o conforto que seu pet merece. Pode viajar tranquilo que seu gatinho está em ótimas mãos!"
+    },
+    "palatialPurrfections": {
+      "title": "Mimos Reais: Luxo para Gatos Exigentes",
+      "text": "A NekoInn não é um simples hotel para gatos - é um verdadeiro lar temporário para seu bichano. Num ambiente tranquilo e seguro, oferecemos o refúgio perfeito para gatos de todos os tipos. Nossa equipe de cuidadores apaixonados por felinos garante carinho, atenção e todo o conforto que seu pet merece. Pode viajar tranquilo que seu gatinho está em ótimas mãos!"
+    },
+    "tailoredTranquility": {
+      "title": "Sossego Sob Medida: Cuidado Personalizado",
+      "text": "A NekoInn não é um simples hotel para gatos - é um verdadeiro lar temporário para seu bichano. Num ambiente tranquilo e seguro, oferecemos o refúgio perfeito para gatos de todos os tipos. Nossa equipe de cuidadores apaixonados por felinos garante carinho, atenção e todo o conforto que seu pet merece. Pode viajar tranquilo que seu gatinho está em ótimas mãos!"
+    }
+    },
+    "PlanPrices": {
+        "header-span":"TARIFAS TRANSPARENTES PARA SEU COMPANHEIRO FELINO",
+        "header-title":"Nossos Planos", 
+        "header-description": "Na NekoInn, a transparência anda de mãos dadas com preços justos. Aqui você sabe exatamente o que está contratando, sem surpresas desagradáveis.", 
+        "section-firstDiv-span":"PURR DUCAL", 
+        "section-firstDiv-title":"R$160,99", 
+        "titleSmall": "POR DIA", 
+        "section-firstDiv-li1":"Acomodação em Suíte Standard", 
+        "section-firstDiv-li2":"Banho e Tosa Básica", 
+        "section-firstDiv-li3": "Brincadeiras em Grupo",
+        "section-firstDiv-li4": "Alimentação Standard",
+        "section-firstDiv-li5": "Check-up Diário de Saúde",
+        "button": "RESERVAR AGORA", 
+        "section-secondDiv-span":"PURR IMPERIAL",
+        "section-secondDiv-title":"R$600,99",
+        "section-secondDiv-li1":"Acomodação em Suíte Presidencial",
+        "section-secondDiv-li2":"Pacote Spa Completo",
+        "section-secondDiv-li3":"Brincadeiras Exclusivas",
+        "section-secondDiv-li4":"Alimentação Gourmet",
+        "section-secondDiv-li5":"Concierge 24 Horas",
+        "section-thirdDiv-span":"PURR ROYAL",
+        "section-thirdDiv-title":"R$299,99",
+        "section-thirdDiv-li1":"Acomodação em Suíte Luxo",
+        "section-thirdDiv-li2":"Banho e Tosa Premium",
+        "section-thirdDiv-li3":"Brincadeiras Privativas",
+        "section-thirdDiv-li4":"Alimentação Premium",
+        "section-thirdDiv-li5":"Check-up VIP de Saúde"
+    }, 
+        "Feedbacks":{
+        "header-span":"DEPOIMENTOS DE CLIENTES SATISFEITOS",
+        "header-title":"Eles Aprovam a NekoInn", 
+        "header-description":"Veja o que nossos clientes têm a dizer sobre a experiência na NekoInn. Seus depoimentos mostram todo o carinho e dedicação que temos com seus gatinhos.",
+        "firstQuotes-description":"Deixar meu gato na NekoInn foi a melhor decisão que tomei. A equipe fez questão de deixar meu bichano feliz e bem cuidado. Recebi fotos e atualizações diárias, o que me deixou tranquila durante minha viagem. Obrigada por proporcionarem um lar tão especial para meu gato!",
+        "secondQuotes-description":"Recomendo a NekoInn de olhos fechados! Desde o primeiro contato, percebi que meu gato estaria em boas mãos. As instalações são impecáveis e a equipe é super atenciosa. Meu gato voltou para casa relaxado e feliz. Com certeza voltaremos!",
+        "thirdQuotes-description":"A NekoInn tornou tudo mais fácil. O cuidado personalizado e a atenção aos detalhes fazem toda diferença. Adorei receber fotos do meu gato aproveitando a estadia. Tenho total paz em saber que ela está com profissionais tão dedicados. Obrigada, NekoInn!"
+    }, 
+    "Contact": {
+        "header-span":"GARANTA JÁ A ESTADIA DO SEU GATO",
+        "header-title":"Reserve Agora",
+        "header-description":"Pronto para reservar a estadia do seu gato na NekoInn? Nosso sistema de reservas fácil e rápido permite agendar em poucos passos. Basta selecionar as datas, escolher entre nossos planos e serviços, e finalizar sua reserva.",
+        "label-name":"NOME COMPLETO",
+        "label-email":"E-MAIL",
+        "label-phone":"TELEFONE",
+        "label-catName":"NOME DO GATO",
+        "label-date":"ESCOLHA A DATA",
+        "label-numberPets":"QUANTOS PETS?",
+        "label-purrPlan":"PLANO PURR",
+        "label-pick":"Selecione",
+        "button-sending":"ENVIANDO...",
+        "button-bookNow":"RESERVAR AGORA",
+        "confirmation-span":"RESERVA CONFIRMADA!",
+        "confirmation-title":"Obrigado por reservar conosco!",
+        "confirmation-descriptionEmail":"Enviamos uma confirmação para",
+        "confirmation-descriptionPlan":"com todos os detalhes do seu",
+        "confirmation-descriptionDate":"agendamento para"
+    },
+    "Footer":{
+        "newsletter-span":"FIQUE POR DENTRO",
+        "newsletter-title":"Newsletter",
+        "newsletter-email":"SEU E-MAIL",
+        "info-title_1":"Nos Faça Uma Visita",
+        "info-title_2":"Ligue Para Nós",
+        "info-title_3":"Mande Uma Mensagem",
+        "info-socialmedia-title":"Siga a NekoInn",
+        "info-socialmedia-description":"© 2024 TODOS OS DIREITOS RESERVADOS - NEKOINN O HOTEL 5 ESTRELAS PARA GATOS"
+    }
 }

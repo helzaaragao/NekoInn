@@ -7,6 +7,7 @@ import { ThemeContext, ThemeType } from '@/context/ThemeContext';
 
 import menuHambuguer from '../../assets/Hamburger.svg'
 import X from '../../assets/X.png'
+import { useTranslation } from 'react-i18next';
 
 
 export function Header(){
@@ -17,6 +18,7 @@ export function Header(){
 
     const isDarkMode = theme === ThemeType.dark
     
+    const { t } = useTranslation('components'); 
 
     useEffect(() => {
         const checkScreenSize = () => {
@@ -70,10 +72,10 @@ export function Header(){
                                             </ChakraSwitchControl>
                                 </ChakraSwitchRoot>
                                 <NavMobile>
-                                    <NavLink href="#">About us</NavLink>
-                                    <NavLink href="#">Our Rooms</NavLink>
-                                    <NavLink href="#">Purr Care</NavLink>
-                                    <NavLink href="#">Testimonial</NavLink>
+                                    <NavLink href="#">{t('Header.about-us')}</NavLink>
+                                    <NavLink href="#">{t('Header.our-rooms')}</NavLink>
+                                    <NavLink href="#">{t('Header.purrCare')}</NavLink>
+                                    <NavLink href="#">{t('Header.testimonial')}</NavLink>
                                     <Button bgColor="secundary/hover"></Button>
                                 </NavMobile>
 
@@ -86,10 +88,10 @@ export function Header(){
             {!isSmallScreenView && (
                     <NavDesktop>
                         <ul>
-                            <NavLink href="#">About us</NavLink>
-                            <NavLink href="#">Our Rooms</NavLink>
-                            <NavLink href="#">Purr Care</NavLink>
-                            <NavLink href="#">Testimonial</NavLink>
+                            <NavLink href="#">{t('Header.about-us')}</NavLink>
+                            <NavLink href="#">{t('Header.our-rooms')}</NavLink>
+                            <NavLink href="#">{t('Header.purrCare')}</NavLink>
+                            <NavLink href="#">{t('Header.testimonial')}</NavLink>
                         </ul>
                         <div>
                             <ChakraSwitchRoot  size="lg" checked={isDarkMode} onCheckedChange={toggleTheme}>

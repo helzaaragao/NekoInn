@@ -8,6 +8,7 @@ import { ThemeContext, ThemeType } from '@/context/ThemeContext';
 import menuHambuguer from '../../assets/Hamburger.svg'
 import X from '../../assets/X.png'
 import { useTranslation } from 'react-i18next';
+import { LanguageSwitcher } from '../ui/LanguageSwitcher';
 
 
 export function Header(){
@@ -93,7 +94,9 @@ export function Header(){
                             <NavLink href="#">{t('Header.purrCare')}</NavLink>
                             <NavLink href="#">{t('Header.testimonial')}</NavLink>
                         </ul>
+
                         <div>
+                                
                             <ChakraSwitchRoot  size="lg" checked={isDarkMode} onCheckedChange={toggleTheme}>
                                                 <Switch.HiddenInput />
                                                 <ChakraSwitchControl>
@@ -102,7 +105,9 @@ export function Header(){
                                                     </ChackraSwitchIndicador>
                                                 </ChakraSwitchControl>
                             </ChakraSwitchRoot>
+                           
                             <Button></Button>
+                             <LanguageSwitcher></LanguageSwitcher>
                         </div>
                     </NavDesktop>
                 )}

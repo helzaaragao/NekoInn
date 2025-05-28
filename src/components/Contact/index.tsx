@@ -122,9 +122,9 @@ export function Contact(){
     return(
          <ContactContainer>
                 <header>
-                    <span>AGENDAMENTO CONFIRMADO!</span>
-                    <h2>Obrigado por reservar conosco!</h2>
-                    <p>Enviamos uma confirmação para <strong>{formData.email}</strong> com os detalhes do seu agendamento para o plano <strong>{formData.purrPlan}</strong> em <strong>{formattedDate}</strong>.</p>
+                    <span>{t('Contact.confirmation-span')}</span>
+                    <h2>{t('Contact.confirmation-title')}</h2>
+                    <p>{t('Contact.confirmation-descriptionEmail')} <strong>{formData.email}</strong> {t('Contact.confirmation-descriptionPlan')} <strong>{formData.purrPlan}</strong> {t('Contact.confirmation-descriptionDate')} <strong>{formattedDate}</strong>.</p>
                 </header>
             </ContactContainer>
     )
@@ -171,7 +171,7 @@ export function Contact(){
                     <option value="Purr Royal">Purr Royal</option>
                 </select>
             </div>
-            <button type="submit" disabled={isSubmitting}> {isSubmitting ? 'SENDING...' : 'BOOK NOW'}</button>
+            <button type="submit" disabled={isSubmitting}> {isSubmitting ? t('Contact.form-sending', 'Sending...') : t('Contact.form-bookNow', 'Book Now')}</button>
             </FormContact>     
         </ContactContainer>
     )

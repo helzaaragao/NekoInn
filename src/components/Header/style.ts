@@ -66,6 +66,7 @@ export const ChakraSwitchRoot = styled(Switch.Root)`
     width: 8rem;
     margin: 0 auto;
   } 
+  
 `
 export const ChakraSwitchControl = styled(Switch.Control)`
   width: 100%;
@@ -154,10 +155,11 @@ export const NavDesktop = styled.nav`
       justify-content: space-between;
     }
     div{
-      width: 20rem;
+      width: 25rem;
     Button{
         width: 10rem;
       }
+     
     }
   }
 `

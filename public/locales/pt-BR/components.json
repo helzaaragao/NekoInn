@@ -74,7 +74,9 @@
         "confirmation-title":"Obrigado por reservar conosco!",
         "confirmation-descriptionEmail":"Enviamos uma confirmação para",
         "confirmation-descriptionPlan":"com todos os detalhes do seu",
-        "confirmation-descriptionDate":"agendamento para"
+        "confirmation-descriptionDate":"agendamento para",
+        "form-sending": "ENVIANDO...", 
+        "form-bookNow":"RESERVAR AGORA"
     },
     "Footer":{
         "newsletter-span":"FIQUE POR DENTRO",

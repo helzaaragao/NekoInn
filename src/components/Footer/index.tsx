@@ -2,20 +2,22 @@ import { Envelope, FacebookLogo, InstagramLogo, LinkedinLogo, MapPinArea, Twitte
 import newsLetter from '../../assets/newsletter.svg'
 import { Phone } from 'lucide-react'
 import { ContactInfos, EmailNewsletter, FooterContainer, Newsletter } from './style'
+import { useTranslation } from 'react-i18next';
 export function Footer(){
+    const { t } = useTranslation('components'); 
     return(
         <FooterContainer>
             <Newsletter>
                 <div>
                         <img src={newsLetter} alt="" />
                         <div>
-                            <span>STAY IN TOUCH</span>
-                            <h4>Newsletter</h4>
+                            <span>{t('Footer.newsletter-span')}</span>
+                            <h4>{t('Footer.newsletter-title')}</h4>
                          </div>
                 </div>
                 <EmailNewsletter>
                         <div>
-                            <label htmlFor="email">EMAIL</label>
+                            <label htmlFor="email">{t('Footer.newsletter-email')}</label>
                             <input type="email" />
                         </div>
                         <div>
@@ -31,7 +33,7 @@ export function Footer(){
                             <MapPinArea size={32}/>
                         </div>
                         <article>
-                            <h5>Pay Us A Visit</h5>
+                            <h5>{t('Footer.info-title_1')}</h5>
                         <p>123 Meow Avenue. 
                         Kittyville, CA 90210 United States</p>
                         </article>
@@ -41,7 +43,7 @@ export function Footer(){
                         <Phone size={32} />
                     </div>
                     <article>
-                    <h5>Give Us A Call</h5>
+                    <h5>{t('Footer.info-title_2')}</h5>
                     <p>(555) 555-5555</p>
                     </article>
                 </section>
@@ -51,7 +53,7 @@ export function Footer(){
                      <Envelope size={32} />
                     </div>
                     <article>
-                    <h5>Send Us A Message</h5>
+                    <h5>{t('Footer.info-title_3')}</h5>
                         <p>info@neko-inn.com</p>
                         </article>
                     </a>
@@ -64,7 +66,7 @@ export function Footer(){
                   <p>Purr Imperial</p>
                 </div>
                 <div>
-                    <h5>Socialize With NekoInn</h5>
+                    <h5>{t('Footer.info-socialmedia-title')}</h5>
                     <figure>
 
 
@@ -87,7 +89,7 @@ export function Footer(){
                
                 </div>
                 <div>
-                    <p>2024 © COPYRIGHT - NEKOINN A 5 STAR PURR HOTEL</p>
+                    <p>{t('Footer.info-socialmedia-description')}</p>
                 </div>
             </ContactInfos>
         

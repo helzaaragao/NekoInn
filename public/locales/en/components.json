@@ -74,7 +74,9 @@
         "confirmation-title":"Thanks for booking with us!",
         "confirmation-descriptionEmail":"We've sent a confirmation to",
         "confirmation-descriptionPlan":"with all the details of your",
-        "confirmation-descriptionDate":"appointment on"
+        "confirmation-descriptionDate":"appointment on",
+        "form-sending": "SENDING...", 
+        "form-bookNow":"BOOK NOW"
     },
     "Footer":{
         "newsletter-span":"STAY IN TOUCH",

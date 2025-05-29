@@ -66,6 +66,10 @@ export const ChakraSwitchRoot = styled(Switch.Root)`
     width: 8rem;
     margin: 0 auto;
   } 
+   @media (min-width: 1440px) {
+    width: 6.813rem;
+    height: 2.813rem;
+   }
   
 `
 export const ChakraSwitchControl = styled(Switch.Control)`
@@ -101,7 +105,7 @@ export const ChackraSwitchIndicador = styled(Switch.Indicator)`
 
 export const NavLink = styled.a`
   font-size: 1.4rem;
-  margin-bottom: 3rem;
+  margin-bottom: 1.8rem;
   padding-left: 2.5rem;
   font-weight: bold;
   text-decoration: none;
@@ -116,8 +120,8 @@ export const NavMobile = styled.nav`
     color:  ${({ theme }) => theme.colors["day-background"]};
     margin-top: 5rem;
     padding-left: 0;
-    Button{
-      margin-top: 4rem;
+    Button:last-child{
+      margin-top: 2rem;
       background-color: ${({ theme }) => theme.colors["secundary/hover"]};
     }
 `
@@ -141,7 +145,8 @@ export const NavDesktop = styled.nav`
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 18rem;
+         gap: 1rem; 
+            width: auto; 
       Button:first-child{
         width: 9rem;
         height: 3rem;
@@ -155,13 +160,13 @@ export const NavDesktop = styled.nav`
       justify-content: space-between;
     }
     div{
-      width: 25rem;
-      /* gap: 1rem; */
-    button:first-child{
-        width: 10rem;
-        height: 3rem;
-          margin: 0; 
-          padding: 0;
-      }
+      width: auto; 
+      gap: 1rem; 
+      button:first-child{
+          width: 10.313rem;
+          height: 2.813rem;
+            margin: 0; 
+            padding: 0;
+        }
   }}
 `

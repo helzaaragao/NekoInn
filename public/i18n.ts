@@ -23,14 +23,15 @@ i18n.use(Backend)
     ns: ['home', 'components'], 
     defaultNS:'home',
     detection: {
-       order: ['cookie', 'localStorage', 'navigator', 'htmlTag', 'path', 'subdomain'],
+       order: ['navigator', 'cookie', 'localStorage', 'htmlTag', 'path', 'subdomain'],
       caches: ['cookie', 'localStorage'],
       lookupCookie: 'i18next',
       lookupLocalStorage: 'i18nextLng',
-        convertDetectedLanguage: (lng) => {
-        if (lng === 'pt' || lng.startsWith('pt-')) return 'pt-BR';
-        return lng;
+
+    convertDetectedLanguage: (lng: string) => {
+        if (lng.startsWith('pt')) return 'pt-BR';
+        return ['en', 'pt-BR'].includes(lng) ? lng : 'en';
       }
     }
-})
+} as const)
 export default i18n

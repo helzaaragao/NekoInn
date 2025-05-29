@@ -77,8 +77,13 @@ export function Header(){
                                     <NavLink href="#">{t('Header.our-rooms')}</NavLink>
                                     <NavLink href="#">{t('Header.purrCare')}</NavLink>
                                     <NavLink href="#">{t('Header.testimonial')}</NavLink>
+                                    <LanguageSwitcher></LanguageSwitcher>
                                     <Button bgColor="secundary/hover"></Button>
+                                    
+                                    
                                 </NavMobile>
+                                 
+                                
 
                           </MobileMenu>
                         )

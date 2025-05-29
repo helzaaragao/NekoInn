@@ -142,7 +142,7 @@ export const NavDesktop = styled.nav`
       align-items: center;
       justify-content: center;
       width: 18rem;
-      Button{
+      Button:first-child{
         width: 9rem;
         height: 3rem;
       }
@@ -156,10 +156,12 @@ export const NavDesktop = styled.nav`
     }
     div{
       width: 25rem;
-    Button{
+      /* gap: 1rem; */
+    button:first-child{
         width: 10rem;
+        height: 3rem;
+          margin: 0; 
+          padding: 0;
       }
-     
-    }
-  }
+  }}
 `

@@ -10,6 +10,9 @@ export const ContactContainer = styled.section`
     header{
         text-align: center;
         margin-top: 2rem; 
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
         span{
             font-size: 0.7rem;
             color: ${({ theme }) => theme.colors["black-off"]};
@@ -22,7 +25,6 @@ export const ContactContainer = styled.section`
         }
         p{
             font-size: 0.7rem;
-            padding: 1rem;
         }
     }
     @media (min-width: 768px) {
@@ -84,6 +86,14 @@ export const FormContact = styled.form`
         background-color:${({ theme }) => theme.colors.componentBackground};
         width: 90%;
       
+       }
+
+       input[type='date']{
+            &::-webkit-calendar-picker-indicator {
+                background-color: ${({ theme }) => theme.colors["main-color"]};
+            border-radius: 5px;
+                
+            }
        }
 
       

@@ -5,6 +5,9 @@ export const FeedbacksContainer = styled.div`
       text-align: center;
       margin-top: 2rem;
       margin-bottom: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
       span{
         font-size: 0.7rem;
         color: ${({ theme }) => theme.colors["black-off"]};
@@ -146,19 +149,28 @@ export const Slide = styled.section<{$isDesktop: boolean, $isActive: boolean }>`
     padding: 0.5rem;
    }
 
-   figure{
-    background-color: ${({ theme }) => theme.colors["main-color"]};
-    border-radius: 70%;
-    width: 5rem;
-    height: 5rem;
+   div{
     display: flex;
     align-items: center;
-    justify-content: center;
-    img{
+    margin-top: 1rem;
+    gap: 0.5rem;
     
-     
-    }
+      figure{
+        background-color: ${({ theme }) => theme.colors["main-color"]};
+        border-radius: 70%;
+        width: 5rem;
+        height: 5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      p{
+        font-size: 1rem;
+        font-weight: bold;
+      }
    }
+
+  
    @media (min-width: 768px) {
     padding: 2rem;
    }

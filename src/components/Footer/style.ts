@@ -81,6 +81,7 @@ export const EmailNewsletter = styled.form`
     height: 4rem;
     border-radius: 40px;
     margin: 1rem;
+    padding: 1rem;
     border-color: ${({ theme }) => theme.colors["border-gray"]};
    
     > div{

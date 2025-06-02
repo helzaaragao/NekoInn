@@ -138,15 +138,15 @@ export const NavDesktop = styled.nav`
       display: flex;
       align-items: center;
       justify-content: space-between;
-      width: 25rem;
+      width: 20rem;
       margin-top: 2rem;
     }
     div{
       display: flex;
       align-items: center;
       justify-content: center;
-         gap: 1rem; 
-            width: auto; 
+      gap: 1rem; 
+      width: auto; 
       Button:first-child{
         width: 9rem;
         height: 3rem;

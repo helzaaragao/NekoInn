@@ -173,6 +173,8 @@ export const Slide = styled.section<{$isDesktop: boolean, $isActive: boolean }>`
   
    @media (min-width: 768px) {
     padding: 2rem;
+    height: 20rem;
+    margin-bottom: 2rem;
    }
     @media (min-width: 1024px) {
       margin-bottom: 3rem;

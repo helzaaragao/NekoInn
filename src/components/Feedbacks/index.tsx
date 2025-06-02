@@ -51,40 +51,40 @@ export function Feedbacks(){
                     <button onClick={goToPrev}><ArrowLeft size={30} /></button>
                   
                 <SlidesContainer $isDesktop={isDesktop}>
-                    <Slide $isDesktop={isDesktop}  $isActive={isDesktop || currentSlide === 0}>
-                         <Quotes />
-                         <p>{t('Feedbacks.firstQuotes-description')}</p>
-                         <div>
-                            <figure>
-                              <img src={Emily} alt="" />
-                           </figure>
-                           <p>Emily S</p>
-                         </div>
-                       
-                    </Slide>
-                    <Slide $isDesktop={isDesktop} $isActive={isDesktop || currentSlide === 1}>
-                         <Quotes />
-                         <p>{t('Feedbacks.secondQuotes-description')}</p>
-                         <div>
-                            <figure>
-                                <img src={Mark} alt="" />
+                      <Slide $isDesktop={isDesktop}  $isActive={isDesktop || currentSlide === 0}>
+                          <Quotes />
+                          <p>{t('Feedbacks.firstQuotes-description')}</p>
+                          <div>
+                              <figure>
+                                <img src={Emily} alt="" />
                             </figure>
-                            <p>Mark T</p>
-                         </div>
-
-
-                    </Slide>
-                    <Slide $isDesktop={isDesktop} $isActive={isDesktop || currentSlide === 2}>
-                         <Quotes/>
-                         <p>{t('Feedbacks.thirdQuotes-description')}</p>
-                         <div>
-                            <figure>
-                              <img src={Fernanda} alt="" />
-                            </figure>
-                            <p>Fernanda S</p>
-                         </div>
+                            <p>Emily S</p>
+                          </div>
                         
-                    </Slide>
+                      </Slide>
+                      <Slide $isDesktop={isDesktop} $isActive={isDesktop || currentSlide === 1}>
+                          <Quotes />
+                          <p>{t('Feedbacks.secondQuotes-description')}</p>
+                          <div>
+                              <figure>
+                                  <img src={Mark} alt="" />
+                              </figure>
+                              <p>Mark T</p>
+                          </div>
+
+
+                      </Slide>
+                      <Slide $isDesktop={isDesktop} $isActive={isDesktop || currentSlide === 2}>
+                          <Quotes/>
+                          <p>{t('Feedbacks.thirdQuotes-description')}</p>
+                          <div>
+                              <figure>
+                                <img src={Fernanda} alt="" />
+                              </figure>
+                              <p>Fernanda S</p>
+                          </div>
+                          
+                      </Slide>
                     </SlidesContainer>
 
                   

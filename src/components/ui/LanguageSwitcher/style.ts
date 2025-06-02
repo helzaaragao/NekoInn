@@ -14,6 +14,10 @@ export const LanguageButtonContainer = styled.button`
   justify-content: center;
   border-radius: 220px;
   color:${({ theme }) => theme.colors['day-background']};
+
+   @media (min-width: 1024px) {
+    width: 4rem;
+   }
   @media (min-width: 1440px){
     width: 5rem;
     padding: 0; 

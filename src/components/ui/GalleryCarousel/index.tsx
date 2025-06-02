@@ -16,21 +16,28 @@ const images = [carousel1, carousel2, carousel3, carousel4, carousel5, carousel6
 export function GalleryCarousel(){
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isAutoPlaying, setIsAutoPlaying] = useState(true); 
-  const isMobile = useMediaQuery({maxWidth: 1023});
+  const isMobileOrTablet = useMediaQuery({maxWidth: 1023});
+
+  
 
   useEffect(() => {
-    if(!isAutoPlaying) return;
+    if(!isAutoPlaying || !isMobileOrTablet) return;
     const interval = setInterval(() => {
       setCurrentIndex(prev => (prev + 1) % images.length)
     }, 3000)
     return () => clearInterval(interval)
-  }, [isAutoPlaying, images.length])
+  }, [isAutoPlaying, isMobileOrTablet, images.length])
+
+   const resetAutoPlay = useCallback(() => {
+    setIsAutoPlaying(false);
+    const timer = setTimeout(() => setIsAutoPlaying(true), 10000);
+    return () => clearTimeout(timer);
+  }, []);
 
   const goToSlide = useCallback((index: number) => {
-    setIsAutoPlaying(false);
     setCurrentIndex(index);
-    setTimeout(() => setIsAutoPlaying(true), 10000);
-  }, []);
+    resetAutoPlay();
+  }, [resetAutoPlay]);
 
   const goToNext = useCallback(() => {
     goToSlide((currentIndex + 1) % images.length);
@@ -42,10 +49,10 @@ export function GalleryCarousel(){
 
   useEffect(() => {
     setCurrentIndex(0)
-  }, [isMobile])
+  }, [isMobileOrTablet])
     return(
         <ImagesCarouselContainer>
-        {isMobile ? (
+        {isMobileOrTablet ? (
           <ImagesCarouselMobile>
              <button onClick={goToPrev}><ArrowLeft size={32} /></button>
                     <div>
@@ -56,7 +63,7 @@ export function GalleryCarousel(){
                     </div>
                    
               <button onClick={goToNext}><ArrowRight size={32} /></button>
-                      <div>
+                  <div>
                         {images.map((_, index) => (
                   <button
                     key={index}

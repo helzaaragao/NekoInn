@@ -26,14 +26,19 @@ export const ImagesCarouselMobile = styled.div`
         position: absolute;
         top: 40%;
         left: -4%;
+
+        
        
     }
 
     div:nth-child(2){
+        overflow: hidden;
         img{
             width: 100%;
             height: 25rem;
+               transition: transform 0.3s ease;
         }
+     
     }
 
     div:nth-child(3){
@@ -92,6 +97,16 @@ export const ImagesCarouselMobile = styled.div`
         }
         right: 5%;
     }
+     > div:last-child { 
+    position: absolute;
+    bottom: -50px; 
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 20; 
+    gap: 8px; 
+  }
     }
     
 

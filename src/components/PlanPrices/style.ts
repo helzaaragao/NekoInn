@@ -223,6 +223,27 @@ export const PricesSection = styled.section`
     }
     @media (min-width: 1024px) {
         flex-direction: row;
+        article:first-child{
+            div{
+                h4{
+                     font-size: 2rem;
+                }
+            }
+        }
+          article:nth-child(2){
+            div{
+                h4{
+                     font-size: 2.3rem;
+                }
+            }
+          }
+          article:nth-child(3){
+                 div{
+                h4{
+                     font-size: 2rem;
+                }
+            }
+          }
      }
       @media (min-width: 1440px) {
         position: relative;
@@ -234,6 +255,11 @@ export const PricesSection = styled.section`
             margin-top:3rem;
             padding-top: 3rem;
             z-index: 1;
+            div{
+                 h4{
+                     font-size: 2.5rem;
+                }
+            }
             ul{
                 gap: 1.2rem;
                 li{

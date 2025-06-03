@@ -160,6 +160,7 @@ export const HeroBanner = styled.div`
         align-items: start;
         button{
           width: 12.5rem;
+          font-size: 0.65rem;
         }
       }
       aside{
@@ -790,6 +791,16 @@ export const PurrCare = styled.section`
     article{
       width: 18rem;
       height: 35rem;
+      span{
+            font-size: 0.6rem;
+      }
+      h2{
+        font-size: 1.5rem;
+      }
+      p{
+         font-size: 0.85rem;
+      }
+     
     }
      > div{
        gap: 1rem;
@@ -798,11 +809,11 @@ export const PurrCare = styled.section`
     
       div {
         width: 33.3%;
-         img{ 
-       
-         }
           h4{
         font-size: 1rem;
+      }
+      p{
+           font-size: 0.8rem;
       }
       }
      }
@@ -824,6 +835,9 @@ export const PurrCare = styled.section`
         h4{
           font-size: 1.5rem;
         }
+          p{
+           font-size: 0.875rem;
+      }
        }
      }
    }

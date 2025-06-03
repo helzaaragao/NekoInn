@@ -116,7 +116,7 @@ export function Home(){
                 <article>
                     <span>{t('MainHome.purrCare.article-span')}</span>
                     <h2>{t('MainHome.purrCare.article-title')}</h2>
-                    <p>{t('MainHome.purrCare.article-description')}.</p>
+                    <p>{t('MainHome.purrCare.article-description')}</p>
                     <button><ArrowRight size={20} />{t('MainHome.purrCare.article-button')}</button>
                 </article>
                 <div>

@@ -119,9 +119,3 @@ export function Header(){
         </HeaderContainer>
     )
 }
-
-// Melhorias Adicionais
-// Animar a entrada/saída do menu (se quiser um fade in/out):
-// Use react-spring ou framer-motion para animações mais suaves.
-
-// Fechar o menu ao clicar em um link.

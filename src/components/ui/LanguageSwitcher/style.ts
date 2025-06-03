@@ -17,6 +17,8 @@ export const LanguageButtonContainer = styled.button`
 
    @media (min-width: 1024px) {
     width: 4rem;
+    margin-left: 0rem;
+    border: none;
    }
   @media (min-width: 1440px){
     width: 5rem;

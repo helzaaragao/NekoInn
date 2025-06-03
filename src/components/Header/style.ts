@@ -63,7 +63,7 @@ export const ChakraSwitchRoot = styled(Switch.Root)`
   margin-left: 2rem;
  
   @media (min-width: 1024px) {
-    width: 8rem;
+    width: 5rem;
     margin: 0 auto;
   } 
    @media (min-width: 1440px) {
@@ -133,31 +133,38 @@ export const NavDesktop = styled.nav`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 2rem;
+    gap: 2.5rem;
     ul{
       display: flex;
       align-items: center;
       justify-content: space-between;
-      width: 20rem;
+      width: 25rem;
       margin-top: 2rem;
+      a{ 
+        font-size: 0.8rem;
+      }
     }
     div{
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 1rem; 
       width: auto; 
       Button:first-child{
-        width: 9rem;
+        width: 8rem;
         height: 3rem;
+        margin: 0;
+        padding: 0;
       }
     }
   }
    @media (min-width: 1440px){
-    gap: 15rem;
+    gap: 12rem;
      ul{
-      width: 27rem;
+      width: 28rem;
       justify-content: space-between;
+      a{
+        font-size: 0.875rem;
+      }
     }
     div{
       width: auto; 

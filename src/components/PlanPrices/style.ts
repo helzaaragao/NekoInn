@@ -283,6 +283,9 @@ export const PricesSection = styled.section`
                     span{
                         font-size: 1rem;
                     }
+                    h4{
+                        font-size: 2.25rem;
+                    }
                 }
              button{
                 width: 70%;
@@ -304,6 +307,11 @@ export const PricesSection = styled.section`
              margin-top:3rem;
               padding-top: 3rem;
                 z-index: 1;
+                div{ 
+                       h4{
+                        font-size: 2.25rem;
+                    }
+                }
                  button{
                 width: 70%;
                 height: 2.813rem;

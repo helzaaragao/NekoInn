@@ -185,6 +185,18 @@ export const HeroBanner = styled.div`
      }
   }
 
+    /* @media (min-width: 1320px) {
+    > section:first-child{
+      aside{
+        figure{
+          right: 80%;
+        }
+      }
+    }
+
+    } */
+
+
   @media (min-width: 1440px) {
     margin-top: 3rem;
     margin-bottom: 2.5rem;
@@ -202,6 +214,7 @@ export const HeroBanner = styled.div`
         }
         button{
           margin-top: 1rem;
+             font-size: 0.657rem;
         }
       }
       aside{
@@ -212,6 +225,27 @@ export const HeroBanner = styled.div`
       }
     }
   }
+
+  
+     @media (min-width: 1600px) {
+         > section:first-child{
+          aside{
+        figure{
+          right: 79%;
+        }
+      }
+    }
+      }
+
+   @media (min-width: 1920px) {
+     > section:first-child{
+      aside{
+         figure{
+          right: 80%;
+        }
+      }
+     }
+   }
 `
 export const Vectors = styled.img<{$variant: 'primary' | 'secundary'}>`
    max-width: 100%;
@@ -821,13 +855,16 @@ export const PurrCare = styled.section`
    @media (min-width: 1440px) {
     padding: 2rem;
      article{
-      width: 19.5rem;
+      width: 25rem;
       height: 31rem;
           span{
-      font-size: 0.75rem;
+      font-size: 0.7rem;
     }
        h2{
-      font-size: 2.25rem;
+      font-size: 2rem;
+    }
+    p{
+      font-size: 0.8rem;
     }
     }
      > div{

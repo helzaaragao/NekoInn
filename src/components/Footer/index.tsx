@@ -18,7 +18,7 @@ export function Footer(){
                 <EmailNewsletter>
                         <div>
                             <label htmlFor="email">{t('Footer.newsletter-email')}</label>
-                            <input type="email" />
+                            <input type="email" id="e-mail" name="e-mail" />
                         </div>
                         <div>
                         <Envelope size={32} />

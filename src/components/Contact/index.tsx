@@ -5,7 +5,6 @@ import {format, isBefore, parseISO} from 'date-fns'
 import {ptBR} from 'date-fns/locale'
 import { useTranslation } from "react-i18next";
 
-// Frase de erro para quando ocorrer do usuário colocar algo errado de proposito na data por exemplo
 
 interface FormData{
     name: string,
@@ -78,7 +77,7 @@ export function Contact(){
 
          if(formData.scredullingDate && isBefore(formData.scredullingDate, MIN_DATE)){
             setSubmitError('Por favor, selecione uma data a partir de maio de 2025')
-            return
+            return;
          }
             setIsSubmitting(true);
             setSubmitError('');
@@ -110,10 +109,11 @@ export function Contact(){
                    emailjsConfig.userId
             )
             setIsEmailSent(true);
-            setSubmitSuccess(true)
+            setSubmitSuccess(true);
         } catch(error){
              console.error('Erro ao enviar email:', error);
             setSubmitError('Ocorreu um erro ao enviar o formulário. Por favor, tente novamente.');
+            setIsEmailSent(false);
         } finally {
             setIsSubmitting(false);
         }
@@ -140,22 +140,22 @@ export function Contact(){
         <FormContact onSubmit={handleSubmit}>
             <div>
                 <label htmlFor="name">{t('Contact.label-name')}</label>
-                <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required/>
+                <input type="text" id="name" name="name" autoComplete="name" value={formData.name} onChange={handleChange} required/>
             </div>
             <div>
                 <label htmlFor="email">{t('Contact.label-email')}</label>
-                <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required/>
+                <input type="email" id="email" name="email" autoComplete="email" value={formData.email} onChange={handleChange} required/>
             </div>
             <div>
                 <label htmlFor="phone">{t('Contact.label-phone')}</label>
-                <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleChange} required/>
+                <input type="tel" id="phone" name="phone" autoComplete="tel" value={formData.phone} onChange={handleChange} required/>
             </div>
             <div>
                 <label htmlFor="catName">{t('Contact.label-catName')}</label>
                 <input type="text" id="catName" name="catName" value={formData.catName} onChange={handleChange} required/>
             </div>
             <div>
-                <label htmlFor="date">{t('Contact.label-date')}</label>
+                <label htmlFor="scredullingDate">{t('Contact.label-date')}</label>
                 <input type="date" id="scredullingDate" name="scredullingDate" value={formData.scredullingDate ? format(formData.scredullingDate, 'yyyy-MM-dd') : ''} onChange={handleChange} min={format(MIN_DATE, 'yyyy-MM-dd')} required />
             </div>
             <div>
@@ -171,7 +171,7 @@ export function Contact(){
                     <option value="Purr Royal">Purr Royal</option>
                 </select>
             </div>
-            <button type="submit" disabled={isSubmitting}> {isSubmitting ? t('Contact.form-sending', 'Sending...') : t('Contact.form-bookNow', 'Book Now')}</button>
+            <button type="submit" disabled={isSubmitting || isEmailSent}> {isSubmitting ? t('Contact.form-sending', 'Sending...') : t('Contact.form-bookNow', 'Book Now')}</button>
             </FormContact>     
         </ContactContainer>
     )

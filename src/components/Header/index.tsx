@@ -65,7 +65,7 @@ export function Header(){
                     {isBurgerMenu && (
                             <MobileMenu $isOpen={isBurgerMenu}>
                                  <ChakraSwitchRoot  size="lg" checked={isDarkMode} onCheckedChange={toggleTheme}>
-                                            <Switch.HiddenInput />
+                                            <Switch.HiddenInput/>
                                             <ChakraSwitchControl>
                                                 <ChackraSwitchIndicador fallback={<Sun size={32} data-icon="sun"/>}>
                                                     <Moon size={32} data-icon="moon"/>
@@ -103,7 +103,7 @@ export function Header(){
                         <div>
                                 
                             <ChakraSwitchRoot  size="lg" checked={isDarkMode} onCheckedChange={toggleTheme}>
-                                                <Switch.HiddenInput />
+                                                <Switch.HiddenInput  />
                                                 <ChakraSwitchControl>
                                                     <ChackraSwitchIndicador fallback={<Sun size={32} data-icon="sun"/>}>
                                                         <Moon size={32} data-icon="moon"/>

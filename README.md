@@ -1,54 +1,68 @@
-# React + TypeScript + Vite
+# Neko Inn Landing Page 🐈
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<div>
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/>
+  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white"/>
+  <img src="https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white"/>
+</div>
 
-Currently, two official plugins are available:
+Pousada para Gatos - Web Responsivo 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+| Mobile | Tablet | Desktop | 
+|--------|---------|---------|
+| <img src="./src/assets/mobile-nekoInn.png" width="200"> | <img src="./src/assets/mobile-nekoInn.png" width="400"> | <img src="./src/assets/desktop-nekoInn.png" width="800"> |
 
-## Expanding the ESLint configuration
+## 🚀 Funcionalidades
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+**Agendamento automatizado com confirmação via E-mail**: 
+- Formulário com validação em tempo real e tratamento de tipos (TypeScript).
+- Integração com EmailJS: Envio automático de confirmações para o cliente e para a administração (fluxo duplex).
+- Fluxo duplex com tratamento de erros e estados de loading.
+- Validação de data mínima (maio de 2025).
+- Confirmação visual após envio bem-sucedido.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+**Internacionalização (i18n) – PT/EN**: 
+- Detecção automática do idioma do navegador.
+- Conversão inteligente (ex.: "pt" → "pt-BR").
+- Troca manual instantânea via react-18next sem recarregar a página (hook useTranslation + método changeLanguage).
+- Estrutura modular com namespaces (home/components) e fallback para inglês.
+
+**Dark Mode Toggle**: 
+- Theming Dinâmico: Troca instantânea de estilos entre lightTheme e darkTheme sem recarregamento.
+- Design acessível (contraste ajustado para ambos os temas).
+- Enum Tipado: Definição explícita dos temas (light/dark) via ThemeType para segurança de tipos.
+- Context API: Estado global gerenciado por ThemeProvider, compartilhando theme, themeData e toggleTheme com toda a aplicação.
+
+## 📌 Desafios enfrentados 
+
+
+## 🌐 Deploy no GitHub Pages
+
+O projeto está disponível online via GitHub Pages. Acesse <a href="helzaaragao.github.io/NekoInn/">aqui</a> para visualizar.
+
+### 🛠️ Dependências e Versões Utilizadas
+
+
+### 📂 Como rodar o projeto na sua máquina local
+
+Obs: é preciso já ter instalado o node.js, vscode ou um terminal da sua preferência para executar os comandos!
+
+Clone esse repositório para os seus arquivos:
+```
+git clone https://github.com/helzaaragao/NekoInn.git
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Depois, vá até a pasta que você acabou de criar com o comando anterior:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```
+cd "NekoInn"
+```
+E instale todas as depedências e versões utilizadas por esse projeto:
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```
+npm install
+```
+Finalmente, rode no seu localhost:
+```
+npm run dev
 ```

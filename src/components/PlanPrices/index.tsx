@@ -1,10 +1,10 @@
 import { CheckCircle } from '@phosphor-icons/react'
-
 import pinkCrown from '../../assets/royal-crown-variant-made-of-lines-and-circles-svgrepo-com 1.svg'
 import whiteCrown from '../../assets/royal-crown-of-elegant-vintage-design-svgrepo-com 1.svg'
 import pinkOutlineCrown from '../../assets/crown-made-of-triangles-and-circles-outline-svgrepo-com 1.svg'
 import { PricesContainer, PricesHeader, PricesSection } from './style'
 import { useTranslation } from 'react-i18next'
+
 export function PlanPrices(){
      const { t } = useTranslation('components'); 
     return(

@@ -60,8 +60,6 @@ export function Home(){
                             <img src={thirdCat} alt="" />
                             <img src={lastCat} alt="" />
                         </Cats>
-                
-
                     </figure>
                 
                 </section>
@@ -78,7 +76,6 @@ export function Home(){
                     <div>
                         <Phone size={32} />
                     </div>
-                
                     <p>(555) 555-5555</p>
                 </section>
                 <section>

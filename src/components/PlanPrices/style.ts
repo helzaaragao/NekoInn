@@ -79,9 +79,6 @@ export const PricesSection = styled.section`
                     font-size: 0.7rem;
                 }
             }
-
-        
-
         }
         ul {
             display: flex;
@@ -135,9 +132,6 @@ export const PricesSection = styled.section`
                     font-size: 0.7rem;
                 }
             }
-
-        
-
         }
         ul {
             display: flex;
@@ -191,9 +185,6 @@ export const PricesSection = styled.section`
                     font-size: 0.7rem;
                 }
             }
-
-        
-
         }
         ul {
             display: flex;

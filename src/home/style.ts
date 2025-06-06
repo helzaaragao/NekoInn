@@ -185,18 +185,6 @@ export const HeroBanner = styled.div`
      }
   }
 
-    /* @media (min-width: 1320px) {
-    > section:first-child{
-      aside{
-        figure{
-          right: 80%;
-        }
-      }
-    }
-
-    } */
-
-
   @media (min-width: 1440px) {
     margin-top: 3rem;
     margin-bottom: 2.5rem;
@@ -448,8 +436,6 @@ export const Address = styled.address`
         justify-content: flex-start;
         gap: 1.8rem;
         padding-left: 1.1rem;
-        /* border-top-left-radius: 40px;
-        border-top-right-radius: 40px; */
         background-color: ${({ theme }) => theme.colors.othersAddressBackground};
         div{
           width: 4rem;

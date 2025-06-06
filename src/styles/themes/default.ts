@@ -1,7 +1,5 @@
 import 'styled-components';
 
-// pegar as cores mais especificas que estão faltando do light e dark começando pelo light
-
 declare module 'styled-components' {
   export interface DefaultTheme {
     colors: {

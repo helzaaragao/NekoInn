@@ -86,15 +86,8 @@ export function Feedbacks(){
                           
                       </Slide>
                     </SlidesContainer>
-
-                  
                     <button onClick={goToNext}><ArrowRight size={30} /></button>
-            
-                  
-             
-                
             </FeedbacksCarousel>
-
         </FeedbacksContainer>
     )
 }

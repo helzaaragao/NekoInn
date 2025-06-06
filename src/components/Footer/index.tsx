@@ -68,8 +68,6 @@ export function Footer(){
                 <div>
                     <h5>{t('Footer.info-socialmedia-title')}</h5>
                     <figure>
-
-
                     <div>
                     <FacebookLogo size={32} weight='bold'/>
                     </div>
@@ -92,7 +90,6 @@ export function Footer(){
                     <p>{t('Footer.info-socialmedia-description')}</p>
                 </div>
             </ContactInfos>
-        
         </FooterContainer>
     )
 }

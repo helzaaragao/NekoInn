@@ -4,7 +4,6 @@ import { Moon, Sun } from '@phosphor-icons/react';
 import { Button } from '../ui/Button';
 import { ChackraSwitchIndicador, ChakraSwitchControl, ChakraSwitchRoot, HamburgerButton, HeaderContainer, MobileMenu, NavDesktop, NavLink, NavMobile } from './style';
 import { ThemeContext, ThemeType } from '@/context/ThemeContext';
-
 import menuHambuguer from '../../assets/Hamburger.svg'
 import X from '../../assets/X.png'
 import { useTranslation } from 'react-i18next';
@@ -110,7 +109,6 @@ export function Header(){
                                                     </ChackraSwitchIndicador>
                                                 </ChakraSwitchControl>
                             </ChakraSwitchRoot>
-                           
                             <Button></Button>
                              <LanguageSwitcher></LanguageSwitcher>
                         </div>

@@ -3,8 +3,6 @@ import { lightTheme } from "@/styles/themes/lightMode";
 import { createContext, ReactNode, useState } from "react";
 import { ThemeProvider as ThemeProviderStyled } from "styled-components";
 
-// Permanencer light ou dark para o usuário = fazer
-
 export enum ThemeType {
     light = 'light', 
     dark = 'dark',

@@ -1,6 +1,6 @@
 import { darkTheme } from "@/styles/themes/darkMode";
 import { lightTheme } from "@/styles/themes/lightMode";
-import { createContext, ReactNode, useState } from "react";
+import { createContext, ReactNode, useEffect, useState } from "react";
 import { ThemeProvider as ThemeProviderStyled } from "styled-components";
 
 export enum ThemeType {
@@ -23,15 +23,32 @@ export const ThemeContext = createContext({
 })
 
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({children}) => {
-    const [theme, setTheme] = useState(ThemeType.light)
+    const [theme, setTheme] = useState<ThemeType | null>(null);
 
-    function toggleTheme(){
-        if(theme === ThemeType.light){
-          setTheme(ThemeType.dark)
-        }else { 
-            setTheme(ThemeType.light)
+     useEffect(() => {
+        const savedTheme = localStorage.getItem('theme');
+        const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const initialTheme = savedTheme === "light" || savedTheme === 'dark' ? savedTheme : (systemPrefersDark ? ThemeType.dark : ThemeType.light);
+        setTheme(initialTheme as ThemeType);
+        document.documentElement.setAttribute('data-theme', initialTheme);
+    }, []);
+
+     useEffect(() => {
+        if(theme){
+            localStorage.setItem('theme', theme);
+            document.documentElement.setAttribute('data-theme', theme);
         }
+       
+    }, [theme]);
+
+
+    function toggleTheme() {
+        setTheme(prev => prev === ThemeType.light ? ThemeType.dark : ThemeType.light);
     }
+    if(theme === null){
+        return null
+    }
+    
     return(
         <ThemeContext.Provider value={{theme, themeData: themes[theme],toggleTheme}}>
             <ThemeProviderStyled theme={themes[theme]}>

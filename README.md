@@ -6,11 +6,23 @@
   <img src="https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white"/>
 </div>
 
-Pousada para Gatos - Web Responsivo 
+Landing Page para Hospedagem Felina
+
+Desenvolvimento de uma landing page unificada focada em experiência do usuário e alta conversão, destinada a serviços premium de hotelaria para gatos.
+
+Destaques:
+
+Design minimalista e funcional por Zine Falouti
+
+Arquitetura de informação otimizada para conversões
+
+Experiência mobile-first responsiva
+
+Stack: React | TypeScript | Vite | Chakra UI
 
 | Mobile | Tablet | Desktop | 
 |--------|---------|---------|
-| <img src="./src/assets/mobile-nekoInn.png" width="200"> | <img src="./src/assets/mobile-nekoInn.png" width="400"> | <img src="./src/assets/desktop-nekoInn.png" width="800"> |
+| <img src="./src/assets/mobile-nekoInn.png" width="200"> | <img src="./src/assets/tablet-nekoInn.png" width="400"> | <img src="./src/assets/desktop-nekoInn.png" width="800"> |
 
 ## 🚀 Funcionalidades
 

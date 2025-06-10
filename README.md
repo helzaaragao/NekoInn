@@ -30,7 +30,7 @@ Landing Page para **Hospedagem Felina**. Desenvolvida a partir do design UI/UX d
 - Troca manual instantânea via react-18next sem recarregar a página (hook useTranslation + método changeLanguage).
 - Estrutura modular com namespaces (home/components) e fallback para inglês.
 
-![image](./src/assets/NekoInn%20-%20ptEn.png)
+![image](./src/assets/NekoInn%20-%20ptEn.png)  ![image](./src/assets/NekoInn%20-%20en.png)
 
 **Dark Mode Toggle**: 
 - Theming Dinâmico: Troca instantânea de estilos entre lightTheme e darkTheme sem recarregamento.
@@ -39,7 +39,7 @@ Landing Page para **Hospedagem Felina**. Desenvolvida a partir do design UI/UX d
 - Enum Tipado: Definição explícita dos temas (light/dark) via ThemeType para segurança de tipos.
 - Context API: Estado global gerenciado por ThemeProvider, compartilhando theme, themeData e toggleTheme com toda a aplicação.
 
-| ![image](./src/assets/NekoInn%20-%20lightmode.png) | ![image](./src/assets/NekoInn%20-%20darkmode.png) |
+ ![image](./src/assets/NekoInn%20-%20lightmode.png)  ![image](./src/assets/NekoInn%20-%20darkmode.png) 
 
 ## 📌 Desafios enfrentados 
 
@@ -49,7 +49,7 @@ Landing Page para **Hospedagem Felina**. Desenvolvida a partir do design UI/UX d
 
 **A parte do Book Now/ Reserve Agora** foi uma das mais desafiadoras para mim: não existia uma lógica do que fazer. Originalmente estática, eu poderia mantê-la sem interatividade, seguindo fielmente o protótipo. Porém, ao decidir implementar uma lógica prática, optei por uma solução simples: enviar e-mails de confirmação tanto para o usuário quanto para mim (como administrador) com os dados do agendamento. Utilizei o serviço **EmailJS** que facilitou a integração de envios de e-mail sem necessidade de um servidor backend, criando uma interação entre as partes.
 
-Além disso, adicionei suporte a múltiplos idiomas (inglês/português). Apesar de o projeto ter sido concebido apenas em inglês, aproveitei a oportunidade para estudar internacionalização. Com a biblioteca i18n, explorei padrões de implementação e dinâmicas de troca de idiomas, aprendendo a gerenciar textos dinâmicos e adaptar a experiência localizada do usuário. 
+Além disso, **adicionei suporte a múltiplos idiomas (inglês/português)**. Apesar de o projeto ter sido concebido apenas em inglês, aproveitei a oportunidade para estudar internacionalização. Com a biblioteca i18n, explorei padrões de implementação e dinâmicas de troca de idiomas, aprendendo a gerenciar textos dinâmicos e adaptar a experiência localizada do usuário. 
 
 Por fim, este projeto representou um marco no meu crescimento técnico, envolvendo várias "primeiras vezes": temas dinâmicos, integração com serviços externos e internacionalização. Cada desafio foi resolvido com pesquisa, testes e adaptação. 
 

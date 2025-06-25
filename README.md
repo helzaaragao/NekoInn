@@ -59,6 +59,7 @@ Por fim, este projeto representou um marco no meu crescimento técnico, envolven
 O projeto está disponível online via GitHub Pages. Acesse <a href="https://helzaaragao.github.io/NekoInn/">aqui</a> para visualizar.
 
 ### 🛠️ Dependências e Versões Utilizadas
+
 **React**: 19.0.0  | **TypeScript**: 5.7.2 | **Vite**: 6.2.0 | **Styled-componets**: 6.1.17 |**Chakra UI**: 3.16.0 | **Phosphor-icons/react**: 2.1.7 | **Emailjs/browser**: 4.4.1 | **i18next**: 25.2.1
 
 
@@ -71,7 +72,7 @@ Clone esse repositório para os seus arquivos:
 git clone https://github.com/helzaaragao/NekoInn.git
 ```
 
-Depois, vá até a pasta que você acabou de criar com o comando anterior:
+Depois, vá até a pasta que você acabou de criar com o comando:
 
 ```
 cd "NekoInn"
